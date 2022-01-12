@@ -41,6 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2943057529
+    locked: 0
+  - name: ButtonUI
+    uniqueID: 2849613827
+    locked: 0
   - name: TalkUI
     uniqueID: 482621481
+    locked: 0
+  - name: Front
+    uniqueID: 2867742017
     locked: 0

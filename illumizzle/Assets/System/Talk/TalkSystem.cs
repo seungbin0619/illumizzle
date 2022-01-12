@@ -7,12 +7,18 @@ public class TalkSystem : MonoBehaviour
     #region [ 인스턴스 초기화 ]
 
     public static TalkSystem instance;
+    private Canvas canvas;
+
     private void Awake()
     {
         if (instance == null) instance = this;
-        else if (instance != null) Destroy(gameObject);
+        else
+        {
+            Destroy(instance);
+            instance = this;
+        }
 
-        DontDestroyOnLoad(this);
+        canvas = GetComponent<Canvas>();
     }
 
     #endregion
@@ -44,8 +50,6 @@ public class TalkSystem : MonoBehaviour
 
     #region [ 대화 정보 ]
 
-    [SerializeField]
-    private TalkBase[] talks;
     public static TalkBase CurrentTalk { get; private set; }
     public static Dictionary<CharacterBase, Target> Characters { get; private set; }
 
@@ -54,19 +58,20 @@ public class TalkSystem : MonoBehaviour
 
     #endregion
 
-    public void test() //debug
+    public void SetTalk(TalkBase talk)
     {
-        CurrentTalk = talks[0];
-        Play();
+        CurrentTalk = talk;
     }
 
     public void Play()
     {
+        //Close();
         gameObject.SetActive(true);
 
         talkIndex = 0;
         Characters = new Dictionary<CharacterBase, Target>();
 
+        // 캐릭터 배치
         for (int i = 0; i < CurrentTalk.characters.Length; i++) {
             CharacterBase character = CurrentTalk.characters[i].character;
             int position = (int)CurrentTalk.characters[i].position;
@@ -93,7 +98,7 @@ public class TalkSystem : MonoBehaviour
 
         TalkBase.Script script = CurrentTalk.GetScript(talkIndex++);
         //Sprite sprite = script.character.sprites[script.sprite];
-        //Characters[script.character]
+        //Characters[script.character] // <- 애니메이션 적용할 때 사용
 
         scriptText.text = script.text;
         nameText.text = script.character.name;
@@ -110,5 +115,11 @@ public class TalkSystem : MonoBehaviour
         foreach (Transform group in characterPanel)
             foreach (Transform child in group)
                 Destroy(child.gameObject);
+    }
+
+    public void Update()
+    {
+        if (canvas.worldCamera == Camera.current) return;
+        canvas.worldCamera = Camera.current;
     }
 }
