@@ -632,6 +632,7 @@ GameObject:
   - component: {fileID: 740554332}
   - component: {fileID: 740554331}
   - component: {fileID: 740554330}
+  - component: {fileID: 740554335}
   m_Layer: 5
   m_Name: TalkUI
   m_TagString: Untagged
@@ -741,6 +742,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &740554335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740554329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04296a9839a7be6448b00c8d562ce66f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventSO: {fileID: 11400000, guid: 03ba428df87c71a44bd844aeb179ed8b, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 740554330}
+        m_TargetAssemblyTypeName: TalkSystem, Assembly-CSharp
+        m_MethodName: Skip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &998633999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,6 +1128,7 @@ GameObject:
   - component: {fileID: 1218458198}
   - component: {fileID: 1218458197}
   - component: {fileID: 1218458196}
+  - component: {fileID: 1218458199}
   m_Layer: 0
   m_Name: Systems
   m_TagString: Untagged
@@ -1145,6 +1175,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1218458199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218458195}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488d79fc089fc574a8a81b20c018081c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitKeyInput: {fileID: 11400000, guid: 03ba428df87c71a44bd844aeb179ed8b, type: 2}
 --- !u!1 &1361074988
 GameObject:
   m_ObjectHideFlags: 0

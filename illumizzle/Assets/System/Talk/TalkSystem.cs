@@ -50,11 +50,27 @@ public class TalkSystem : MonoBehaviour
 
     #region [ 대화 정보 ]
 
-    public static TalkBase CurrentTalk { get; private set; }
+    private static TalkBase currentTalk;
+    public static TalkBase CurrentTalk
+    {
+        get
+        {
+            return currentTalk;
+        }
+        private set
+        {
+            currentTalk = value;
+            KeySystem.instance.enabled = currentTalk != null;
+        }
+    }
+
     public static Dictionary<CharacterBase, Target> Characters { get; private set; }
 
     public static bool IsLoaded { get { return CurrentTalk != null; } }
     private static int talkIndex;
+
+    private bool isPlaying = false;
+    private Coroutine scriptCoroutine = null;
 
     #endregion
 
@@ -85,6 +101,17 @@ public class TalkSystem : MonoBehaviour
         Next();
     }
 
+    public void Skip()
+    {
+        if (!IsLoaded) return;
+        if (isPlaying && scriptCoroutine != null)
+        {
+            isPlaying = false;
+            scriptCoroutine = null;
+        }
+        else Next();
+    }
+
     public void Next()
     {
         if (!IsLoaded) return;
@@ -100,26 +127,47 @@ public class TalkSystem : MonoBehaviour
         //Sprite sprite = script.character.sprites[script.sprite];
         //Characters[script.character] // <- 애니메이션 적용할 때 사용
 
-        scriptText.text = script.text;
+        scriptText.text = ""; //script.text;
         nameText.text = script.character.name;
 
         foreach(Target target in Characters.Values)
             target.ChangeFocus(script.character);
+
+        scriptCoroutine = StartCoroutine(CoNext(script));
+    }
+
+    private IEnumerator CoNext(TalkBase.Script script)
+    {
+        int progress = 0;
+        WaitForSeconds wait = new WaitForSeconds(0.15f);
+
+        isPlaying = true;
+        while (isPlaying)
+        {
+            scriptText.text += script.text[progress++];
+            isPlaying = progress < script.text.Length;
+
+            yield return wait;
+        }
+
+        scriptText.text = script.text;
     }
 
     private void Close()
     {
-        gameObject.SetActive(false);
         CurrentTalk = null;
+        gameObject.SetActive(false);
 
         foreach (Transform group in characterPanel)
             foreach (Transform child in group)
                 Destroy(child.gameObject);
     }
 
+    /*
     public void Update()
     {
         if (canvas.worldCamera == Camera.current) return;
         canvas.worldCamera = Camera.current;
     }
+    */
 }

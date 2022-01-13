@@ -12,7 +12,6 @@ public class ActionSystem : MonoBehaviour
         if (instance == null) instance = this;
         else if (instance != this) Destroy(this);
 
-        DontDestroyOnLoad(this);
         actions = new List<Action>();
     }
 

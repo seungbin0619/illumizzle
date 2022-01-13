@@ -9,7 +9,10 @@ public class GameEvent : ScriptableObject
 
     public void Raise()
     {
-        foreach (var lis in listeners) lis.OnEventRaised();
+        foreach (var lis in listeners.FindAll(p => p.gameObject.activeSelf))
+        {
+            lis.OnEventRaised();
+        }
     }
 
     public void AddListener(GameEventListener listener)
