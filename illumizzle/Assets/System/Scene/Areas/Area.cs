@@ -18,7 +18,7 @@ public class Area : MonoBehaviour
         bgRect = bgImage.rectTransform;
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         for (int i = 0; i < LevelCount; i++)
         {

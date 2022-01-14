@@ -70,6 +70,7 @@ public class TalkSystem : MonoBehaviour
     private static int talkIndex;
 
     private bool isPlaying = false;
+    private TalkBase.Script targetScript;
     private Coroutine scriptCoroutine = null;
 
     #endregion
@@ -106,8 +107,12 @@ public class TalkSystem : MonoBehaviour
         if (!IsLoaded) return;
         if (isPlaying && scriptCoroutine != null)
         {
-            isPlaying = false;
+            StopCoroutine(scriptCoroutine);
             scriptCoroutine = null;
+
+            isPlaying = false;
+
+            scriptText.text = targetScript.text;
         }
         else Next();
     }
@@ -123,23 +128,23 @@ public class TalkSystem : MonoBehaviour
             return;
         }
 
-        TalkBase.Script script = CurrentTalk.GetScript(talkIndex++);
+        targetScript = CurrentTalk.GetScript(talkIndex++);
         //Sprite sprite = script.character.sprites[script.sprite];
         //Characters[script.character] // <- 애니메이션 적용할 때 사용
 
         scriptText.text = ""; //script.text;
-        nameText.text = script.character.name;
+        nameText.text = targetScript.character.name;
 
         foreach(Target target in Characters.Values)
-            target.ChangeFocus(script.character);
+            target.ChangeFocus(targetScript.character);
 
-        scriptCoroutine = StartCoroutine(CoNext(script));
+        scriptCoroutine = StartCoroutine(CoNext(targetScript));
     }
 
     private IEnumerator CoNext(TalkBase.Script script)
     {
         int progress = 0;
-        WaitForSeconds wait = new WaitForSeconds(0.15f);
+        WaitForSeconds wait = new WaitForSeconds(0.1f);
 
         isPlaying = true;
         while (isPlaying)
