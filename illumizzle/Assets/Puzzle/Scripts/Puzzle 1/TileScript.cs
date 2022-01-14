@@ -14,7 +14,8 @@ public class TileScript : MonoBehaviour {
         RotateRight rotateRight = rightButton.GetComponent<RotateRight>();
 
         if (exchangeTile.isMooving == false 
-            && rotateLeft.isRotatingLeft == false && rotateRight.isRotatingRight == false) {
+            && rotateLeft.isRotatingLeft == false && rotateRight.isRotatingRight == false
+            && gameObject.TryGetComponent(typeof(IsFixedTile), out Component component) == false) {
 
             if (exchangeTile.calledTile1 == null) {
                 exchangeTile.calledTile1 = gameObject;

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class JudgeClear : MonoBehaviour {
 
+    public int cntTotFitTrigger;
     public int cntFitTrigger = 0;
 
     void Update() {
-        if (cntFitTrigger == 16) {
+        if (cntFitTrigger == cntTotFitTrigger) {
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
         }
     }

@@ -14,13 +14,13 @@ public class InnerTileScript : MonoBehaviour {
             triggerScript.cntTriggerStay += 1;
 
             if (triggerScript.cntTriggerStay == 1) {
-                triggerScript.materialName = gameObject.GetComponent<MeshRenderer>().material.name;
-                Debug.Log("트리거에 메테리얼 등록");
+                triggerScript.mtlNameInit = gameObject.GetComponent<MeshRenderer>().material.name[0];
+                //Debug.Log("트리거에 메테리얼 등록");
                 triggerScript.isFit = true;
             }
-            else if (gameObject.GetComponent<MeshRenderer>().material.name != triggerScript.materialName) {
+            else if (gameObject.GetComponent<MeshRenderer>().material.name[0] != triggerScript.mtlNameInit) {
                 triggerScript.isFit = false;
-                Debug.Log("등록된 메테리얼과 불일치");
+                //Debug.Log("등록된 메테리얼과 불일치");
             }
         }
     }

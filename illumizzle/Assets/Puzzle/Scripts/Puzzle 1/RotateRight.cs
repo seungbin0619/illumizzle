@@ -19,7 +19,7 @@ public class RotateRight : MonoBehaviour {
 
         if (isRotatingRight == false && rotateLeft.isRotatingLeft == false) {
             isRotatingRight = true;
-            Debug.Log("오른쪽으로 회전 시작");
+            //Debug.Log("오른쪽으로 회전 시작");
             target = cubeBase.transform.rotation * Quaternion.Euler(0, -90, 0);
         }
     }
@@ -32,7 +32,7 @@ public class RotateRight : MonoBehaviour {
             float angle = Quaternion.Angle(cubeBase.transform.rotation, target);
             if (angle < 5f) {
                 isRotatingRight = false;
-                Debug.Log("오른쪽으로 회전 완료");
+                //Debug.Log("오른쪽으로 회전 완료");
                 cubeBase.transform.rotation = target;
             }
         }

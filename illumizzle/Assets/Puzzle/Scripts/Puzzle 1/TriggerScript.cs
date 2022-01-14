@@ -7,7 +7,7 @@ public class TriggerScript : MonoBehaviour {
     public GameObject sceneController;
 
     public int cntTriggerStay = 0;
-    public string materialName = null;
+    public char mtlNameInit;
     public bool isPreFit = false, isFit = false;
 
     private void LateUpdate() {
