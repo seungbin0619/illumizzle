@@ -6,12 +6,15 @@ public class Area : MonoBehaviour
 {
     public new string name;     // 지역 이름
     [SerializeField]
-    private Vector3[] positions; // 스테이지 버튼 위치
-    private int LevelCount { get { return positions.Length; } }
+    protected Vector3[] positions; // 스테이지 버튼 위치
+    protected int LevelCount { get { return positions.Length; } }
 
     [SerializeField]
-    private UnityEngine.UI.Image bgImage;
-    private RectTransform bgRect;
+    protected UnityEngine.UI.Image bgImage;
+    protected RectTransform bgRect;
+
+    [SerializeField]
+    protected TalkBase[] talks;
 
     private void Awake()
     {
@@ -20,6 +23,15 @@ public class Area : MonoBehaviour
 
     protected virtual void Start()
     {
+        /*
+        float w = bgRect.rect.width * 0.5f, h = bgRect.rect.height* 0.5f;
+        for (int i = 0; i < LevelCount; i++)
+        {
+            Transform child = bgRect.GetChild(i);
+            Debug.Log((child.localPosition.x / w) + " , " + (child.localPosition.y / h));
+        }
+        */
+
         for (int i = 0; i < LevelCount; i++)
         {
             Transform child = bgRect.GetChild(i);

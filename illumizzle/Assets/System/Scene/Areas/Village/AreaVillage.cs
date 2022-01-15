@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class AreaVillage : Area
 {
-    public TalkBase[] talk;
-
     protected override void Start()
     {
         base.Start();
 
         //
-        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talk[0]);
-        ActionSystem.instance.Play();
+        //ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talk[0]);
+        //ActionSystem.instance.Play();
     }
 
     public void TEST()
     {
-        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talk[0]);
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Workroom");
         ActionSystem.instance.Play();
     }
 }

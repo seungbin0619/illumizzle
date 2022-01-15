@@ -23,7 +23,7 @@ public class MapScroll : MonoBehaviour
     {
         horizontalRange = rect.sizeDelta.y * 0.5f;
 
-        currentPosition = rect.localPosition  = new Vector3(0, horizontalRange, 0);
+        currentPosition = rect.localPosition = new Vector3(0, horizontalRange, 0);
     }
 
     public void OnScroll(UnityEngine.EventSystems.BaseEventData e) {

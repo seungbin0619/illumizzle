@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Workroom : Area
 {
-    public void Test()
+    public void Bulb()
     {
-        Debug.Log("´©¸§");
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[0]);
+        ActionSystem.instance.Play();
     }
 }
