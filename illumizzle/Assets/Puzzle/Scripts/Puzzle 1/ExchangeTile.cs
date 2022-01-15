@@ -18,7 +18,7 @@ public class ExchangeTile : MonoBehaviour {
                 isMooving = true;
                 //Debug.Log("타일 교환 시작");
 
-                if (calledTile1.CompareTag("yf")) {
+                if (calledTile1.tag[0] == 'y') {
                     calledTile1.transform.position += Vector3.up / 50;
                     calledTile2.transform.position += Vector3.up / 100;
                 }

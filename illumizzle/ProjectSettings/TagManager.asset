@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - trigger
+  - xb
+  - zb
+  - xf1
+  - xf2
+  - zf1
+  - zf2
+  - yf1
+  - yf2
   layers:
   - Default
   - TransparentFX
