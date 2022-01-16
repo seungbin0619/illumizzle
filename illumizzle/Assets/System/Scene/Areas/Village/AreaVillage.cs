@@ -8,14 +8,27 @@ public class AreaVillage : Area
     {
         base.Start();
 
-        //
-        //ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talk[0]);
-        //ActionSystem.instance.Play();
+        if (!DataSystem.HasData("Story", "Village.Entry.00"))
+        {
+            DataSystem.SetData("Story", "Village.Entry.00", 1);
+
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[0]);
+            ActionSystem.instance.Play();
+        }
     }
 
     public void TEST()
     {
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Workroom");
+        ActionSystem.instance.Play();
+    }
+
+    public void Homes()
+    {
+        Random.InitState((int)(Time.time * 1000));
+        int rand = Random.Range(1, 4);
+
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[rand]);
         ActionSystem.instance.Play();
     }
 }

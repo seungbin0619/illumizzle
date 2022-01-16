@@ -290,7 +290,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 255755237}
         m_TargetAssemblyTypeName: AreaVillage, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Homes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -373,7 +373,11 @@ MonoBehaviour:
   - {x: -0.2322917, y: -0.3138122, z: 0}
   - {x: 0.553125, y: -0.5303867, z: 0}
   bgImage: {fileID: 1945315926}
-  talks: []
+  talks:
+  - {fileID: 11400000, guid: f60d0cfa7523b4f4ea9de41411439213, type: 2}
+  - {fileID: 11400000, guid: a164053f4556110449b67a7eb65edfd6, type: 2}
+  - {fileID: 11400000, guid: f36e8ac649a1c9947aaad2fbfebb84ca, type: 2}
+  - {fileID: 11400000, guid: 313cd46849913f8468b3c0fcd7df8d27, type: 2}
 --- !u!4 &255755238
 Transform:
   m_ObjectHideFlags: 0
@@ -950,7 +954,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 255755237}
         m_TargetAssemblyTypeName: AreaVillage, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Homes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -10,7 +10,7 @@ public class KeySystem : MonoBehaviour
     private void Awake()
     {
         if (instance == null) instance = this;
-        else if (instance != this) Destroy(this);
+        else if (instance != this) Destroy(gameObject);
     }
 
     #endregion

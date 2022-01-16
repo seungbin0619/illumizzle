@@ -13,6 +13,7 @@ public class TalkBase : ScriptableObject
         public int sprite;              // 이미지 번호
 
         public string text;             // 대화 내용
+        public bool hide;               // 캐릭터 가리기
     }
 
     [Serializable]

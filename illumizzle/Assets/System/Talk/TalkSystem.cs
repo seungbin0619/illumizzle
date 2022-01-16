@@ -113,6 +113,7 @@ public class TalkSystem : MonoBehaviour
             isPlaying = false;
 
             scriptText.text = targetScript.text;
+            nextButton.color = Color.white;
         }
         else Next();
     }
@@ -133,7 +134,13 @@ public class TalkSystem : MonoBehaviour
         //Characters[script.character] // <- 애니메이션 적용할 때 사용
 
         scriptText.text = ""; //script.text;
-        nameText.text = targetScript.character.name;
+
+        characterPanel.gameObject.SetActive(!targetScript.hide);
+        nameBorder.gameObject.SetActive(targetScript.character != null);
+
+        if(targetScript.character != null) nameText.text = targetScript.character.name;
+
+        nextButton.color = new Color(1, 1, 1, 0);
 
         foreach(Target target in Characters.Values)
             target.ChangeFocus(targetScript.character);
@@ -149,18 +156,29 @@ public class TalkSystem : MonoBehaviour
         isPlaying = true;
         while (isPlaying)
         {
-            scriptText.text += script.text[progress++];
-            isPlaying = progress < script.text.Length;
+            try
+            {
+                scriptText.text += script.text[progress++];
+                isPlaying = progress < script.text.Length;
+            }catch
+            {
+                
+            }
 
             yield return wait;
         }
 
         scriptText.text = script.text;
+        nextButton.color = Color.white;
     }
 
     private void Close()
     {
         CurrentTalk = null;
+
+        characterPanel.gameObject.SetActive(true);
+        nameBorder.gameObject.SetActive(true);
+
         gameObject.SetActive(false);
 
         foreach (Transform group in characterPanel)
