@@ -14,6 +14,7 @@ public class TalkBase : ScriptableObject
 
         public string text;             // 대화 내용
         public bool hide;               // 캐릭터 가리기
+        public string command;          // 기타 호출
     }
 
     [Serializable]

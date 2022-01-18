@@ -26,6 +26,9 @@ public class TalkSystem : MonoBehaviour
     #region [ 대화창 오브젝트 ]
 
     [SerializeField]
+    private Transform objectPanel;
+
+    [SerializeField]
     private Transform characterPanel;
 
     [SerializeField]
@@ -72,6 +75,8 @@ public class TalkSystem : MonoBehaviour
     private bool isPlaying = false;
     private TalkBase.Script targetScript;
     private Coroutine scriptCoroutine = null;
+
+    //private GameObject generated;
 
     #endregion
 
@@ -193,4 +198,8 @@ public class TalkSystem : MonoBehaviour
         canvas.worldCamera = Camera.current;
     }
     */
+
+    //public void ObjectGenerate(GameObject prefab) { generated = Instantiate(prefab, objectPanel); }
+
+    //public void ObjectRemove() { Destroy(generated); }
 }

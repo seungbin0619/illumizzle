@@ -18,17 +18,16 @@ public class DataSystem : MonoBehaviour
 
     #endregion
 
-    //private readonly string path = Application.persistentDataPath;
-    private static readonly string path = @"D:\OneDrive - Sejong University\πŸ≈¡ »≠∏È\";
+    private static readonly string path = Application.persistentDataPath;
 
     private Dictionary<string, Dictionary<string, int>> data;
     private static readonly string[] parts = new string[2] { "Story", "Puzzle" };
 
     private void Start()
     {
-        data = LoadData();
+        //data = LoadData();
 
-        SaveData();
+        //SaveData();
     }
 
     public static void SetData(string part, string key, int value)

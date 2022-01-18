@@ -38,6 +38,8 @@ public class ActionSystem : MonoBehaviour
     private static AsyncOperation operation;
     private static readonly WaitWhile waitMove = new WaitWhile(() => !operation.isDone);
 
+    private static readonly WaitWhile waitPuzzle = new WaitWhile(() => PuzzleSystem.currentPuzzle != "");
+
     public void AddAction(Action.ActionType type, params object[] args)
     {
         Action action = new Action();
@@ -98,7 +100,10 @@ public class ActionSystem : MonoBehaviour
 
                 break;
             case Action.ActionType.Puzzle:
+                string PuzzleName = (string)currentAction.args[0];
+                PuzzleSystem.instance.GoPuzzle(PuzzleName);
 
+                wait = waitPuzzle;
 
                 break;
         }
