@@ -18,14 +18,15 @@ public class DataSystem : MonoBehaviour
 
     #endregion
 
-    private static readonly string path = Application.persistentDataPath;
+    //private static readonly string path = Application.persistentDataPath;
+    private static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop);
 
     private Dictionary<string, Dictionary<string, int>> data;
-    private static readonly string[] parts = new string[2] { "Story", "Puzzle" };
+    private static readonly string[] parts = new string[3] { "Story", "Puzzle", "Setting"};
 
     private void Start()
     {
-        //data = LoadData();
+        data = LoadData();
 
         //SaveData();
     }
