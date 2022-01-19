@@ -207,14 +207,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1954491602}
         m_TargetAssemblyTypeName: Map, Assembly-CSharp
-        m_MethodName: GoVillage
-        m_Mode: 1
+        m_MethodName: Go
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Village
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &892830246
@@ -422,14 +422,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1954491602}
         m_TargetAssemblyTypeName: Map, Assembly-CSharp
-        m_MethodName: GoCoast
-        m_Mode: 1
+        m_MethodName: Go
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Coast
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1000113966
@@ -757,14 +757,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1954491602}
         m_TargetAssemblyTypeName: Map, Assembly-CSharp
-        m_MethodName: GoForest
-        m_Mode: 1
+        m_MethodName: Go
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Forest
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1512846015
@@ -889,14 +889,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1954491602}
         m_TargetAssemblyTypeName: Map, Assembly-CSharp
-        m_MethodName: GoDesert
-        m_Mode: 1
+        m_MethodName: Go
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Desert
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1707625416
@@ -1073,6 +1073,8 @@ MonoBehaviour:
   - {x: 0.558068, y: 0.2407745, z: 0}
   - {x: -0.5974467, y: 0.7365604, z: 0}
   bgImage: {fileID: 1389543239}
+  talks: []
+  isPuzzle: 0
 --- !u!4 &1954491603
 Transform:
   m_ObjectHideFlags: 0

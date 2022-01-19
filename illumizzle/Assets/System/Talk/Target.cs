@@ -5,10 +5,14 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public CharacterBase target;
+
+    private UnityEngine.UI.Image size;
+    [SerializeField]
     private UnityEngine.UI.Image image;
+
     private void Awake()
     {
-        image = GetComponent<UnityEngine.UI.Image>();
+        size = GetComponent<UnityEngine.UI.Image>();
     }
 
     public void Initialize(CharacterBase target, int position)
@@ -16,8 +20,8 @@ public class Target : MonoBehaviour
         this.target = target;
 
         transform.rotation = new Quaternion(0, position * 180f, 0, 0);
-        image.sprite = target.sprites[0];
-        image.SetNativeSize();
+        image.sprite = size.sprite = target.sprites[0];
+        size.SetNativeSize();
     }
 
     public void ChangeFocus(CharacterBase character)

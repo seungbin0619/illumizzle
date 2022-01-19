@@ -9,24 +9,9 @@ public class Map : Area
         base.Start();
     }
 
-    public void GoVillage()
+    public void Go(string name)
     {
-        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Village");
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, name);
         ActionSystem.instance.Play();
-    }
-
-    public void GoForest()
-    {
-
-    }
-
-    public void GoDesert()
-    {
-
-    }
-
-    public void GoCoast()
-    {
-
     }
 }

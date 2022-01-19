@@ -16,6 +16,9 @@ public class Area : MonoBehaviour
     [SerializeField]
     protected TalkBase[] talks;
 
+    [SerializeField]
+    protected bool isPuzzle = false;
+
     private void Awake()
     {
         bgRect = bgImage.rectTransform;
@@ -40,7 +43,7 @@ public class Area : MonoBehaviour
                 bgRect.rect.height * positions[i].y);
 
             child.localPosition = targetPosition * 0.5f;
-            child.gameObject.SetActive(true);
+            if(!isPuzzle) child.gameObject.SetActive(true);
         }
     }
 
