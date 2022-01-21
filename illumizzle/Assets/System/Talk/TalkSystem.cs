@@ -76,7 +76,8 @@ public class TalkSystem : MonoBehaviour
     private TalkBase.Script targetScript;
     private Coroutine scriptCoroutine = null;
 
-    //private GameObject generated;
+    [SerializeField]
+    private TalkObject[] generates;
 
     #endregion
 
@@ -151,6 +152,27 @@ public class TalkSystem : MonoBehaviour
 
         foreach(Target target in Characters.Values)
             target.ChangeFocus(targetScript.character);
+
+        foreach(string command in targetScript.command.Split(';'))
+        {
+            string[] tmp = command.Split(' ');
+            string inst = tmp[0];
+            
+            switch(inst)
+            {
+                case "SHOW":
+                    int index = int.Parse(tmp[1]);
+                    Instantiate(generates[index].gameObject, objectPanel.transform);
+
+                    break;
+                case "CLEAR":
+                    foreach (Transform tf in objectPanel.transform)
+                        Destroy(tf.gameObject);
+
+                    break;
+            }
+        }
+        
 
         scriptCoroutine = StartCoroutine(CoNext(targetScript));
     }
