@@ -9,12 +9,12 @@ public class TalkBase : ScriptableObject
     [Serializable]
     public struct Script
     {
-        public CharacterBase character; // 캐릭터
-        public int sprite;              // 이미지 번호
+        public CharacterBase character;  // 캐릭터
+        public int sprite;               // 이미지 번호
 
-        public string text;             // 대화 내용
-        public bool hide;               // 캐릭터 가리기
-        public string command;          // 기타 호출
+        public string text;              // 대화 내용
+        public List<CharacterBase> hide; // 캐릭터 가리기
+        public string command;           // 기타 호출
     }
 
     [Serializable]

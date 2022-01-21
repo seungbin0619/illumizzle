@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Map : Area
 {
-    protected override void Start()
+    protected override void LateStart()
     {
-        base.Start();
+        if (!DataSystem.HasData("Story", "Map.Entry.00"))
+        {
+            DataSystem.SetData("Story", "Map.Entry.00", 1);
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[0]);
+        }
+
+        ActionSystem.instance.Play();
     }
 
     public void Go(string name)

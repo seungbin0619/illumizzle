@@ -16,9 +16,7 @@ public class TitleBackground : MonoBehaviour
 
     private void Start()
     {
-        int? index = DataSystem.GetData("Setting", "CurrentMap");
-        if (index == null) index = 0;
-
-        background.sprite = images[(int)index];
+        int index = DataSystem.GetData("Setting", "CurrentMap", 0);
+        background.sprite = images[index];
     }
 }

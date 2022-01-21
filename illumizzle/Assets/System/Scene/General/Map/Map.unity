@@ -1073,7 +1073,8 @@ MonoBehaviour:
   - {x: 0.558068, y: 0.2407745, z: 0}
   - {x: -0.5974467, y: 0.7365604, z: 0}
   bgImage: {fileID: 1389543239}
-  talks: []
+  talks:
+  - {fileID: 11400000, guid: 398c618d4cc1e3740a26e3a27f6e0f6e, type: 2}
   isPuzzle: 0
 --- !u!4 &1954491603
 Transform:

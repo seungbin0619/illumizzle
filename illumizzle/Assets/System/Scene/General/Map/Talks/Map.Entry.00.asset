@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
+  m_Name: Map.Entry.00
+  m_EditorClassIdentifier: 
+  scripts:
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uC74C... \uADF8\uB7EC\uBA74 \uC5B4\uB514\uBD80\uD130 \uAC08\uAE4C?"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC544\uBB34\uB370\uB098 \uAC00\uBA74 \uBB50\uB77C\uB3C4 \uC788\uACA0\uC9C0!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uC77C\uB2E8 \uAC00\uAE4C\uC6B4 \uC232\uBD80\uD130 \uAC00\uBCFC\uAE4C?"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC54C\uC558\uC5B4!"
+    hide: []
+    command: 
+  characters:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    position: 0

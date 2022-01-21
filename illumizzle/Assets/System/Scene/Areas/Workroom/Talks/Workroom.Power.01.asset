@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
+  m_Name: Workroom.Power.01
+  m_EditorClassIdentifier: 
+  scripts:
+  - character: {fileID: 0}
+    sprite: 0
+    text: "\uC774 \uC7A5\uCE58\uB294 \uD0DC\uC591\uC774\uB791 \uC5F0\uACB0\uB418\uC5B4
+      \uC788\uB294\uB370 \uC124\uACC4\uB3C4\uC5D0\uB294 \uC5C6\uC5B4!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uAE00\uC384, \uBCC4\uB85C \uC911\uC694\uD55C \uAC8C \uC544\uB2CC\uAC00
+      \uBD10."
+    hide: []
+    command: 
+  characters:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    position: 1

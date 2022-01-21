@@ -1420,14 +1420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a553e666aa2d1045a8d63166d8c5426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzles:
-  - theme: Forest
-    scenes:
-    - Stage1
-    - Stage2
-    - Stage3
-    - Stage4
-    - Stage5
 --- !u!1 &1361074988
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,6 +40,8 @@ public class ActionSystem : MonoBehaviour
 
     private static readonly WaitWhile waitPuzzle = new WaitWhile(() => PuzzleSystem.currentPuzzle != "");
 
+    public static readonly WaitWhile waitComplete = new WaitWhile(() => !instance.IsCompleted);
+
     public void AddAction(Action.ActionType type, params object[] args)
     {
         Action action = new Action();
@@ -58,19 +60,14 @@ public class ActionSystem : MonoBehaviour
             {
                 Next();
                 yield return wait;
-
-                /*
+                actions.RemoveAt(0);
+                
                 switch (currentAction.type)
                 {
                     case Action.ActionType.Talk: break;
-                    case Action.ActionType.Move:
-                        //Debug.Log(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-                        TalkSystem.instance.UpdateCamera();
-
-                        break;
+                    case Action.ActionType.Move: break;
                     case Action.ActionType.Puzzle: break;
                 }
-                */
             }
         }
         StartCoroutine(CoPlay());
@@ -107,7 +104,5 @@ public class ActionSystem : MonoBehaviour
 
                 break;
         }
-
-        actions.RemoveAt(0);
     }
 }

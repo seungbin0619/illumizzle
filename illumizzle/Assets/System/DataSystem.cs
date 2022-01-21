@@ -41,9 +41,9 @@ public class DataSystem : MonoBehaviour
         return instance.data[part].ContainsKey(key);
     }
 
-    public static int? GetData(string part, string key)
+    public static int GetData(string part, string key, int def = -1)
     {
-        if (!instance.data[part].ContainsKey(key)) return null;
+        if (!instance.data[part].ContainsKey(key)) return def;
         return instance.data[part][key];
     }
 

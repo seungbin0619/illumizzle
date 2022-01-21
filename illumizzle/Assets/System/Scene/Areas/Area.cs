@@ -39,16 +39,31 @@ public class Area : MonoBehaviour
         {
             Transform child = bgRect.GetChild(i);
             Vector3 targetPosition = new Vector3(
-                bgRect.rect.width * positions[i].x, 
+                bgRect.rect.width * positions[i].x,
                 bgRect.rect.height * positions[i].y);
 
             child.localPosition = targetPosition * 0.5f;
-            if(!isPuzzle) child.gameObject.SetActive(true);
+            if (!isPuzzle) child.gameObject.SetActive(true);
         }
+
+        IEnumerator LateStart()
+        {
+            yield return ActionSystem.waitComplete;
+            this.LateStart();
+        }
+        StartCoroutine(LateStart());
     }
+
+    protected virtual void LateStart() { }
 
     protected void PlayAction()
     {
+        ActionSystem.instance.Play();
+    }
+
+    public virtual void GoScene(string name)
+    {
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, name);
         ActionSystem.instance.Play();
     }
 }

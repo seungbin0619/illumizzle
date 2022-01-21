@@ -140,7 +140,9 @@ public class TalkSystem : MonoBehaviour
 
         scriptText.text = ""; //script.text;
 
-        characterPanel.gameObject.SetActive(!targetScript.hide);
+        foreach(Target obj in Characters.Values)
+            obj.gameObject.SetActive(targetScript.hide.Find(p => p == obj.target) == null);
+
         nameBorder.gameObject.SetActive(targetScript.character != null);
 
         if(targetScript.character != null) nameText.text = targetScript.character.name;
