@@ -5,19 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - trigger
-  - xf1
-  - xf2
-  - zf1
-  - zf2
-  - yf
-  - xb1
-  - xb2
-  - zb1
-  - zb2
-  - xf3
-  - zf3
-  - xb3
-  - zb3
+  - base
   layers:
   - Default
   - TransparentFX

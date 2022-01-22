@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JudgeClear : MonoBehaviour {
+public class JudgeClear1 : MonoBehaviour {
 
     public int cntTotFitTrigger;
     public int cntFitTrigger = 0;

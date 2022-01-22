@@ -13,7 +13,7 @@ public class TriggerScript : MonoBehaviour {
     private void LateUpdate() {
         if (cntTriggerStay > 0 && isPreFit != isFit) {
 
-            JudgeClear judgeClear = sceneController.GetComponent<JudgeClear>();
+            JudgeClear1 judgeClear = sceneController.GetComponent<JudgeClear1>();
 
             if (isFit == true) {
                 judgeClear.cntFitTrigger += 1;
