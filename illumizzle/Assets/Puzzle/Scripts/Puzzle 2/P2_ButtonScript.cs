@@ -7,7 +7,8 @@ public class P2_ButtonScript : MonoBehaviour {
     public GameObject sceneController;
     public GameObject group;
     public GameObject clickArea;
-    public bool isClockwise;
+
+    private bool isClockwise;
 
     public bool isRotating = false;
     public Vector3 rotateDir = Vector3.forward;
@@ -20,6 +21,8 @@ public class P2_ButtonScript : MonoBehaviour {
         actionController = sceneController.GetComponent<P2_ActionController>();
         groupScript = group.GetComponent<P2_GroupScript>();
         clickArea = gameObject.transform.parent.gameObject;
+        if (rotateDir.x + rotateDir.y + rotateDir.z > 0) isClockwise = true;
+        else isClockwise = false;
     }
 
     private void OnMouseDown() {
