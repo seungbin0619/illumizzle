@@ -170,9 +170,12 @@ public class TalkSystem : MonoBehaviour
                         Destroy(tf.gameObject);
 
                     break;
+                case "SET_PARTS":
+                    Blueprint.SetParts();
+
+                    break;
             }
         }
-        
 
         scriptCoroutine = StartCoroutine(CoNext(targetScript));
     }
@@ -212,6 +215,9 @@ public class TalkSystem : MonoBehaviour
 
         foreach (Transform group in characterPanel)
             foreach (Transform child in group)
+                Destroy(child.gameObject);
+
+        foreach (Transform child in objectPanel)
                 Destroy(child.gameObject);
     }
 
