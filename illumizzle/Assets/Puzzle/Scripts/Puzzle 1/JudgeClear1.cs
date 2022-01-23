@@ -9,7 +9,8 @@ public class JudgeClear1 : MonoBehaviour {
     private bool isFinished = false;
 
     void Update() {
-        if (isFinished == false && cntFitTrigger == cntTotFitTrigger) {
+        //if (isFinished == false && cntFitTrigger == cntTotFitTrigger) {
+        if ((isFinished == false && cntFitTrigger == cntTotFitTrigger) || Input.GetKeyDown(KeyCode.S)) { 
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
             PuzzleSystem.instance.AfterPuzzle(true);

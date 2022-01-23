@@ -31,8 +31,7 @@ public class TalkBase : ScriptableObject
         public POSITION position;
     }
 
-    [SerializeField]
-    private Script[] scripts;          // 대화 목록
+    public Script[] scripts;          // 대화 목록
     public Character[] characters;    // 대화 등장 캐릭터
 
     public int Count { get { return scripts.Length; } }

@@ -15,6 +15,57 @@ public class Workroom : Area
         ActionSystem.instance.Play();
     }
 
+    public void ClickBlueprint()
+    {
+        if (!DataSystem.HasData("Story", "Workroom.Blueprint.00"))
+        {
+            DataSystem.SetData("Story", "Workroom.Blueprint.00", 1);
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[2]);
+        }else if(!DataSystem.HasData("Story", "Map.Entry.00"))
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[15]);
+        else
+        {
+            Blueprint.UpdateParts();
+            int changedCount = DataSystem.GetData("Story", "ChangedPartsCount", 0);
+            int totalParts = DataSystem.GetData("Story", "TotalPartsCount", 0);
+
+            if (changedCount == 0) // 구한 부품이 없는 경우
+            {
+                talks[18].scripts[0].text = "(현재 부품을 " + totalParts + "개 모았다.)";
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[18]);
+            }
+            else
+            {
+                talks[16].scripts[0].text = "가져온 부품 " + changedCount + "개를 바꿔보자!";
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[16]);
+
+                if (DataSystem.GetData("Story", "", 0) < Blueprint.partsName.Length)
+                {
+                    bool firstFlag = false;
+
+                    talks[17].scripts[1].text = "남은게 ";
+                    for (int i = 0; i < Blueprint.partsName.Length; i++)
+                    {
+                        if (i < totalParts) continue;
+                        if (firstFlag) talks[17].scripts[1].text += ", ";
+
+                        talks[17].scripts[1].text += Blueprint.partsName[i];
+                        firstFlag = true;
+                    }
+
+                    talks[17].scripts[1].text += "지? 남은 부품도 빨리 찾으러 가자!";
+                    ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[17]);
+                }
+                else // 부품 다 구한 경우
+                {
+
+                }
+            }
+        }
+
+        ActionSystem.instance.Play();
+    }
+
     public void ClickBulb()
     {
         if (!DataSystem.HasData("Story", "Workroom.Bulb.00"))
@@ -23,17 +74,6 @@ public class Workroom : Area
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
         }
         else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
-
-        ActionSystem.instance.Play();
-    }
-
-    public void ClickBlueprint()
-    {
-        if (!DataSystem.HasData("Story", "Workroom.Blueprint.00"))
-        {
-            DataSystem.SetData("Story", "Workroom.Blueprint.00", 1);
-            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[2]);
-        }
 
         ActionSystem.instance.Play();
     }

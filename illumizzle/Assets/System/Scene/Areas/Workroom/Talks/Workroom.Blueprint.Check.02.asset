@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a91b97188344cb4ea53e1d283889400, type: 3}
-  m_Name: village_npc
+  m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
+  m_Name: Workroom.Blueprint.Check.02
   m_EditorClassIdentifier: 
-  name: Npc
-  sprites:
-  - {fileID: 21300000, guid: a0dd0720da6235c4e81e815e3c59633e, type: 3}
+  scripts:
+  - character: {fileID: 0}
+    sprite: 0
+    text: "(\uD604\uC7AC \uBD80\uD488\uC744 0\uAC1C \uBAA8\uC558\uB2E4.)"
+    hide: []
+    command: SHOW 0
+  characters: []
