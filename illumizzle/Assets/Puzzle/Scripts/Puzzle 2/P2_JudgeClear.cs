@@ -14,7 +14,7 @@ public class P2_JudgeClear : MonoBehaviour {
         if (isFinished == false && dist <= 0.04f || Input.GetKeyDown(KeyCode.S)) {
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
-            PuzzleSystem.instance.AfterPuzzle(true);
+            //PuzzleSystem.instance.AfterPuzzle(true);
         }
     }
 }

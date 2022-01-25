@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class P2_ButtonScript : MonoBehaviour {
 
+    public GameObject cubeBase;
     public GameObject sceneController;
     public GameObject group;
     public GameObject clickArea;
@@ -46,7 +47,7 @@ public class P2_ButtonScript : MonoBehaviour {
     private void Update() {
         if (isRotating == true) {
 
-            group.transform.RotateAround(group.transform.position, rotateDir, 300 * Time.deltaTime);
+            group.transform.RotateAround(group.transform.position, cubeBase.transform.rotation * rotateDir, 300 * Time.deltaTime);
 
             float angle = Quaternion.Angle(group.transform.rotation, target);
 
