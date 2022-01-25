@@ -219,6 +219,8 @@ public class TalkSystem : MonoBehaviour
 
         foreach (Transform child in objectPanel)
                 Destroy(child.gameObject);
+
+        DataSystem.SaveData();
     }
 
     /*

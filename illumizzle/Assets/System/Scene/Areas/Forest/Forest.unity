@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f16309f4c008120498867c6e8e1ad813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapIndex: 1
   name: Forest
   positions:
   - {x: -0.5760416, y: 0.5200737, z: 0}

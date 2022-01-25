@@ -368,6 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99bd1631b6d567b4e96a4f36368a0758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapIndex: 4
   name: Workroom
   positions:
   - {x: 0.000001396146, y: -0.5816428, z: 0}

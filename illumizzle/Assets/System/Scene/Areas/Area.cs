@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Area : MonoBehaviour
 {
+    [SerializeField]
+    private int mapIndex = -1;
+
     public new string name;     // 지역 이름
     [SerializeField]
     protected Vector3[] positions; // 스테이지 버튼 위치
@@ -51,7 +54,14 @@ public class Area : MonoBehaviour
             yield return ActionSystem.waitComplete;
             this.LateStart();
         }
+
         StartCoroutine(LateStart());
+
+        if (mapIndex >= 0 && mapIndex < 5)
+        {
+            DataSystem.SetData("Setting", "CurrentMap", mapIndex);
+            DataSystem.SaveData();
+        }
     }
 
     protected virtual void LateStart() { }

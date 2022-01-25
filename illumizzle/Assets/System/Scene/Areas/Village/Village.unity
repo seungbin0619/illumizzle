@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d350f605a23214da028db2791e7b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapIndex: 0
   name: Village
   positions:
   - {x: 0.100375, y: 0.3410093, z: 0}

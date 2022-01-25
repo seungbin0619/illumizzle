@@ -19,7 +19,7 @@ public class DataSystem : MonoBehaviour
     #endregion
 
     //private static readonly string path = Application.persistentDataPath;
-    private static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop);
+    private static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + @"\";
 
     private Dictionary<string, Dictionary<string, int>> data;
     private static readonly string[] parts = new string[3] { "Story", "Puzzle", "Setting"};
@@ -29,6 +29,11 @@ public class DataSystem : MonoBehaviour
         data = LoadData();
 
         //SaveData();
+    }
+
+    public static void Load(bool flag = false)
+    {
+        instance.data = LoadData(flag);
     }
 
     public static void SetData(string part, string key, int value)
@@ -47,7 +52,7 @@ public class DataSystem : MonoBehaviour
         return instance.data[part][key];
     }
 
-    private static void SaveData()
+    public static void SaveData()
     {
         foreach (string part in parts) { 
             XElement el = new XElement("root", instance.data[part].Select(kv => new XElement(kv.Key, kv.Value)));
@@ -56,7 +61,7 @@ public class DataSystem : MonoBehaviour
         }
     }
 
-    private static Dictionary<string, Dictionary<string, int>> LoadData()
+    private static Dictionary<string, Dictionary<string, int>> LoadData(bool flag = false)
     {
         var data = new Dictionary<string, Dictionary<string, int>>();
         foreach (string part in parts)
@@ -64,6 +69,7 @@ public class DataSystem : MonoBehaviour
             string tmp = path + part + ".xml";
             data[part] = new Dictionary<string, int>();
 
+            if (flag) continue;
             if (File.Exists(tmp)) { 
                 XElement root = XElement.Load(tmp);
                 foreach (var element in root.Elements())
