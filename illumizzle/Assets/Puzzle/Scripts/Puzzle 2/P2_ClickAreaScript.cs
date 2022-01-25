@@ -6,15 +6,17 @@ public class P2_ClickAreaScript : MonoBehaviour {
 
     public GameObject sceneController;
 
-    GameObject[] arrows = new GameObject[2];
+    public int arrowCnt;
+    public GameObject[] arrows = new GameObject[2];
 
-    private bool isHover = false;
+    public bool isHover = false;
     public bool isArrowHover = false;
+    private bool isArrowOn = false;
 
     P2_ActionController actionController;
 
     private void Start() {
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < arrowCnt; i++) {
             arrows[i] = transform.GetChild(i).gameObject;
         }
         actionController = sceneController.GetComponent<P2_ActionController>();
@@ -29,22 +31,32 @@ public class P2_ClickAreaScript : MonoBehaviour {
     }
 
     private void Update() {
-        if (isHover == true && arrows[0].GetComponent<BoxCollider>().enabled == false
+        if (isHover == true && isArrowOn == false
             && actionController.isActioning == false) {
 
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < arrowCnt; i++) {
                 arrows[i].GetComponent<SpriteRenderer>().enabled = true;
                 arrows[i].GetComponent<BoxCollider>().enabled = true;
+
+                if (gameObject.CompareTag("meeple")) {
+                    if (arrows[i].GetComponent<P2_MeepleArrowScript>().isPathCnnted == false) {
+                        arrows[i].GetComponent<SpriteRenderer>().enabled = false;
+                        arrows[i].GetComponent<BoxCollider>().enabled = false;
+                    }
+                }
             }
+
+            isArrowOn = true;
         }
 
-        else if (isHover == false && isArrowHover == false 
-            && arrows[0].GetComponent<SpriteRenderer>().enabled == true) {
+        else if (isHover == false && isArrowHover == false && isArrowOn == true) {
 
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < arrowCnt; i++) {
                 arrows[i].GetComponent<SpriteRenderer>().enabled = false;
                 arrows[i].GetComponent<BoxCollider>().enabled = false;
             }
+
+            isArrowOn = false;
         }
     }
 }

@@ -4,8 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - trigger
   - base
+  - cube
+  - path
+  - tile
+  - meeple
+  - meepleArrow
+  - meepleTrigger
+  - group
   layers:
   - Default
   - TransparentFX

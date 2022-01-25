@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class P2_CubeScript : MonoBehaviour {
 
+    public GameObject sceneController;
     private void OnTriggerStay(Collider other) {
-        P2_GroupScript groupScript = other.GetComponent<P2_GroupScript>();
-        if (groupScript.includedCubeCnt < 6) {
-            groupScript.includedCube[groupScript.includedCubeCnt++] = gameObject.transform.parent.gameObject;
-            //Debug.Log("추가된 오브젝트 : " + gameObject.transform.parent.gameObject);
+        if (other.CompareTag("group")) {
+            P2_GroupScript groupScript = other.GetComponent<P2_GroupScript>();
+            if (groupScript.includedCubeCnt < 6) {
+                if (gameObject.CompareTag("cube")) {
+                    groupScript.includedCube[groupScript.includedCubeCnt++] = gameObject.transform.parent.gameObject;
+                }
+                else {
+                    groupScript.includedCube[groupScript.includedCubeCnt++] = gameObject;
+                }
+                //groupScript.includedCube[groupScript.includedCubeCnt++] = gameObject.transform.parent.gameObject;
+            }
         }
     }
 }
