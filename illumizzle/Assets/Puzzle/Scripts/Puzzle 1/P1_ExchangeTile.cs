@@ -39,8 +39,8 @@ public class P1_ExchangeTile : MonoBehaviour {
 
     private void FixedUpdate() {
         if (isMooving == true) {
-            calledTile1.transform.position += (position2 - position1) / (8 + dist * 3);
-            calledTile2.transform.position += (position1 - position2) / (8 + dist * 3);
+            calledTile1.transform.position += (position2 - position1) / (8 + dist * 3) * 40 * Time.deltaTime;
+            calledTile2.transform.position += (position1 - position2) / (8 + dist * 3) * 40 * Time.deltaTime;
 
             if (Vector3.Distance(calledTile1.transform.position,
                                  position2) <= 0.1f) {

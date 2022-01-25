@@ -42,7 +42,7 @@ public class P2_MeepleArrowScript : MonoBehaviour {
     private void Update() {
         if (isMooving == true) {
 
-            meeple.transform.position += targetDir / 100;
+            meeple.transform.position += targetDir * 4 * Time.deltaTime;
 
             float dist = Vector3.Distance(meeple.transform.position, target);
 
