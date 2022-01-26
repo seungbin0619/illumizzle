@@ -3,15 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class P2_JudgeClear : MonoBehaviour {
-    public GameObject meeple;
-    public GameObject destination;
+
+    P2_ActionController actionController;
+
+    public GameObject[] meeples = new GameObject[2];
+    public GameObject[] destinations = new GameObject[2];
 
     private bool isFinished = false;
 
+    private void Start() {
+        actionController = gameObject.GetComponent<P2_ActionController>();
+    }
+
     void Update() {
-        float dist = Vector3.Distance(meeple.transform.position, destination.transform.position);
-        //if (isFinished == false && dist <= 0.03f) {
-        if (isFinished == false && dist <= 0.04f || Input.GetKeyDown(KeyCode.S)) {
+
+        bool isArrived = true;
+
+        for (int i = 0; i < actionController.meepleCnt && isArrived; i++) {
+            float dist = Vector3.Distance(meeples[i].transform.position, destinations[i].transform.position);
+            if (dist > 0.04f) isArrived = false;
+        }
+
+        //if (isFinished == false && isArrived == true) {
+        if (isFinished == false && isArrived == true || Input.GetKeyDown(KeyCode.S)) {
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
             //PuzzleSystem.instance.AfterPuzzle(true);

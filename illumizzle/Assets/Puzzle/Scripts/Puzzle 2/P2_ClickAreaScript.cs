@@ -6,8 +6,8 @@ public class P2_ClickAreaScript : MonoBehaviour {
 
     public GameObject sceneController;
 
-    public int arrowCnt;
     public GameObject[] arrows = new GameObject[2];
+    public int arrowCnt;
 
     public bool isHover = false;
     public bool isArrowHover = false;

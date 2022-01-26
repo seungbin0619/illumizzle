@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class P2_GroupScript : MonoBehaviour {
 
-    public int includedCubeCnt = 0;
-    public GameObject[] includedCube = new GameObject[6];
+    public GameObject sceneController;
     public GameObject cubeBase;
     public P2_ButtonScript buttonScript;
 
+    public GameObject[] includedObj = new GameObject[13];
+    public int includedObjCnt = 0;
+
+    P2_ActionController actionController;
+    private int maxCubeCnt;
+
+    private void Start() {
+        actionController = sceneController.GetComponent<P2_ActionController>();
+        maxCubeCnt = actionController.maxGroupCubeCnt;
+    }
+
     private void LateUpdate() {
-        if (includedCubeCnt >= 4 && buttonScript.isRotating == false) {
+        if (includedObjCnt >= maxCubeCnt && buttonScript.isRotating == false) {
             MakeChild();
             buttonScript.isRotating = true;
             gameObject.GetComponent<BoxCollider>().enabled = false;
@@ -19,14 +29,14 @@ public class P2_GroupScript : MonoBehaviour {
     }
 
     private void MakeChild() {
-        for (int i = 0; i < includedCubeCnt; i++) {
-            includedCube[i].transform.parent = gameObject.transform;
+        for (int i = 0; i < includedObjCnt; i++) {
+            includedObj[i].transform.parent = gameObject.transform;
         }
     }
 
     public void DeleteChild() {
-        for (int i = 0; i < includedCubeCnt; i++) {
-            includedCube[i].transform.parent = cubeBase.transform;
+        for (int i = 0; i < includedObjCnt; i++) {
+            includedObj[i].transform.parent = cubeBase.transform;
         }
     }
 }

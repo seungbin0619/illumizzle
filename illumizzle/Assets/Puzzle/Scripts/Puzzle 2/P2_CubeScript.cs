@@ -5,15 +5,24 @@ using UnityEngine;
 public class P2_CubeScript : MonoBehaviour {
 
     public GameObject sceneController;
+
+    P2_ActionController actionController;
+    private int maxObjCnt;
+
+    private void Start() {
+        actionController = sceneController.GetComponent<P2_ActionController>();
+        maxObjCnt = actionController.maxGroupCubeCnt + actionController.meepleCnt * 2;
+    }
+
     private void OnTriggerStay(Collider other) {
         if (other.CompareTag("group")) {
             P2_GroupScript groupScript = other.GetComponent<P2_GroupScript>();
-            if (groupScript.includedCubeCnt < 6) {
+            if (groupScript.includedObjCnt < maxObjCnt) {
                 if (gameObject.CompareTag("cube")) {
-                    groupScript.includedCube[groupScript.includedCubeCnt++] = gameObject.transform.parent.gameObject;
+                    groupScript.includedObj[groupScript.includedObjCnt++] = gameObject.transform.parent.gameObject;
                 }
                 else {
-                    groupScript.includedCube[groupScript.includedCubeCnt++] = gameObject;
+                    groupScript.includedObj[groupScript.includedObjCnt++] = gameObject;
                 }
                 //groupScript.includedCube[groupScript.includedCubeCnt++] = gameObject.transform.parent.gameObject;
             }

@@ -7,8 +7,8 @@ public class P2_ButtonScript : MonoBehaviour {
     public GameObject cubeBase;
     public GameObject sceneController;
     public GameObject group;
-    public GameObject clickArea;
 
+    private GameObject clickArea;
     private bool isClockwise;
 
     public bool isRotating = false;
@@ -55,7 +55,7 @@ public class P2_ButtonScript : MonoBehaviour {
                 group.transform.rotation = target;
 
                 groupScript.DeleteChild();
-                groupScript.includedCubeCnt = 0;
+                groupScript.includedObjCnt = 0;
                 isRotating = false;
                 actionController.isActioning = false;
 

@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 4282550504429886317}
   - component: {fileID: 4282550504429886316}
   m_Layer: 0
-  m_Name: P2_Click Area Coner
+  m_Name: P2_Click Area Coner Coner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -11,13 +11,14 @@ public class P2_BaseRotater : MonoBehaviour, IDragHandler {
     P2_ActionController actionController;
 
     private float rotateSpeed = 70;
+    private bool isRotating = false;
 
     private void Start() {
         actionController = sceneController.GetComponent<P2_ActionController>();
     }
 
     public void OnDrag(PointerEventData eventData) {
-        if (Input.GetMouseButton(1)) {
+        if (Input.GetMouseButton(1) && isRotating == true) {
             float x = eventData.delta.x * Time.deltaTime * rotateSpeed;
             float y = eventData.delta.y * Time.deltaTime * rotateSpeed;
 
@@ -30,10 +31,12 @@ public class P2_BaseRotater : MonoBehaviour, IDragHandler {
     private void Update() {
         if (Input.GetMouseButton(1) && actionController.isActioning == false) {
             cubeBase.GetComponent<SphereCollider>().enabled = true;
+            isRotating = true;
             actionController.isActioning = true;
         }
         if (!Input.GetMouseButton(1) && cubeBase.GetComponent<SphereCollider>().enabled == true) {
             cubeBase.GetComponent<SphereCollider>().enabled = false;
+            isRotating = false;
             actionController.isActioning = false;
         }
     }

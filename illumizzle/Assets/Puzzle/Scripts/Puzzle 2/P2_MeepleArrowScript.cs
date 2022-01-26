@@ -6,16 +6,18 @@ public class P2_MeepleArrowScript : MonoBehaviour {
 
     public GameObject sceneController;
     public GameObject meeple;
-    private GameObject clickArea;
+    public char crColorInit = 'W';
+
     public bool isPathCnnted = false;
     public int cntdTileCnt = 0;
 
     public bool isMooving = false;
     public Vector3 moveDir;
-
     private Vector3 targetDir;
 
+    private GameObject clickArea;
     P2_ActionController actionController;
+
     Vector3 target;
 
     private void Start() {
@@ -62,6 +64,7 @@ public class P2_MeepleArrowScript : MonoBehaviour {
         else isPathCnnted = false;
 
         cntdTileCnt = 0;
+        crColorInit = 'W';
     }
 
     private void OnMouseEnter() {

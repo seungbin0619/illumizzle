@@ -1390,7 +1390,7 @@ GameObject:
   - component: {fileID: 373306689}
   - component: {fileID: 373306685}
   m_Layer: 0
-  m_Name: Meeple
+  m_Name: Blue Meeple
   m_TagString: meeple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1441,12 +1441,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneController: {fileID: 1193779238}
-  arrowCnt: 4
   arrows:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  arrowCnt: 4
   isHover: 0
   isArrowHover: 0
 --- !u!1001 &387114000
@@ -1636,6 +1636,16 @@ PrefabInstance:
       propertyPath: cubeBase
       value: 
       objectReference: {fileID: 1936961880}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: maxObjCnt
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 1193779238}
     - target: {fileID: 8259380214991587299, guid: e7f50277c90ef024c9b078681b0d6977,
         type: 3}
       propertyPath: m_Size.x
@@ -2782,8 +2792,8 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_Bias: 0.2
+    m_NormalBias: 0
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
@@ -4166,6 +4176,16 @@ PrefabInstance:
       propertyPath: cubeBase
       value: 
       objectReference: {fileID: 1936961880}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: maxObjCnt
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 1193779238}
     - target: {fileID: 8259380214991587299, guid: e7f50277c90ef024c9b078681b0d6977,
         type: 3}
       propertyPath: m_Size.x
@@ -4716,6 +4736,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActioning: 0
+  maxGroupCubeCnt: 4
+  meepleCnt: 1
 --- !u!4 &1193779240
 Transform:
   m_ObjectHideFlags: 0
@@ -4742,8 +4764,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3af7006bcd07543ac1317a00373205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meeple: {fileID: 373306683}
-  destination: {fileID: 1920646371}
+  meeples:
+  - {fileID: 373306683}
+  destinations:
+  - {fileID: 1920646371}
 --- !u!4 &1233362788 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4282550502630099480, guid: 518ee52e67d6cdb4a97fd981c19a6066,
@@ -5375,7 +5399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2108c3faade628044bf523428c477b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneController: {fileID: 0}
+  sceneController: {fileID: 1193779238}
 --- !u!65 &1525122098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6469,6 +6493,16 @@ PrefabInstance:
       propertyPath: cubeBase
       value: 
       objectReference: {fileID: 1936961880}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: maxObjCnt
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 1193779238}
     - target: {fileID: 8259380214991587299, guid: e7f50277c90ef024c9b078681b0d6977,
         type: 3}
       propertyPath: m_Size.x
@@ -7078,6 +7112,16 @@ PrefabInstance:
       propertyPath: cubeBase
       value: 
       objectReference: {fileID: 1936961880}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: maxObjCnt
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 1193779238}
     - target: {fileID: 8259380214991587299, guid: e7f50277c90ef024c9b078681b0d6977,
         type: 3}
       propertyPath: m_Size.x
@@ -7313,7 +7357,7 @@ GameObject:
   - component: {fileID: 1920646374}
   - component: {fileID: 1920646373}
   m_Layer: 0
-  m_Name: Destination
+  m_Name: Blue Destination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7349,7 +7393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2108c3faade628044bf523428c477b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneController: {fileID: 0}
+  sceneController: {fileID: 1193779238}
 --- !u!54 &1920646374
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7818,6 +7862,16 @@ PrefabInstance:
       propertyPath: cubeBase
       value: 
       objectReference: {fileID: 1936961880}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: maxObjCnt
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 1193779238}
     - target: {fileID: 8259380214991587299, guid: e7f50277c90ef024c9b078681b0d6977,
         type: 3}
       propertyPath: m_Size.x
@@ -7907,6 +7961,16 @@ PrefabInstance:
       propertyPath: cubeBase
       value: 
       objectReference: {fileID: 1936961880}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: maxObjCnt
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119358513680227107, guid: e7f50277c90ef024c9b078681b0d6977,
+        type: 3}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 1193779238}
     - target: {fileID: 8259380214991587299, guid: e7f50277c90ef024c9b078681b0d6977,
         type: 3}
       propertyPath: m_Size.x
