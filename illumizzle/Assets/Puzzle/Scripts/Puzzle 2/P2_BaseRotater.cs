@@ -10,22 +10,29 @@ public class P2_BaseRotater : MonoBehaviour, IDragHandler {
 
     P2_ActionController actionController;
 
-    private float rotateSpeed = 70;
+    private float rotateSpeed = 0.000007f;
     private bool isRotating = false;
+
+    private long lastOnDragTime = 0;
 
     private void Start() {
         actionController = sceneController.GetComponent<P2_ActionController>();
     }
 
     public void OnDrag(PointerEventData eventData) {
-        if (Input.GetMouseButton(1) && isRotating == true) {
-            float x = eventData.delta.x * Time.deltaTime * rotateSpeed;
-            float y = eventData.delta.y * Time.deltaTime * rotateSpeed;
+        if (isRotating == true && lastOnDragTime != 0) {
+
+            long deltaTime = System.DateTime.Now.Ticks - lastOnDragTime;
+
+            float x = eventData.delta.x * deltaTime * rotateSpeed;
+            float y = eventData.delta.y * deltaTime * rotateSpeed;
 
             transform.Rotate(0, -x, y, Space.World);
 
             Debug.Log("드래그 중");
         }
+
+        lastOnDragTime = System.DateTime.Now.Ticks;
     }
 
     private void Update() {
@@ -38,6 +45,7 @@ public class P2_BaseRotater : MonoBehaviour, IDragHandler {
             cubeBase.GetComponent<SphereCollider>().enabled = false;
             isRotating = false;
             actionController.isActioning = false;
+            lastOnDragTime = 0;
         }
     }
 }
