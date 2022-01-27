@@ -44,7 +44,7 @@ public class TalkSystem : MonoBehaviour
     private TMPro.TMP_Text nameText;
 
     [SerializeField]
-    private UnityEngine.UI.Image nextButton;
+    private Animation nextButton;
 
     [SerializeField]
     private Target characterPrefab;
@@ -119,7 +119,9 @@ public class TalkSystem : MonoBehaviour
             isPlaying = false;
 
             scriptText.text = targetScript.text;
-            nextButton.color = Color.white;
+            //nextButton.color = Color.white;
+            nextButton.gameObject.SetActive(true);
+            nextButton.Play();
         }
         else Next();
     }
@@ -148,7 +150,8 @@ public class TalkSystem : MonoBehaviour
 
         if(targetScript.character != null) nameText.text = targetScript.character.name;
 
-        nextButton.color = new Color(1, 1, 1, 0);
+        //nextButton.color = new Color(1, 1, 1, 0);
+        nextButton.gameObject.SetActive(false);
 
         foreach(Target target in Characters.Values)
             target.ChangeFocus(targetScript.character);
@@ -201,7 +204,9 @@ public class TalkSystem : MonoBehaviour
         }
 
         scriptText.text = script.text;
-        nextButton.color = Color.white;
+
+        nextButton.gameObject.SetActive(true);
+        nextButton.Play();
     }
 
     private void Close()

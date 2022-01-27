@@ -21,7 +21,9 @@ public class Target : MonoBehaviour
 
         transform.rotation = new Quaternion(0, position * 180f, 0, 0);
         image.sprite = size.sprite = target.sprites[0];
+
         size.SetNativeSize();
+        image.SetNativeSize();
     }
 
     public void ChangeFocus(CharacterBase character)
