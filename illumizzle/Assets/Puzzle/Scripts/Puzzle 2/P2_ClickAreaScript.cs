@@ -31,15 +31,17 @@ public class P2_ClickAreaScript : MonoBehaviour {
     }
 
     private void Update() {
-        if (isHover == true && isArrowOn == false
-            && actionController.isActioning == false) {
+        if (isHover == true && actionController.isActioning == false) {
 
             for (int i = 0; i < arrowCnt; i++) {
                 arrows[i].GetComponent<SpriteRenderer>().enabled = true;
                 arrows[i].GetComponent<BoxCollider>().enabled = true;
 
                 if (gameObject.CompareTag("meeple")) {
-                    if (arrows[i].GetComponent<P2_MeepleArrowScript>().isPathCnnted == false) {
+                    char crArrowColorInit = arrows[i].GetComponent<P2_MeepleArrowScript>().crColorInit;
+                    char crMeepleColorInit = gameObject.transform.GetChild(4).gameObject.GetComponent<MeshRenderer>().material.name[0];
+                    if (arrows[i].GetComponent<P2_MeepleArrowScript>().isPathCnnted == false
+                        || crArrowColorInit != crMeepleColorInit) {
                         arrows[i].GetComponent<SpriteRenderer>().enabled = false;
                         arrows[i].GetComponent<BoxCollider>().enabled = false;
                     }
