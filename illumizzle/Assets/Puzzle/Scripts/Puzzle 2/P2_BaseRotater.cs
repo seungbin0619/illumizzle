@@ -10,7 +10,7 @@ public class P2_BaseRotater : MonoBehaviour, IDragHandler {
 
     P2_ActionController actionController;
 
-    private float rotateSpeed = 0.000007f;
+    private float rotateSpeed = 0.002f;
     private bool isRotating = false;
 
     private long lastOnDragTime = 0;
@@ -24,8 +24,8 @@ public class P2_BaseRotater : MonoBehaviour, IDragHandler {
 
             long deltaTime = System.DateTime.Now.Ticks - lastOnDragTime;
 
-            float x = eventData.delta.x * deltaTime * rotateSpeed;
-            float y = eventData.delta.y * deltaTime * rotateSpeed;
+            float x = eventData.delta.x * deltaTime * rotateSpeed / Screen.width;
+            float y = eventData.delta.y * deltaTime * rotateSpeed / Screen.width;
 
             transform.Rotate(0, -x, y, Space.World);
 

@@ -51,7 +51,7 @@ public class P2_ButtonScript : MonoBehaviour {
 
             float angle = Quaternion.Angle(group.transform.rotation, target);
 
-            if (angle < 4f) {
+            if (angle < 6f) {
                 group.transform.rotation = target;
 
                 groupScript.DeleteChild();
