@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Npc
   sprites:
-  - {fileID: 21300000, guid: a0dd0720da6235c4e81e815e3c59633e, type: 3}
+  - {fileID: 21300000, guid: 22961c552762ca045ba13ad11d2e4a0f, type: 3}
