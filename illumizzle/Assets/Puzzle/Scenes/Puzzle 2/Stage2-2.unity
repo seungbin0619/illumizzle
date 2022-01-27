@@ -3776,6 +3776,11 @@ PrefabInstance:
       propertyPath: sceneController
       value: 
       objectReference: {fileID: 1193779238}
+    - target: {fileID: 7602549639542034738, guid: 568770c3dd2b95e4e86e12a18d39812f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8000468485822330600, guid: 568770c3dd2b95e4e86e12a18d39812f,
         type: 3}
       propertyPath: sceneController
@@ -3871,6 +3876,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1e259a1b574c5824085c055e1749529f, type: 2}
+    - target: {fileID: 8603339862421782952, guid: 568770c3dd2b95e4e86e12a18d39812f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603339862421782952, guid: 568770c3dd2b95e4e86e12a18d39812f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.385
+      objectReference: {fileID: 0}
     - target: {fileID: 8629392673898471857, guid: 568770c3dd2b95e4e86e12a18d39812f,
         type: 3}
       propertyPath: sceneController
@@ -7323,6 +7338,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1e259a1b574c5824085c055e1749529f, type: 2}
+    - target: {fileID: 7602549639542034738, guid: 568770c3dd2b95e4e86e12a18d39812f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759854013894417268, guid: 568770c3dd2b95e4e86e12a18d39812f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759854013894417268, guid: 568770c3dd2b95e4e86e12a18d39812f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.385
+      objectReference: {fileID: 0}
     - target: {fileID: 7812178067110442858, guid: 568770c3dd2b95e4e86e12a18d39812f,
         type: 3}
       propertyPath: m_IsActive
