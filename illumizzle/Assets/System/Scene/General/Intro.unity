@@ -541,7 +541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 80}
+  m_AnchoredPosition: {x: 0, y: 120}
   m_SizeDelta: {x: -360, y: 240}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &492463127
@@ -862,7 +862,7 @@ MonoBehaviour:
   nameBorder: {fileID: 403205010}
   scriptText: {fileID: 1048581269}
   nameText: {fileID: 1156321848}
-  nextButton: {fileID: 1361074989}
+  nextButton: {fileID: 1361074992}
   characterPrefab: {fileID: 7807918509752603011, guid: 00d99a59377d3b44e9f3202a7594a8d2,
     type: 3}
   generates:
@@ -1436,6 +1436,7 @@ GameObject:
   - component: {fileID: 1361074991}
   - component: {fileID: 1361074990}
   - component: {fileID: 1361074989}
+  - component: {fileID: 1361074992}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -1456,14 +1457,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 64ccb96de9f3215489ade1aea1bd44f3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1497,9 +1498,25 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -240, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -210, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0}
+--- !u!111 &1361074992
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361074988}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 97f149f5e43351a42bd0b2028e065dfd, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 97f149f5e43351a42bd0b2028e065dfd, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1719527764
 GameObject:
   m_ObjectHideFlags: 0
