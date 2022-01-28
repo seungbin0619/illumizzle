@@ -27,7 +27,8 @@ public class P2_PathScript : MonoBehaviour {
                 == gameObject.GetComponent<MeshRenderer>().material.name[0]) {
                 meepleArrowScript.cntdTileCnt++;
             }
-            
+
+            Debug.Log(gameObject.transform.parent.parent.name);
         }
     }
 }

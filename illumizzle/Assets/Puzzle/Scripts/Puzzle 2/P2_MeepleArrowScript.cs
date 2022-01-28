@@ -60,7 +60,7 @@ public class P2_MeepleArrowScript : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (cntdTileCnt == 2) isPathCnnted = true;
+        if (cntdTileCnt >= 2) isPathCnnted = true;
         else isPathCnnted = false;
 
         cntdTileCnt = 0;
