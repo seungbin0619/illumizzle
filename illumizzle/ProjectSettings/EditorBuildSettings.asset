@@ -52,8 +52,11 @@ EditorBuildSettings:
     guid: 2cc8b6a8bae550f4a8cb2a17a699fc6e
   - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 2/Stage2-3.unity
-    guid: 9617bff2ce829574f9a0f5ff94dd2854
+    guid: 2878d6f5fca25f34eb7b25843594ded9
   - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 2/Stage2-4.unity
+    guid: 9617bff2ce829574f9a0f5ff94dd2854
+  - enabled: 1
+    path: Assets/Puzzle/Scenes/Puzzle 2/Stage2-5.unity
     guid: d3fe8ec3adc829c46a11e0e4eeb7d177
   m_configObjects: {}

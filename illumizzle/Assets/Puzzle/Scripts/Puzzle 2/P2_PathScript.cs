@@ -28,7 +28,7 @@ public class P2_PathScript : MonoBehaviour {
                 meepleArrowScript.cntdTileCnt++;
             }
 
-            Debug.Log(gameObject.transform.parent.parent.name);
+            //Debug.Log(gameObject.transform.parent.parent.name);
         }
     }
 }
