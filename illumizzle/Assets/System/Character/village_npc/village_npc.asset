@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a91b97188344cb4ea53e1d283889400, type: 3}
   m_Name: village_npc
   m_EditorClassIdentifier: 
-  name: Npc
+  name: "\uB9C8\uC744 \uC544\uC800\uC528"
   sprites:
-  - {fileID: 21300000, guid: 22961c552762ca045ba13ad11d2e4a0f, type: 3}
+  - {fileID: 6003476010924668747, guid: 22961c552762ca045ba13ad11d2e4a0f, type: 3}

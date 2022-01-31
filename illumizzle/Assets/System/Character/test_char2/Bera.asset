@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a91b97188344cb4ea53e1d283889400, type: 3}
-  m_Name: test_char2
+  m_Name: Bera
   m_EditorClassIdentifier: 
-  name: "\uC11C\uBE0C"
+  name: "\uBCA0\uB77C"
   sprites:
-  - {fileID: 21300000, guid: c7b96d5209588174bba12d8883fb693f, type: 3}
+  - {fileID: 6236830420561342179, guid: c7b96d5209588174bba12d8883fb693f, type: 3}
