@@ -8,10 +8,12 @@ public class P2_JudgeClear : MonoBehaviour {
 
     public GameObject[] meeples = new GameObject[2];
     public GameObject[] destinations = new GameObject[2];
+    public GameObject clearText; //
 
     private bool isFinished = false;
 
-    public GameObject clearText; //
+    //private string cheatKey = "showmethenextstage";
+    //private int cheatKeyIdx = 0;
 
     private void Start() {
         actionController = gameObject.GetComponent<P2_ActionController>();
@@ -27,7 +29,7 @@ public class P2_JudgeClear : MonoBehaviour {
         }
 
         //if (isFinished == false && isArrived == true) {
-        if (isFinished == false && isArrived == true || Input.GetKeyDown(KeyCode.S)) {
+        if (isFinished == false && (isArrived == true /*|| cheatKeyIdx == 18*/ || Input.GetKeyDown(KeyCode.S))) {
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
             clearText.SetActive(true);
