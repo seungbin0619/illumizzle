@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class P3_JudgeClear : MonoBehaviour {
+
+    public int maxHeight;
+    public bool isActioning = false;
+
+    public int cntTotFitTile;
+    public int cntFitTile = 0;
+
+    private bool isFinished = false;
+
+    private void Start() {
+        cntTotFitTile = maxHeight * maxHeight * 3;
+    }
+
+    void Update() {
+
+        //if (isFinished == false && cntTotFitTile == cntTotFitTile) {
+        if (isFinished == false && cntFitTile == cntTotFitTile || Input.GetKeyDown(KeyCode.S)) {
+            isFinished = true;
+            Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
+            //PuzzleSystem.instance.AfterPuzzle(true);
+        }
+    }
+}
