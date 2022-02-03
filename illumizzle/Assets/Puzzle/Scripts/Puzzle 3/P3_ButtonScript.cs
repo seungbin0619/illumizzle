@@ -20,13 +20,13 @@ public class P3_ButtonScript : MonoBehaviour {
             isMooving = true;
             judgeClear.isActioning = true;
 
-            if (targetLine.transform.position.y > judgeClear.maxHeight - 0.5f) {
+            if (targetLine.transform.localPosition.y > judgeClear.maxHeight - 0.5f) {
                 moveDir = -2f;
                 targetHeight = 0;
             }
             else {
                 moveDir = 1f;
-                targetHeight = targetLine.transform.position.y + 1;
+                targetHeight = targetLine.transform.localPosition.y + 1;
             }
 
             Debug.Log("이동 시작");
@@ -36,14 +36,14 @@ public class P3_ButtonScript : MonoBehaviour {
     private void Update() {
         if (isMooving == true) {
 
-            targetLine.transform.position += Vector3.up * moveDir * 4 * Time.deltaTime;
+            targetLine.transform.localPosition += Vector3.up * moveDir * 4 * Time.deltaTime;
 
-            float dist = targetLine.transform.position.y - targetHeight;
+            float dist = targetLine.transform.localPosition.y - targetHeight;
             if (dist < 0) dist = -dist;
 
             if (dist <= 0.07f) {
-                targetLine.transform.position = new Vector3(targetLine.transform.position.x, 
-                    targetHeight, targetLine.transform.position.z);
+                targetLine.transform.localPosition = new Vector3(targetLine.transform.localPosition.x, 
+                    targetHeight, targetLine.transform.localPosition.z);
                 isMooving = false;
                 judgeClear.isActioning = false;
 

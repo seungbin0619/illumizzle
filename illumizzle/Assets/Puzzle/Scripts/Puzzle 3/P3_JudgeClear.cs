@@ -14,7 +14,7 @@ public class P3_JudgeClear : MonoBehaviour {
     private bool isFinished = false;
 
     private void Start() {
-        cntTotFitTile = maxHeight * maxHeight * 3;
+        cntTotFitTile = maxHeight * maxHeight * 2;
     }
 
     void Update() {

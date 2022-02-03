@@ -8,6 +8,8 @@ public class P1_RotateLeft : MonoBehaviour {
     public GameObject rightButton;
     public bool isRotatingLeft = false;
 
+    public float rotateSpeed = 400;
+
     Quaternion target;
 
     private void Start() {
@@ -27,7 +29,7 @@ public class P1_RotateLeft : MonoBehaviour {
     void Update() {
         if (isRotatingLeft) {
 
-            cubeBase.transform.RotateAround(cubeBase.transform.position, Vector3.up, 400 * Time.deltaTime);
+            cubeBase.transform.RotateAround(cubeBase.transform.position, Vector3.up, rotateSpeed * Time.deltaTime);
 
             float angle = Quaternion.Angle(cubeBase.transform.rotation, target);
             if (angle < 5f) {
