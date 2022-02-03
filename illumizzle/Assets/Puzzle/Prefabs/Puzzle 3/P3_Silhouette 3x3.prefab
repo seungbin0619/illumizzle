@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2858277595580868014}
   m_Layer: 0
-  m_Name: P3_Silhouette
+  m_Name: P3_Silhouette 3x3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
