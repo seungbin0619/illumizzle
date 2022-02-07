@@ -42,7 +42,7 @@ EditorBuildSettings:
     path: Assets/Puzzle/Scenes/Puzzle X/StageX-3.unity
     guid: 95faf9a5a9ff8d641961e23b8c3fb3cb
   - enabled: 0
-    path: Assets/Puzzle/Scenes/Puzzle 2/Stage Select.unity
+    path: Assets/Puzzle/Scenes/Puzzle 2/Stage Select2.unity
     guid: 1183c260c32fb134fbbbd9383b455b07
   - enabled: 0
     path: Assets/Puzzle/Scenes/Puzzle 2/Stage2-1.unity
@@ -59,10 +59,22 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Puzzle/Scenes/Puzzle 2/Stage2-5.unity
     guid: d3fe8ec3adc829c46a11e0e4eeb7d177
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Puzzle/Scenes/Puzzle 3/Stage Select3.unity
+    guid: 27fb22022dfa9f44b8ba8bc9cfdd2c79
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-1.unity
+    guid: 6f08dabd8f99e434c8c0ac565b06cd08
+  - enabled: 1
+    path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-2.unity
     guid: eedce8447e73bcf42aefc41779d24aed
   - enabled: 1
-    path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-n.unity
+    path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-3.unity
+    guid: da7746c6a6422eb4eaeb554c8eb86c40
+  - enabled: 1
+    path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-4.unity
+    guid: 6aee27a711eda4144b2b4f458e7241a8
+  - enabled: 1
+    path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-5.unity
     guid: 6ed6a4d92de562c479310f66abebb637
   m_configObjects: {}

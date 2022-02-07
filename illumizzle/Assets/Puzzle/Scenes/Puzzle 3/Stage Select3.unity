@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8104213, b: 0.4669811, a: 1}
+  m_Color: {r: 0.4666667, g: 0.6988209, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fecf4785f7f01b4a8426ac8dfb513e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stage2-3
+  sceneName: Stage3-3
 --- !u!114 &265916510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fecf4785f7f01b4a8426ac8dfb513e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stage2-4
+  sceneName: Stage3-4
 --- !u!114 &450404871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,8 +1273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.105, y: -214.87}
-  m_SizeDelta: {x: 1819.074, y: 459.43}
+  m_AnchoredPosition: {x: 13.852, y: -167.724}
+  m_SizeDelta: {x: 600.139, y: 198.229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1120092648
 MonoBehaviour:
@@ -1309,22 +1309,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "\uFEFF\r\uD050\uBE0C\uC5D0 \uB9C8\uC6B0\uC2A4\uB97C \uC62C\uB9AC\uBA74
-    \uB098\uD0C0\uB098\uB294 \uD68C\uC0C9 \uD654\uC0B4\uD45C\uB97C \uD074\uB9AD\uD558\uBA74
-    \uD050\uBE0C\uC758 \uAC01 \uCE35\uC744 90\uB3C4\uC529 \uD68C\uC804\uC2DC\uD0AC
-    \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\uB9D0(\uC9C1\uC721\uBA74\uCCB4)\uC5D0 \uB9C8\uC6B0\uC2A4\uB97C
-    \uC62C\uB9AC\uBA74 \uAC08 \uC218 \uC788\uB294 \uAE38\uC758 \uBC29\uD5A5\uC5D0\uB9CC
-    \uD654\uC0B4\uD45C\uAC00 \uB098\uD0C0\uB098\uBA70, \n\t\uD074\uB9AD\uD574\uC11C
-    \uD55C \uCE78\uC529 \uC774\uB3D9\uC2DC\uD0AC \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\uB9C8\uC6B0\uC2A4
-    \uC6B0\uD074\uB9AD\uD55C \uC0C1\uD0DC\uB85C \uB4DC\uB798\uADF8\uD558\uBA74 \uD050\uBE0C
-    \uC804\uCCB4\uB97C \uD68C\uC804\uC2DC\uD0AC \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\uD770\uC0C9
-    \uAE38\uC740 \uBAA8\uB4E0 \uB9D0\uC774 \uC9C0\uB098\uAC08 \uC218 \uC788\uC73C\uBA70
-    \uC0C9\uC774 \uC788\uB294 \uAE38\uC740 \uC0C9\uC5D0 \uB9DE\uB294 \uB9D0\uB9CC
-    \uC9C0\uB098\uAC08 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\uB9D0\uC744 \uC774\uB3D9\uC2DC\uCF1C\uC11C
-    \uB3C4\uCC29\uC9C0\uC810(\uC18D\uC774 \uBE48 \uC587\uC740 \uC9C1\uC721\uBA74\uCCB4)\uC5D0
-    \uB3C4\uCC29\uC2DC\uD0A4\uBA74 \uD074\uB9AC\uC5B4\uC785\uB2C8\uB2E4.\r\n\uB9D0\uC774
-    \uB450 \uAC1C\uC778 \uACBD\uC6B0 \uC0C9\uC5D0 \uB9DE\uB294 \uB3C4\uCC29\uC9C0\uC810\uC5D0
-    \uB458 \uB2E4 \uB3C4\uCC29\uC2DC\uCF1C\uC57C \uD074\uB9AC\uC5B4\uB429\uB2C8\uB2E4.\r"
+  m_Text: "\uBC84\uD2BC \uC88C\uD074\uB9AD : \uD574\uB2F9 \uD0D1 \uD55C \uCE78 \uB192\uC774\uAE30\n\uBC84\uD2BC
+    \uC6B0\uD074\uB9AD : \uD574\uB2F9 \uD0D1 \uD55C \uCE78 \uB0AE\uCD94\uAE30\n\uD720
+    \uC2A4\uD06C\uB864 : \uC2DC\uC810 \uC62E\uAE30\uAE30"
 --- !u!222 &1120092649
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1385,7 +1372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fecf4785f7f01b4a8426ac8dfb513e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stage2-2
+  sceneName: Stage3-2
 --- !u!114 &1693358079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1532,7 +1519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fecf4785f7f01b4a8426ac8dfb513e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stage2-5
+  sceneName: Stage3-5
 --- !u!114 &1700123547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1982,7 +1969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fecf4785f7f01b4a8426ac8dfb513e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stage2-1
+  sceneName: Stage3-1
 --- !u!114 &2052222706
 MonoBehaviour:
   m_ObjectHideFlags: 0
