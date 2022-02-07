@@ -48,7 +48,7 @@ public class P2_MeepleArrowScript : MonoBehaviour {
 
             float dist = Vector3.Distance(meeple.transform.position, target);
 
-            if (dist < 0.05f) {
+            if (dist < 0.05f * Time.deltaTime * 180) {
                 meeple.transform.position = target;
                 isMooving = false;
                 actionController.isActioning = false;

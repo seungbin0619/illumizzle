@@ -32,7 +32,7 @@ public class P1_RotateLeft : MonoBehaviour {
             cubeBase.transform.RotateAround(cubeBase.transform.position, Vector3.up, rotateSpeed * Time.deltaTime);
 
             float angle = Quaternion.Angle(cubeBase.transform.rotation, target);
-            if (angle < 5f) {
+            if (angle < 5f * Time.deltaTime * 180) {
                 isRotatingLeft = false;
                 Debug.Log("왼쪽으로 회전 완료");
                 cubeBase.transform.rotation = target;
