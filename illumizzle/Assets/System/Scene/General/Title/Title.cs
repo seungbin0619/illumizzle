@@ -9,10 +9,24 @@ public class Title : MonoBehaviour
         // 불러오기 작업?
     }
 
+    private void Start()
+    {
+        IEnumerator LateStart()
+        {
+            yield return ActionSystem.waitComplete;
+
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 0, 1f);
+            ActionSystem.instance.Play();
+        }
+
+        StartCoroutine(LateStart());
+    }
+
     public void StartGame()
     {
         DataSystem.Load(true);
 
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 1f);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Village");
         ActionSystem.instance.Play();
     }
@@ -25,6 +39,7 @@ public class Title : MonoBehaviour
                 "Village", "Forest", "Desert", "Coast", "Workroom" 
             }[DataSystem.GetData("Setting", "CurrentMap", 0)];
 
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 1f);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, currentName);
         ActionSystem.instance.Play();
     }

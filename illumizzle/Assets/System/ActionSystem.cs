@@ -22,7 +22,8 @@ public class ActionSystem : MonoBehaviour
         {
             Talk,  // 대화
             Move,  // 지역(씬) 이동
-            Puzzle // 퍼즐로 이동
+            Puzzle, // 퍼즐로 이동
+            Fade
         }
         public ActionType type;
         public List<object> args;
@@ -39,6 +40,8 @@ public class ActionSystem : MonoBehaviour
     private static readonly WaitWhile waitMove = new WaitWhile(() => !operation.isDone);
 
     private static readonly WaitWhile waitPuzzle = new WaitWhile(() => PuzzleSystem.currentPuzzle != "");
+
+    private static readonly WaitWhile waitFade = new WaitWhile(() => FadeSystem.instance.isAnimated);
 
     public static readonly WaitWhile waitComplete = new WaitWhile(() => !instance.IsCompleted);
 
@@ -101,6 +104,18 @@ public class ActionSystem : MonoBehaviour
                 PuzzleSystem.instance.GoPuzzle(PuzzleName);
 
                 wait = waitPuzzle;
+
+                break;
+            case Action.ActionType.Fade:
+                float target = float.Parse(currentAction.args[0].ToString());
+                float duration = float.Parse(currentAction.args[1].ToString());
+
+                //Debug.Log(target);
+                //Debug.Log(duration);
+                
+                FadeSystem.instance.StartFade(target, duration);
+
+                wait = waitFade;
 
                 break;
         }

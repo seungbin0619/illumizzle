@@ -52,6 +52,8 @@ public class Area : MonoBehaviour
         IEnumerator LateStart()
         {
             yield return ActionSystem.waitComplete;
+
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 0, 0.5f);
             this.LateStart();
         }
 
@@ -73,7 +75,9 @@ public class Area : MonoBehaviour
 
     public virtual void GoScene(string name)
     {
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 0.5f);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, name);
+
         ActionSystem.instance.Play();
     }
 }

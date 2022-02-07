@@ -13,9 +13,9 @@ public class Village : Area
 
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[0]);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[1]);
-
-            ActionSystem.instance.Play();
         }
+
+        ActionSystem.instance.Play();
     }
 
     public void GoWorkroom()
