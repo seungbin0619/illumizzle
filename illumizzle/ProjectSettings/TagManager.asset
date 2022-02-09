@@ -5,6 +5,20 @@ TagManager:
   serializedVersion: 2
   tags:
   - block
+  - trigger
+  - zf
+  - xb
+  - zb
+  - xf
+  - yf
+  - meeple
+  - cube
+  - base
+  - meepleArrow
+  - meepleTrigger
+  - tile
+  - path
+  - group
   layers:
   - Default
   - TransparentFX
@@ -13,7 +27,7 @@ TagManager:
   - Water
   - UI
   - Blur
-  - 
+  - PostProcess
   - 
   - 
   - 
