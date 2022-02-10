@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
+  m_Name: Desert_Story01
+  m_EditorClassIdentifier: 
+  scripts:
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uC774\uAC70\uBD10, \uC5EC\uAE30\uC11C \uBC14\uB298 \uD754\uB4E4\uB9BC\uC774
+      \uC5C4\uCCAD \uC2EC\uD574. "
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC5B4...? \uC774 \uC8FC\uBCC0\uC5D0 \uC544\uBB34\uAC83\uB3C4 \uC5C6\uB294\uB370...?"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: " ... \uBD84\uBA85 \uC774 \uADFC\uCC98\uC5D0\uC11C \uAC00\uC7A5 \uC2EC\uD558\uAC8C
+      \uD754\uB4E4\uB9AC\uB294\uB370... "
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC124\uB9C8 \uBAA8\uB798 \uC18D\uC5D0 \uBB3B\uD600\uC788\uB098? "
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uBC1C \uBC11...? \uC5B4? \uC5EC\uAE30 \uBB50 \uC788\uB2E4!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uB0B4\uAC00 \uD30C\uBCFC\uAC8C!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: ... ...!!
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uCC3E\uC558\uC5B4! \uBE68\uB9AC \uC774\uAC70 \uAC00\uC9C0\uACE0 \uC815\uBE44\uC2E4\uB85C
+      \uAC00\uC790!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uADF8\uB7EC\uC790, \uC5B4\uC11C \uAD50\uCCB4\uD574\uBCF4\uC790! "
+    hide: []
+    command: 
+  characters:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    position: 1

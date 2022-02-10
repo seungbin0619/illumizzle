@@ -10,24 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
-  m_Name: Forest.Pond.00
+  m_Name: Coast_Story00
   m_EditorClassIdentifier: 
   scripts:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC800\uAE30 \uC6B8\uD241\uBD88\uD241\uD55C \uC2E4\uB8E8\uC5E3\uC774 \uBCF4\uC5EC!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uD639\uC2DC \uD1B1\uB2C8\uBC14\uD034?"
+    hide: []
+    command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uAE08\uBD95\uC5B4 \uD55C \uB9C8\uB9AC\uAC00 \uD5E4\uC5C4\uCE58\uACE0
-      \uC788\uB124."
+    text: ...
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uC774\uAC74 \uBD88\uAC00\uC0AC\uB9AC\uC796\uC544."
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uC6C0\uC9C1\uC77C \uB54C\uB9C8\uB2E4 \uC9C0\uB290\uB7EC\uBBF8\uC5D0\uC11C
-      \uBE5B\uC774 \uB098\uB294 \uAC83 \uAC19\uC740\uB370?"
+    text: "\uBBF8\uC548."
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uAE30\uBD84 \uD0D3\uC778\uAC00?"
+    text: "\uD2C0\uB9BC\uC5C6\uC774 \uD1B1\uB2C8\uBC14\uD034\uC600\uB294\uB370...
+      \uC774\uC0C1\uD558\uB2E4"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uBC8C\uC368 \uB450 \uBC88\uC9F8\uC57C... \uAE30\uC6B4 \uBE60\uC838."
     hide: []
     command: 
   characters:

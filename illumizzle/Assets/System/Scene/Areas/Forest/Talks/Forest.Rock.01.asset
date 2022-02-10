@@ -13,10 +13,25 @@ MonoBehaviour:
   m_Name: Forest.Rock.01
   m_EditorClassIdentifier: 
   scripts:
-  - character: {fileID: 0}
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "(\uB3CC\uBA69\uC774\uB97C \uC790\uAFB8 \uB9CC\uC9C0\uB2C8 \uD76C\uBBF8\uD55C
-      \uBE5B\uC774 \uBCF4\uC774\uB294 \uAC83\uB9CC \uAC19\uB2E4.)"
+    text: "\uC65C \uB3CC\uB9F9\uC774\uB97C \uC790\uAFB8 \uAC74\uB4DC\uB9AC\uB294
+      \uAC70\uC57C?"
     hide: []
     command: 
-  characters: []
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC774\uAC70 \uB9CC\uC9C0\uB2E4\uBCF4\uB2C8\uAE4C \uD76C\uBBF8\uD558\uAC8C
+      \uBE5B\uC774 \uBCF4\uC774\uB294 \uAC83 \uAC19\uC544!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC9C4\uC9DC...?"
+    hide: []
+    command: 
+  characters:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    position: 1

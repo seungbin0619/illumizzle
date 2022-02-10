@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Forest.Rock.00
   m_EditorClassIdentifier: 
   scripts:
-  - character: {fileID: 0}
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "(\uADF8\uB0E5 \uD3C9\uBC94\uD55C \uB3CC\uBA69\uC774\uB2E4.)"
+    text: "\uADF8\uB0E5 \uD3C9\uBC94\uD55C \uB3CC\uBA69\uC774\uC57C"
     hide: []
     command: 
-  characters: []
+  characters:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    position: 1
