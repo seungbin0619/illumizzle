@@ -9,7 +9,7 @@ public class P4_GroopScript : MonoBehaviour {
 
     private P4_JudgeClear judgeClear;
 
-    private bool[][] isBlocked = new bool[4][];
+    public bool[][] isBlocked = new bool[4][]; // [방향(앞우뒤좌)][블록번호(1~)]
     private int cntBlocks;
 
     public bool isHover = false;
@@ -18,7 +18,7 @@ public class P4_GroopScript : MonoBehaviour {
 
     void Start() {
         for (int i = 0; i < 4; i++) {
-            arrows[i] = transform.GetChild(i).gameObject;
+            arrows[i] = transform.GetChild(0).GetChild(i).gameObject;
         }
         judgeClear = sceneController.GetComponent<P4_JudgeClear>();
         cntBlocks = judgeClear.cntBlocks;
@@ -32,6 +32,7 @@ public class P4_GroopScript : MonoBehaviour {
     }
 
     private void OnMouseEnter() {
+        Debug.Log("그룹에 마우스 올라감");
         isHover = true;
     }
 
@@ -67,7 +68,7 @@ public class P4_GroopScript : MonoBehaviour {
             }
         }
 
-        else if (isHover == false && isArrowHover == false && isArrowOn == true) {
+        else if (isHover == false && isArrowHover == false || isArrowOn == true) {
 
             for (int i = 0; i < 4; i++) {
                 arrows[i].GetComponent<SpriteRenderer>().enabled = false;

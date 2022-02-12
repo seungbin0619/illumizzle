@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3472145986571451349}
   - component: {fileID: 1913742484030262267}
   - component: {fileID: 1205844080490666790}
+  - component: {fileID: 1962100296544115383}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 263ef979970d9d645b97848c4d813fe4, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5254902}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,5 +95,19 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.5, y: 6.6, z: 0.2}
+  m_Size: {x: 4.5, y: 6.6, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1962100296544115383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058204421431890898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc3c274b36a37f42b9daebe4130e465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneController: {fileID: 0}
+  moveDir: {x: 0, y: 0, z: 0}
