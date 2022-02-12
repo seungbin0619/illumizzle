@@ -10,7 +10,7 @@ public class P3_CheckerScript : MonoBehaviour {
 
     private P3_JudgeClear judgeClear;
     private GameObject myTile;
-    private GameObject myTrigger;
+    private GameObject myTrigger = null;
     private bool isPreFit = false, isFit = false;
     private int targetCnt;
 
@@ -20,25 +20,29 @@ public class P3_CheckerScript : MonoBehaviour {
 
     private void OnTriggerStay(Collider other) {
         myTile = other.gameObject;
-        targetCnt = int.Parse(myTile.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text);
-        gameObject.GetComponent<BoxCollider>().enabled = false;
+        if (myTile.CompareTag("tile")) {
+            targetCnt = int.Parse(myTile.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text);
+            gameObject.GetComponent<BoxCollider>().enabled = false;
 
-        myTrigger = myTile.transform.GetChild(2).gameObject;
+            myTrigger = myTile.transform.GetChild(2).gameObject;
 
-        if (targetCnt == 0) {
-            isPreFit = true; isFit = true;
-            judgeClear.cntFitTile++;
-            myTile.transform.GetChild(0).gameObject.GetComponent<TextMesh>().color = Color.green;
+            if (targetCnt == 0) {
+                isPreFit = true; isFit = true;
+                judgeClear.cntFitTile++;
+                myTile.transform.GetChild(0).gameObject.GetComponent<TextMesh>().color = Color.green;
+            }
         }
     }
 
     void Update() {
 
-        if (myTrigger.GetComponent<BoxCollider>().enabled && targetLineCnt == judgeClear.maxHeight) {
-            myTrigger.GetComponent<BoxCollider>().enabled = false;
+        if (myTrigger != null) {
+            if (myTrigger.GetComponent<BoxCollider>().enabled && targetLineCnt == judgeClear.maxHeight) {
+                myTrigger.GetComponent<BoxCollider>().enabled = false;
+            }
         }
 
-        if (judgeClear.isActioning == false) {
+        if (judgeClear.isActioning == false && targetLineCnt == judgeClear.maxHeight) {
 
             int currCnt = 0;
             for (int i = 0; i < judgeClear.maxHeight; i++) {

@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7008425751754232195}
   m_Layer: 0
   m_Name: P3_Tile
-  m_TagString: Untagged
+  m_TagString: tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
