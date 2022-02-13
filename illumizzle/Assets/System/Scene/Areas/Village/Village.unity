@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 454646286}
   - component: {fileID: 454646285}
   - component: {fileID: 454646284}
+  - component: {fileID: 454646283}
   m_Layer: 5
   m_Name: BgCanvas
   m_TagString: Untagged
@@ -280,6 +281,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &454646283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454646282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06aadfe290b3c6541ae7416fcfcf9cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &454646284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +386,7 @@ GameObject:
   - component: {fileID: 577255549}
   - component: {fileID: 577255548}
   - component: {fileID: 577255547}
+  - component: {fileID: 577255546}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -380,6 +394,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &577255546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577255545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06aadfe290b3c6541ae7416fcfcf9cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &577255547
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,14 +13,19 @@ MonoBehaviour:
   m_Name: Forest.Tree.00
   m_EditorClassIdentifier: 
   scripts:
-  - character: {fileID: 0}
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "(\uC774 \uC232\uC5D0\uC11C \uAC00\uC7A5 \uD070 \uB098\uBB34\uC774\uB2E4.)"
+    text: "\uC774 \uC232\uC5D0 700\uB144 \uC0B0 \uB098\uBB34\uAC00 \uC788\uB2E4\uB358\uB370."
     hide: []
     command: 
-  - character: {fileID: 0}
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "(700\uC0B4\uC774\uB77C\uB098...)"
+    text: "\uC5B4\uCA4C\uBA74 \uC774\uAC8C \uADF8 \uB098\uBB34\uC77C\uC9C0\uB3C4
+      \uBAB0\uB77C."
     hide: []
     command: 
-  characters: []
+  characters:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    position: 1

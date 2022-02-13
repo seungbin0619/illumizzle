@@ -38,6 +38,7 @@ public class Area : MonoBehaviour
         }
         */
 
+        /*
         for (int i = 0; i < LevelCount; i++)
         {
             Transform child = bgRect.GetChild(i);
@@ -48,6 +49,7 @@ public class Area : MonoBehaviour
             child.localPosition = targetPosition * 0.5f;
             if (!isPuzzle) child.gameObject.SetActive(true);
         }
+        */
 
         IEnumerator LateStart()
         {

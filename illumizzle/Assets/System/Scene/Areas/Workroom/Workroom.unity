@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99bd1631b6d567b4e96a4f36368a0758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapIndex: 4
+  mapIndex: 5
   name: Workroom
   positions:
   - {x: 0.000001396146, y: -0.5816428, z: 0}
@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 263233626}
   - component: {fileID: 263233625}
   - component: {fileID: 263233624}
+  - component: {fileID: 263233628}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -514,6 +515,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &263233628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263233623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06aadfe290b3c6541ae7416fcfcf9cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &303105621
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +671,7 @@ GameObject:
   - component: {fileID: 454646286}
   - component: {fileID: 454646285}
   - component: {fileID: 454646284}
+  - component: {fileID: 454646283}
   m_Layer: 5
   m_Name: BgCanvas
   m_TagString: Untagged
@@ -665,6 +679,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &454646283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454646282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06aadfe290b3c6541ae7416fcfcf9cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &454646284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,7 +922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &875653965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1748,7 +1774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 64ef8d255e677a942b8e1d122332cbfd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7e2139d4f1aa0a04ca217f1f5f8d258c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
