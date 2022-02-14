@@ -64,4 +64,18 @@ public class Desert : Area
 
         ActionSystem.instance.Play();
     }
+
+    public void ClickCactus()
+    {
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
+
+        ActionSystem.instance.Play();
+    }
+
+    public void ClickSand()
+    {
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
+
+        ActionSystem.instance.Play();
+    }
 }

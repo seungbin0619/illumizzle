@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Map : Area
 {
-    private readonly string[] puzzles = new string[4]
+    private readonly string[] puzzles = new string[5]
     {
-        "", "Stage1-5", "Stage2-5", "Stage3-5"
+        "", "Stage1-5", "Stage4-5", "Stage3-5", ""
     };
 
     protected override void Start()

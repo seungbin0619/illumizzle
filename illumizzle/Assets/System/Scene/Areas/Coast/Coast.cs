@@ -64,4 +64,16 @@ public class Coast : Area
 
         ActionSystem.instance.Play();
     }
+
+    public void ClickTree()
+    {
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
+        ActionSystem.instance.Play();
+    }
+
+    public void ClickStack()
+    {
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
+        ActionSystem.instance.Play();
+    }
 }
