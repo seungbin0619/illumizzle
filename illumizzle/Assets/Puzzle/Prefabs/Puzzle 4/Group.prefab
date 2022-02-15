@@ -45,8 +45,8 @@ GameObject:
   - component: {fileID: 8692239002246158252}
   - component: {fileID: 6097494772418470479}
   m_Layer: 0
-  m_Name: Groop1
-  m_TagString: Untagged
+  m_Name: Group
+  m_TagString: group
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,6 +79,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneController: {fileID: 0}
+  arrows:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cntBlocks: 0
+  isHover: 0
+  isArrowHover: 0
 --- !u!1001 &8692239001639484795
 PrefabInstance:
   m_ObjectHideFlags: 0

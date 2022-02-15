@@ -19,6 +19,7 @@ TagManager:
   - tile
   - path
   - group
+  - destination
   layers:
   - Default
   - TransparentFX

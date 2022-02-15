@@ -6,6 +6,7 @@ public class P4_JudgeClear : MonoBehaviour {
 
     public int cntBlocks;
     public bool isActioning = false;
+    public int sizeX, sizeZ;
 
     public int cntFitBlock = 0;
     public GameObject clearText; //
@@ -15,7 +16,11 @@ public class P4_JudgeClear : MonoBehaviour {
 
     void Update() {
 
-        //대충 클리어 판정
-
+        if (cntBlocks == cntFitBlock && isFinished == false || Input.GetKeyDown(KeyCode.S)) {
+            isFinished = true;
+            Debug.Log("퍼즐 클리어!!");
+            clearText.SetActive(true); //
+            //PuzzleSystem.instance.AfterPuzzle(true);
+        }
     }
 }

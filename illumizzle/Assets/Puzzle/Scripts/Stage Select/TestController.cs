@@ -13,4 +13,8 @@ public class TestController : MonoBehaviour{
     public void ExitGame() {
         Application.Quit();
     }
+
+    public void SceneReload() {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(gameObject.scene.name);
+    }
 }
