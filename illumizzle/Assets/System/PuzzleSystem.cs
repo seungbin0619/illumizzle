@@ -32,6 +32,9 @@ public class PuzzleSystem : MonoBehaviour
             yield return new WaitUntil(() => operation.isDone);
 
             // 퍼즐이 로드되고 할 일?
+            yield return new WaitForEndOfFrame();
+
+            FadeSystem.instance.StartFade(0);
         }
 
         StartCoroutine(CoGoPuzzle());

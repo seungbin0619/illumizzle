@@ -18,11 +18,14 @@ public class DataSystem : MonoBehaviour
 
     #endregion
 
-    //private static readonly string path = Application.persistentDataPath;
+#if UNITY_EDITOR
     private static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + @"\";
+#else
+    private static readonly string path = Application.persistentDataPath + @"\";
+#endif
 
     private Dictionary<string, Dictionary<string, int>> data;
-    private static readonly string[] parts = new string[3] { "Story", "Puzzle", "Setting"};
+    private static readonly string[] parts = new string[] { "Story", "Puzzle", "Setting", "LastPosition"};
 
     private void Start()
     {

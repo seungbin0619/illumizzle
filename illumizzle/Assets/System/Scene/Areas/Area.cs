@@ -8,12 +8,13 @@ public class Area : MonoBehaviour
     private int mapIndex = -1;
 
     public new string name;     // 지역 이름
-    [SerializeField]
-    protected Vector3[] positions; // 스테이지 버튼 위치
-    protected int LevelCount { get { return positions.Length; } }
+    public string title;
+
+    public UnityEngine.UI.Image bgImage;
 
     [SerializeField]
-    protected UnityEngine.UI.Image bgImage;
+    protected Sprite[] images = new Sprite[2];
+
     protected RectTransform bgRect;
 
     [SerializeField]
@@ -21,6 +22,9 @@ public class Area : MonoBehaviour
 
     [SerializeField]
     protected bool isPuzzle = false;
+
+    [SerializeField]
+    protected bool face = false;
 
     private void Awake()
     {
@@ -51,11 +55,17 @@ public class Area : MonoBehaviour
         }
         */
 
+        if(face) AreaSystem.instance.SetArea(this);
+
         IEnumerator LateStart()
         {
             yield return ActionSystem.waitComplete;
 
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 0, 0.5f);
+            
+            int lastPosition = DataSystem.GetData("LastPosition", name, 0);
+            AreaSystem.instance.Walk(lastPosition, false);
+
             this.LateStart();
         }
 

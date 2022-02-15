@@ -29,6 +29,8 @@ public class Desert : Area
 
     public void LoadPuzzle(int index)
     {
+        if (!ActionSystem.instance.IsCompleted) return;
+
         #region [ ∆€¡Ò Ω√¿€ ¿¸ ]
         switch (index)
         {
@@ -40,7 +42,10 @@ public class Desert : Area
         }
         #endregion
 
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, index);
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 0.5f);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Puzzle, puzzles[index]);
+
         ActionSystem.instance.Play();
     }
 
@@ -67,6 +72,8 @@ public class Desert : Area
 
     public void ClickCactus()
     {
+        if (!ActionSystem.instance.IsCompleted) return;
+
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
 
         ActionSystem.instance.Play();
@@ -74,6 +81,8 @@ public class Desert : Area
 
     public void ClickSand()
     {
+        if (!ActionSystem.instance.IsCompleted) return;
+
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
 
         ActionSystem.instance.Play();

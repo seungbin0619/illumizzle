@@ -20,6 +20,10 @@ public class Village : Area
 
     public void GoWorkroom()
     {
+        if (!ActionSystem.instance.IsCompleted) return;
+
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 1);
+
         if (!DataSystem.HasData("Story", "Village.Workroom.00"))
         {
             DataSystem.SetData("Story", "Village.Workroom.00", 1);
@@ -29,8 +33,25 @@ public class Village : Area
         GoScene("Workroom");
     }
 
+    public void GoHome1()
+    {
+        if (!ActionSystem.instance.IsCompleted) return;
+
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 0);
+        ActionSystem.instance.Play();
+    }
+
+    public void GoHome2()
+    {
+        if (!ActionSystem.instance.IsCompleted) return;
+
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 2);
+        ActionSystem.instance.Play();
+    }
+
     public override void GoScene(string name)
     {
+
         if (!DataSystem.HasData("Story", "Village.Workroom.00"))
         {
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[2]);

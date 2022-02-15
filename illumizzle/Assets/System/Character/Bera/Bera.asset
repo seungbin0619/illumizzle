@@ -15,3 +15,4 @@ MonoBehaviour:
   name: "\uBCA0\uB77C"
   sprites:
   - {fileID: 6236830420561342179, guid: c7b96d5209588174bba12d8883fb693f, type: 3}
+  face: {fileID: 21300000, guid: d804e6377c2f5bb4aa3aaf3051ae6f80, type: 3}

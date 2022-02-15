@@ -22,4 +22,6 @@ public class MainSystem : MonoBehaviour
     }
 
     #endregion
+
+    public GameEvent OnCameraChanged;
 }

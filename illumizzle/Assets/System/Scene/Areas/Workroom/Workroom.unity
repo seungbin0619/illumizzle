@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 81755203}
   - component: {fileID: 81755202}
   - component: {fileID: 81755201}
+  - component: {fileID: 81755204}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -159,7 +160,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -206,6 +207,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &81755204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81755200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7b2a6b82b69264993941bb4ed37f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &150654803
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,15 +383,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapIndex: 5
   name: Workroom
-  positions:
-  - {x: 0.000001396146, y: -0.5816428, z: 0}
-  - {x: -0.00328125, y: 0.02760958, z: 0}
-  - {x: -0.549698, y: 0.6428583, z: 0}
-  - {x: -0.6898333, y: -0.05505709, z: 0}
-  - {x: 0.1674375, y: 0.682431, z: 0}
-  - {x: 0.1908854, y: -0.2508435, z: 0}
-  - {x: -0.574948, y: -0.7540185, z: 0}
+  title: "\uC815\uBE44\uC2E4"
   bgImage: {fileID: 1945315926}
+  images:
+  - {fileID: 0}
+  - {fileID: 0}
   talks:
   - {fileID: 11400000, guid: a0ee28ac535e75f45a8ab8485d953d1e, type: 2}
   - {fileID: 11400000, guid: e4d6f688a5ad87943b6134ecdad16026, type: 2}
@@ -400,6 +409,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b759e17129adc3740b2a96429a836849, type: 2}
   - {fileID: 11400000, guid: 39b12d5a66ab21d4c85385c1d7f71ffd, type: 2}
   isPuzzle: 0
+  face: 0
 --- !u!4 &255755238
 Transform:
   m_ObjectHideFlags: 0

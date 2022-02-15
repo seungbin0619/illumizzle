@@ -29,6 +29,8 @@ public class Forest : Area
 
     public void LoadPuzzle(int index)
     {
+        if (!ActionSystem.instance.IsCompleted) return;
+
         #region [ ∆€¡Ò Ω√¿€ ¿¸ ]
         switch (index)
         {
@@ -40,7 +42,10 @@ public class Forest : Area
         }
         #endregion
 
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, index);
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 0.5f);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Puzzle, puzzles[index]);
+
         ActionSystem.instance.Play();
     }
 
@@ -67,12 +72,16 @@ public class Forest : Area
 
     public void ClickPond()
     {
+        if (!ActionSystem.instance.IsCompleted) return;
+
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
         ActionSystem.instance.Play();
     }
 
     public void ClickRock()
     {
+        if (!ActionSystem.instance.IsCompleted) return;
+
         if (DataSystem.GetData("Story", "Forest.Rock.00", 0) < 3)
         {
             DataSystem.SetData("Story", "Forest.Rock.00", DataSystem.GetData("Story", "Forest.Rock.00", 0) + 1);
@@ -85,6 +94,8 @@ public class Forest : Area
 
     public void ClickTree()
     {
+        if (!ActionSystem.instance.IsCompleted) return;
+
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[6]);
         ActionSystem.instance.Play();
     }
