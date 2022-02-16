@@ -48,6 +48,7 @@ public class P4_ArrowScript : MonoBehaviour {
             //Debug.Log("boundaryIdx : " + boundaryIdx);
 
             if (boundaryIdx >= 1) { //블록 덩어리 분리해야 하는 경우
+
                 newGroop = Instantiate(myGroop, gameObject.transform.position, gameObject.transform.rotation);
 
                 int childCnt = myGroop.transform.childCount;

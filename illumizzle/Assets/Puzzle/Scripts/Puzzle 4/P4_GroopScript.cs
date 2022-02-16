@@ -189,16 +189,16 @@ public class P4_GroopScript : MonoBehaviour {
             }
         }
 
-        if (true /*judgeClear.isActioning == false*/) { //
-            string str = ((int)transform.localPosition.z).ToString() + " " + ((int)transform.localPosition.x).ToString() + "\n";//
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < cntBlocks; j++) {
-                    str += isBlocked[i][j] + " ";
-                }
-                str += '\n';
-            }
-            Debug.Log(str);
-        } //
+        //if (judgeClear.isActioning == false) { //
+        //    string str = ((int)transform.localPosition.z).ToString() + " " + ((int)transform.localPosition.x).ToString() + "\n";//
+        //    for (int i = 0; i < 4; i++) {
+        //        for (int j = 0; j < cntBlocks; j++) {
+        //            str += isBlocked[i][j] + " ";
+        //        }
+        //        str += '\n';
+        //    }
+        //    Debug.Log(str);
+        //} //
 
     }
 
