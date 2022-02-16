@@ -20,6 +20,7 @@ TagManager:
   - path
   - group
   - destination
+  - collider
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4974712547249613432}
   m_Layer: 0
   m_Name: Side Collider
-  m_TagString: Untagged
+  m_TagString: collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1d9517aefb02345b4563166c8a5885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneController: {fileID: 0}
 --- !u!54 &4974712547249613432
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ public class P4_JudgeClear : MonoBehaviour {
 
     private bool isFinished = false;
 
-
     void Update() {
 
         if (cntBlocks == cntFitBlock && isFinished == false || Input.GetKeyDown(KeyCode.S)) {

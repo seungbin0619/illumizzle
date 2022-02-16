@@ -34,9 +34,6 @@ public class P4_GroopScript : MonoBehaviour {
 
         for (int i = 0; i < 4; i++) {
             isBlocked[i] = new int[6];
-            for (int j = 0; j < 6; j++) {
-                isBlocked[i][j] = 0;
-            }
         }
 
         sizeX = judgeClear.sizeX;
@@ -53,25 +50,34 @@ public class P4_GroopScript : MonoBehaviour {
 
     private void Update() {
 
+        if (judgeClear.isActioning == false) {
+            for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < cntBlocks; j++) {
+                    isBlocked[i][j] = transform.GetChild(j + 1)
+                        .gameObject.GetComponent<P4_BlockScript>().isBlocked[i];
+                }
+            }
+        }
+
         //그룹에 마우스 갖다대기
         if (isHover == true && isFin == false && judgeClear.isActioning == false) {
 
             if (transform.localPosition.x < sizeX - 1 - 0.1) { //Front
-                changeEnabled(arrows[0], true);
+                ChangeEnabled(arrows[0], true);
             }
             if (transform.localPosition.z < sizeZ - 1 - 0.1) { //Right
-                changeEnabled(arrows[1], true);
+                ChangeEnabled(arrows[1], true);
             }
             if (transform.localPosition.x > 0 + 0.1) { //Back
-                changeEnabled(arrows[2], true);
+                ChangeEnabled(arrows[2], true);
             }
             if (transform.localPosition.z > 0 + 0.1) { //Left
-                changeEnabled(arrows[3], true);
+                ChangeEnabled(arrows[3], true);
             }
 
             for (int i = 0; i < 4; i++) { //가장 위 블록도 못 가는 경우
-                if (isBlocked[i][cntBlocks - 1] == 1) {
-                    changeEnabled(arrows[i], false);
+                if (isBlocked[i][cntBlocks - 1] >= 1) {
+                    ChangeEnabled(arrows[i], false);
                 }
             }
         }
@@ -80,7 +86,7 @@ public class P4_GroopScript : MonoBehaviour {
         else if (isHover == false && isArrowHover == false || isArrowOn == true || judgeClear.isActioning == true) {
 
             for (int i = 0; i < 4; i++) {
-                changeEnabled(arrows[i], false);
+                ChangeEnabled(arrows[i], false);
             }
 
             isArrowOn = false;
@@ -132,29 +138,34 @@ public class P4_GroopScript : MonoBehaviour {
             else if (transform.localPosition.y - upperBound < 0.1
                 && targetObject.CompareTag("group")) { //다른 그룹과 병합
 
-                if (targetObject.GetComponent<P4_GroopScript>().isFin == false) {
-                    int targetChildCnt = targetObject.GetComponent<P4_GroopScript>().cntBlocks;
-                    int cnt = 0;
-                    targetObject.GetComponent<P4_GroopScript>().cntBlocks += cntBlocks;
+                P4_GroopScript targetGroupScript = targetObject.GetComponent<P4_GroopScript>();
 
-                    for (int i = 1; i < transform.childCount; i++) {
-                        Debug.Log(transform.GetChild(i).name);
-                        transform.GetChild(i).transform.localPosition = new Vector3(
-                            transform.GetChild(i).transform.localPosition.x,
-                            targetChildCnt + cnt++ - 1,
-                            transform.GetChild(i).transform.localPosition.z);
-                        transform.GetChild(i).parent = targetObject.transform;
-                        i--;
+                if (targetObject.GetComponent<P4_GroopScript>().isFin == false) {
+                    int targetChildCnt = targetGroupScript.cntBlocks;
+                    targetGroupScript.cntBlocks += cntBlocks;
+
+                    //int cnt = 0;
+
+                    while (transform.childCount > 1) {
+                        //Debug.Log(transform.GetChild(i).name);
+                        transform.GetChild(1).parent = targetObject.transform;
                     }
+
+                    //for (int i = 1; i < transform.childCount; i++) {
+                    //    transform.GetChild(i).parent = targetObject.transform;
+                    //    i--;
+                    //}
 
                     Destroy(gameObject);
 
                     BoxCollider collider = targetObject.GetComponent<BoxCollider>();
-                    int blockCnt = targetObject.GetComponent<P4_GroopScript>().cntBlocks;
+                    int blockCnt = targetGroupScript.cntBlocks;
                     collider.size = new Vector3(0.81f, blockCnt + 0.01f, 0.81f);
                     collider.center = new Vector3(collider.center.x, (blockCnt - 1) / 2.0f, collider.center.z);
 
                     targetObject.transform.GetChild(0).localPosition = new Vector3(0, blockCnt - 1, 0);
+
+
                 }
             }
         }
@@ -177,9 +188,21 @@ public class P4_GroopScript : MonoBehaviour {
                 }
             }
         }
+
+        if (true /*judgeClear.isActioning == false*/) { //
+            string str = ((int)transform.localPosition.z).ToString() + " " + ((int)transform.localPosition.x).ToString() + "\n";//
+            for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < cntBlocks; j++) {
+                    str += isBlocked[i][j] + " ";
+                }
+                str += '\n';
+            }
+            Debug.Log(str);
+        } //
+
     }
 
-    private void changeEnabled(GameObject arrow, bool isEnabled) {
+    private void ChangeEnabled(GameObject arrow, bool isEnabled) {
         arrow.GetComponent<SpriteRenderer>().enabled = isEnabled;
         arrow.GetComponent<BoxCollider>().enabled = isEnabled;
     }

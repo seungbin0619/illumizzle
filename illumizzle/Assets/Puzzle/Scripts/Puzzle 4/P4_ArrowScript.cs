@@ -82,10 +82,14 @@ public class P4_ArrowScript : MonoBehaviour {
                 ReSetGroop(myGroop, myBlockCnt);
                 ReSetGroop(newGroop, newBlockCnt);
 
+                P4_GroopScript myGroupScript = myGroop.GetComponent<P4_GroopScript>();
+                P4_GroopScript newGroupScript = newGroop.GetComponent<P4_GroopScript>();
+
+
                 //Debug.Log(myBlockCnt + " " + newBlockCnt);
 
                 if (myGroop.transform.localPosition.y == 0 && myBlockCnt == 1) {
-                    myGroop.GetComponent<P4_GroopScript>().isFin = true;
+                    myGroupScript.isFin = true;
                 }
 
             }

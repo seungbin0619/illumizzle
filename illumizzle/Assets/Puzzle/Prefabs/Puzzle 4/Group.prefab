@@ -87,6 +87,7 @@ MonoBehaviour:
   cntBlocks: 0
   isHover: 0
   isArrowHover: 0
+  isFin: 0
 --- !u!1001 &8692239001639484795
 PrefabInstance:
   m_ObjectHideFlags: 0
