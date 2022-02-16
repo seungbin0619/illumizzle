@@ -11,6 +11,7 @@ public class AreaSystem : MonoBehaviour
         if (instance == null) instance = this;
 
         DontDestroyOnLoad(canvas);
+        mask = characterPanel.GetComponent<UnityEngine.UI.Mask>();
     }
 
     public static Area CurrentArea { private set; get; }
@@ -29,6 +30,7 @@ public class AreaSystem : MonoBehaviour
 
     [SerializeField]
     private RectTransform characterPanel;
+    private UnityEngine.UI.Mask mask;
 
     [SerializeField]
     private UnityEngine.UI.Image titleBG;
@@ -48,7 +50,7 @@ public class AreaSystem : MonoBehaviour
         if (faceCount >= count) return;
 
         for (int i = faceCount; i < count; i++)
-            characterPanel.GetChild(i).gameObject.SetActive(true);
+            canvas.transform.GetChild(i).gameObject.SetActive(true);
     }
 
     public void SetArea(Area area)
@@ -137,6 +139,6 @@ public class AreaSystem : MonoBehaviour
         flag = flag && CurrentArea != null;
         flag = flag && CurrentArea.name == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
-        canvas.gameObject.SetActive(flag);
+        mask.enabled = !flag;
     }
 }

@@ -55,17 +55,19 @@ public class Area : MonoBehaviour
         }
         */
 
-        if(face) AreaSystem.instance.SetArea(this);
+        if (face)
+        {
+            AreaSystem.instance.SetArea(this);
+
+            int lastPosition = DataSystem.GetData("LastPosition", name, 0);
+            AreaSystem.instance.Walk(lastPosition, false);
+        }
 
         IEnumerator LateStart()
         {
             yield return ActionSystem.waitComplete;
 
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 0, 0.5f);
-            
-            int lastPosition = DataSystem.GetData("LastPosition", name, 0);
-            AreaSystem.instance.Walk(lastPosition, false);
-
             this.LateStart();
         }
 

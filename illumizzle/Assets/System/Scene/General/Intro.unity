@@ -826,7 +826,6 @@ GameObject:
   - component: {fileID: 570759178}
   - component: {fileID: 570759177}
   - component: {fileID: 570759175}
-  - component: {fileID: 570759181}
   - component: {fileID: 570759176}
   m_Layer: 5
   m_Name: FadeUI
@@ -918,7 +917,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: -1427225279
-  m_SortingOrder: 10
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &570759180
 RectTransform:
@@ -940,34 +939,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &570759181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570759174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04296a9839a7be6448b00c8d562ce66f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EventSO: {fileID: 11400000, guid: 24d8a5e4edb6210429da1926acbbec70, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 570759176}
-        m_TargetAssemblyTypeName: FollowCamera, Assembly-CSharp
-        m_MethodName: OnCameraChanged
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &637025606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,7 +1125,6 @@ GameObject:
   - component: {fileID: 740554330}
   - component: {fileID: 740554335}
   - component: {fileID: 740554336}
-  - component: {fileID: 740554338}
   - component: {fileID: 740554337}
   m_Layer: 5
   m_Name: TalkUI
@@ -1324,34 +1294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8623a0ed2d777d6488a029b2e08a6d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &740554338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740554329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04296a9839a7be6448b00c8d562ce66f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EventSO: {fileID: 11400000, guid: 24d8a5e4edb6210429da1926acbbec70, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 740554337}
-        m_TargetAssemblyTypeName: FollowCamera, Assembly-CSharp
-        m_MethodName: OnCameraChanged
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &998633999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,7 +1890,6 @@ GameObject:
   - component: {fileID: 1397138342}
   - component: {fileID: 1397138341}
   - component: {fileID: 1397138338}
-  - component: {fileID: 1397138340}
   - component: {fileID: 1397138339}
   m_Layer: 5
   m_Name: AreaUI
@@ -1981,34 +1922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8623a0ed2d777d6488a029b2e08a6d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1397138340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397138337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04296a9839a7be6448b00c8d562ce66f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EventSO: {fileID: 11400000, guid: 24d8a5e4edb6210429da1926acbbec70, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1397138339}
-        m_TargetAssemblyTypeName: FollowCamera, Assembly-CSharp
-        m_MethodName: OnCameraChanged
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1397138341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2244,6 +2157,7 @@ GameObject:
   - component: {fileID: 1841951407}
   - component: {fileID: 1841951409}
   - component: {fileID: 1841951408}
+  - component: {fileID: 1841951410}
   m_Layer: 5
   m_Name: Characters
   m_TagString: Untagged
@@ -2311,6 +2225,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841951406}
   m_CullTransparentMesh: 1
+--- !u!114 &1841951410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841951406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &2011775837
 GameObject:
   m_ObjectHideFlags: 0
