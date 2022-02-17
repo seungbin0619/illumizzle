@@ -6,4 +6,25 @@ public class P2_ActionController : MonoBehaviour {
     public bool isActioning = false;
     public int maxGroupCubeCnt;
     public int meepleCnt;
+
+    //================Rule Displayer================
+    public GameObject rule;
+    public bool isRuleOn = false;
+    //==============================================
+
+
+    //================Rule Displayer================
+    public void DisplayRule() {
+        if (isRuleOn == false) {
+            rule.SetActive(true);
+            isRuleOn = true;
+            isActioning = true;
+        }
+        else {
+            rule.SetActive(false);
+            isRuleOn = false;
+            isActioning = false;
+        }
+    }
+    //==============================================
 }

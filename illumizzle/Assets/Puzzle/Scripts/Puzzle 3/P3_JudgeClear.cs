@@ -13,6 +13,11 @@ public class P3_JudgeClear : MonoBehaviour {
 
     private bool isFinished = false;
 
+    //================Rule Displayer================
+    public GameObject rule;
+    public bool isRuleOn = false;
+    //==============================================
+
     private void Start() {
         cntTotFitTile = maxHeight * maxHeight * 2;
     }
@@ -27,4 +32,19 @@ public class P3_JudgeClear : MonoBehaviour {
             //PuzzleSystem.instance.AfterPuzzle(true);
         }
     }
+
+    //================Rule Displayer================
+    public void DisplayRule() {
+        if (isRuleOn == false) {
+            rule.SetActive(true);
+            isRuleOn = true;
+            isActioning = true;
+        }
+        else {
+            rule.SetActive(false);
+            isRuleOn = false;
+            isActioning = false;
+        }
+    }
+    //==============================================
 }

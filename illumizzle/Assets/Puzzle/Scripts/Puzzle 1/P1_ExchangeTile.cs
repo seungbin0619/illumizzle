@@ -10,6 +10,11 @@ public class P1_ExchangeTile : MonoBehaviour {
     private Vector3 position1, position2;
     private float dist;
 
+    //================Rule Displayer================
+    public GameObject rule;
+    public bool isRuleOn = false;
+    //==============================================
+
     void Update() {
         if (calledTile1 != null && calledTile2 != null && isMooving == false) {
             if (calledTile1 != calledTile2 && calledTile1.CompareTag(calledTile2.tag)) {
@@ -38,7 +43,7 @@ public class P1_ExchangeTile : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (isMooving == true) {
+        if (isMooving == true && isRuleOn == false) {
             calledTile1.transform.position += (position2 - position1) / (8 + dist * 3) * 40 * Time.deltaTime;
             calledTile2.transform.position += (position1 - position2) / (8 + dist * 3) * 40 * Time.deltaTime;
 
@@ -55,4 +60,20 @@ public class P1_ExchangeTile : MonoBehaviour {
             }
         }
     }
+
+    //================Rule Displayer================
+    public void DisplayRule() {
+        if (isRuleOn == false) {
+            rule.SetActive(true);
+            isRuleOn = true;
+            isMooving = true;
+        }
+        else {
+            rule.SetActive(false);
+            isRuleOn = false;
+            isMooving = false;
+        }
+    }
+    //==============================================
+
 }

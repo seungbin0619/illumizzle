@@ -13,6 +13,11 @@ public class P4_JudgeClear : MonoBehaviour {
 
     private bool isFinished = false;
 
+    //================Rule Displayer================
+    public GameObject rule;
+    public bool isRuleOn = false;
+    //==============================================
+
     void Update() {
 
         if (cntBlocks == cntFitBlock && isFinished == false || Input.GetKeyDown(KeyCode.S)) {
@@ -22,4 +27,19 @@ public class P4_JudgeClear : MonoBehaviour {
             //PuzzleSystem.instance.AfterPuzzle(true);
         }
     }
+
+    //================Rule Displayer================
+    public void DisplayRule() {
+        if (isRuleOn == false) {
+            rule.SetActive(true);
+            isRuleOn = true;
+            isActioning = true;
+        }
+        else {
+            rule.SetActive(false);
+            isRuleOn = false;
+            isActioning = false;
+        }
+    }
+    //==============================================
 }

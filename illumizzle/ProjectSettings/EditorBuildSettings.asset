@@ -5,87 +5,87 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/System/Scene/General/Intro.unity
     guid: 6a53ca292cf856f46a623fe00507b646
-  - enabled: 0
+  - enabled: 1
     path: Assets/System/Scene/General/Title/Title.unity
     guid: 9045561b6178b6c469b8cbc54bc5f439
-  - enabled: 0
+  - enabled: 1
     path: Assets/System/Scene/General/Map/Map.unity
     guid: 038b04fb30f994d41bfcd0fbe4ff4678
-  - enabled: 0
+  - enabled: 1
     path: Assets/System/Scene/Areas/Village/Village.unity
     guid: 4a7199fee6eca86429f23e765cbfc6a7
-  - enabled: 0
+  - enabled: 1
     path: Assets/System/Scene/Areas/Forest/Forest.unity
     guid: fd21802f20082764b984bc415a8b0cd5
-  - enabled: 0
+  - enabled: 1
     path: Assets/System/Scene/Areas/Workroom/Workroom.unity
     guid: ef3a182b06c8ce849ac75ad2e0a5149b
-  - enabled: 0
+  - enabled: 1
     path: Assets/System/Scene/Areas/Desert/Desert.unity
     guid: 956065fb5db63a64ca0ffd583a044a5d
-  - enabled: 0
+  - enabled: 1
     path: Assets/System/Scene/Areas/Coast/Coast.unity
     guid: 9abfcde9780d3364d949b7121af4d485
-  - enabled: 0
+  - enabled: 1
     path: Assets/System/Scene/Areas/Rock/Rock.unity
     guid: 3519e2265c973b649b49848704cfae1b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 1/Stage1-1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 1/Stage1-2.unity
     guid: 240363d09cee54c4a95c800cd405058e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 1/Stage1-3.unity
     guid: d54aec45be787eb489cef148a490c461
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 1/Stage1-4.unity
     guid: 8ba8b4a49c9546542b08d92b35b88522
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 1/Stage1-5.unity
     guid: 631b5bfb0e546694e8146332df9b3288
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle X/StageX-3.unity
     guid: 95faf9a5a9ff8d641961e23b8c3fb3cb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 2/Stage Select2.unity
     guid: 1183c260c32fb134fbbbd9383b455b07
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 2/Stage2-1.unity
     guid: 603a09b843be3314aaba4b8cbdd0b5a0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 2/Stage2-2.unity
     guid: 2cc8b6a8bae550f4a8cb2a17a699fc6e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 2/Stage2-3.unity
     guid: 2878d6f5fca25f34eb7b25843594ded9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 2/Stage2-4.unity
     guid: 9617bff2ce829574f9a0f5ff94dd2854
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 2/Stage2-5.unity
     guid: d3fe8ec3adc829c46a11e0e4eeb7d177
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 3/Stage Select3.unity
     guid: 27fb22022dfa9f44b8ba8bc9cfdd2c79
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-1.unity
     guid: 6f08dabd8f99e434c8c0ac565b06cd08
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-2.unity
     guid: eedce8447e73bcf42aefc41779d24aed
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-3.unity
     guid: da7746c6a6422eb4eaeb554c8eb86c40
-  - enabled: 0
-    path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-5.unity
-    guid: 6aee27a711eda4144b2b4f458e7241a8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-4.unity
     guid: 6ed6a4d92de562c479310f66abebb637
+  - enabled: 1
+    path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-5.unity
+    guid: 6aee27a711eda4144b2b4f458e7241a8
   - enabled: 1
     path: Assets/Puzzle/Scenes/Puzzle 4/Stage Select4.unity
     guid: df2dca259ebdd6c43801aab80ad46945
