@@ -104,7 +104,10 @@ public class AreaSystem : MonoBehaviour
 
             while(progress < duration && isAnimate)
             {
-                characterPanel.anchoredPosition = Vector3.Lerp(position, target.anchoredPosition, progress / duration);
+                float clamp = progress / duration;
+                clamp = LineAnimation.Lerp(0, 1, clamp, 1, 0.3f, 0.3f);
+
+                characterPanel.anchoredPosition = Vector3.Lerp(position, target.anchoredPosition, clamp);
                 progress += Time.deltaTime;
 
                 yield return frame;

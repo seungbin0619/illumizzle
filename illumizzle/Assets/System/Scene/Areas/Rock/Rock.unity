@@ -363,12 +363,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapIndex: 4
   name: Rock
-  title: 
+  title: "\uBC14\uC704\uC12C"
   bgImage: {fileID: 1293299723}
   images:
   - {fileID: 0}
   - {fileID: 0}
-  talks: []
+  talks:
+  - {fileID: 11400000, guid: b878dca6462a2ac4d960fb09876a5159, type: 2}
+  - {fileID: 11400000, guid: fc2b981c950754f4a9df1126116947b9, type: 2}
+  - {fileID: 11400000, guid: 38066d9f4dc776e4b824078d4686b597, type: 2}
   isPuzzle: 1
   face: 1
 --- !u!4 &620780959
