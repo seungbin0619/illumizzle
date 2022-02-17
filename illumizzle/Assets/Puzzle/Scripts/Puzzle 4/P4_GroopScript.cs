@@ -172,7 +172,7 @@ public class P4_GroopScript : MonoBehaviour {
 
         //³«ÇÏÇÏ±â
         if (isFalling == true) {
-            transform.localPosition += Vector3.down * 4 * Time.deltaTime;
+            transform.localPosition += Vector3.down * 8 * Time.deltaTime;
 
             float dist = Vector3.Distance(transform.localPosition, targetPosition);
 
