@@ -26,12 +26,16 @@ public class P4_JudgeClear : MonoBehaviour {
     //==============================================
 
     void Update() {
+        bool debug = false;
+#if UNITY_EDITOR
+        debug = Input.GetKeyDown(KeyCode.S);
+#endif
 
-        if (isFinished == false && (cntBlocks == cntFitBlock || cheatKeyIdx == cheatKeyLen)) {
+        if (isFinished == false && (cntBlocks == cntFitBlock || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
             clearText.SetActive(true); //
-            //PuzzleSystem.instance.AfterPuzzle(true);
+            PuzzleSystem.instance.AfterPuzzle(true);
         }
 
         //==================Cheet Key===================

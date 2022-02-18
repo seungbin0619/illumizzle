@@ -16,10 +16,15 @@ public class P1_JudgeClear : MonoBehaviour {
     //==============================================
 
     void Update() {
-        if (isFinished == false && (cntFitTrigger == cntTotFitTrigger || cheatKeyIdx == cheatKeyLen)) { 
+        bool debug = false;
+#if UNITY_EDITOR
+        debug = Input.GetKeyDown(KeyCode.S);
+#endif
+
+        if (isFinished == false && (cntFitTrigger == cntTotFitTrigger || cheatKeyIdx == cheatKeyLen || debug)) { 
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
-            //PuzzleSystem.instance.AfterPuzzle(true);
+            PuzzleSystem.instance.AfterPuzzle(true);
         }
 
         //==================Cheet Key===================

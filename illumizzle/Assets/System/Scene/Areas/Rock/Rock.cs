@@ -63,8 +63,25 @@ public class Rock : Area
         {
             DataSystem.SetData("Story", "Rock.Story.01", 1);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[2]);
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
+
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 0.5f);
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Workroom");
         }
 
         ActionSystem.instance.Play();
+    }
+
+    public override void GoScene(string name)
+    {
+        if (!DataSystem.HasData("Story", "Rock.Story.01"))
+        {
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
+            ActionSystem.instance.Play();
+
+            return;
+        }
+
+        base.GoScene(name);
     }
 }

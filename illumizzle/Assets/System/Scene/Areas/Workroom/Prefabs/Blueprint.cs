@@ -11,7 +11,7 @@ public class Blueprint : MonoBehaviour
 
     public static readonly string[] partsConditions = new string[3]
     {
-        "Stage1-5", "Stage2-5", "Stage3-5"
+        "Stage1-5", "Stage4-5", "Stage3-5"
     };
 
     public static readonly string[] partsSetFlag = new string[3]

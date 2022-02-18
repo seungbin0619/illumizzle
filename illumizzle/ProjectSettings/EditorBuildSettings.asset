@@ -81,6 +81,12 @@ EditorBuildSettings:
     path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-3.unity
     guid: da7746c6a6422eb4eaeb554c8eb86c40
   - enabled: 1
+<<<<<<< Updated upstream
+=======
+    path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-5.unity
+    guid: 6aee27a711eda4144b2b4f458e7241a8
+  - enabled: 1
+>>>>>>> Stashed changes
     path: Assets/Puzzle/Scenes/Puzzle 3/Stage3-4.unity
     guid: 6ed6a4d92de562c479310f66abebb637
   - enabled: 1

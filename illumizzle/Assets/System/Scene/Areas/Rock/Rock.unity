@@ -372,6 +372,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b878dca6462a2ac4d960fb09876a5159, type: 2}
   - {fileID: 11400000, guid: fc2b981c950754f4a9df1126116947b9, type: 2}
   - {fileID: 11400000, guid: 38066d9f4dc776e4b824078d4686b597, type: 2}
+  - {fileID: 11400000, guid: 4a6dac3a4b4efee4890d3ebee3e70399, type: 2}
+  - {fileID: 11400000, guid: 41fc002bdcd92f843a2ef0c780a4de42, type: 2}
   isPuzzle: 1
   face: 1
 --- !u!4 &620780959
@@ -536,8 +538,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Forest, Assembly-CSharp
+      - m_Target: {fileID: 620780958}
+        m_TargetAssemblyTypeName: Rock, Assembly-CSharp
         m_MethodName: LoadPuzzle
         m_Mode: 3
         m_Arguments:
@@ -621,7 +623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 299}
+  m_AnchoredPosition: {x: 446, y: -365}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049729841
@@ -668,8 +670,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Forest, Assembly-CSharp
+      - m_Target: {fileID: 620780958}
+        m_TargetAssemblyTypeName: Rock, Assembly-CSharp
         m_MethodName: LoadPuzzle
         m_Mode: 3
         m_Arguments:
@@ -753,7 +755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 136, y: -239}
+  m_AnchoredPosition: {x: -547, y: 48}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077895603
@@ -800,8 +802,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Forest, Assembly-CSharp
+      - m_Target: {fileID: 620780958}
+        m_TargetAssemblyTypeName: Rock, Assembly-CSharp
         m_MethodName: LoadPuzzle
         m_Mode: 3
         m_Arguments:
@@ -1012,7 +1014,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 620780958}
         m_TargetAssemblyTypeName: Area, Assembly-CSharp
         m_MethodName: GoScene
         m_Mode: 5
@@ -1177,7 +1179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -478, y: 22}
+  m_AnchoredPosition: {x: 136, y: -239}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369922494
@@ -1224,8 +1226,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Forest, Assembly-CSharp
+      - m_Target: {fileID: 620780958}
+        m_TargetAssemblyTypeName: Rock, Assembly-CSharp
         m_MethodName: LoadPuzzle
         m_Mode: 3
         m_Arguments:
@@ -1309,7 +1311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 418, y: -365}
+  m_AnchoredPosition: {x: -611, y: 346}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671966840
@@ -1356,8 +1358,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Forest, Assembly-CSharp
+      - m_Target: {fileID: 620780958}
+        m_TargetAssemblyTypeName: Rock, Assembly-CSharp
         m_MethodName: LoadPuzzle
         m_Mode: 3
         m_Arguments:

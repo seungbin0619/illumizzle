@@ -10,9 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
-  m_Name: Rock.Story00
+  m_Name: Workroom.Blueprint.Check.03
   m_EditorClassIdentifier: 
-  scripts: []
+  scripts:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC774\uC81C \uBC14\uAFC0 \uBD80\uD488\uB3C4 \uC5C6\uB294\uB370 \uC5B4\uCA4C\uC9C0?"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC774\uC81C \uBC14\uAFC0 \uBD80\uD488\uB3C4 \uC5C6\uB294\uB370 \uC5B4\uCA4C\uC9C0?"
+    hide: []
+    command: 
   characters:
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     position: 0

@@ -10,6 +10,10 @@ public class Workroom : Area
         {
             DataSystem.SetData("Story", "Workroom.Entry.00", 1);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[0]);
+        } else if(DataSystem.HasData("Story", "Rock.Story.01") && !DataSystem.HasData("Story", "Workroom.Entry.01"))
+        {
+            DataSystem.SetData("Story", "Workroom.Entry.01", 1);
+            //ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[0]);
         }
 
         ActionSystem.instance.Play();
@@ -39,7 +43,7 @@ public class Workroom : Area
                 talks[16].scripts[0].text = "가져온 부품 " + changedCount + "개를 바꿔보자!";
                 ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[16]);
 
-                if (DataSystem.GetData("Story", "", 0) < Blueprint.partsName.Length)
+                if (totalParts < Blueprint.partsName.Length)
                 {
                     bool firstFlag = false;
 

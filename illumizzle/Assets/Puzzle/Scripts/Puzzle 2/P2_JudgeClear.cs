@@ -24,6 +24,10 @@ public class P2_JudgeClear : MonoBehaviour {
     }
 
     void Update() {
+        bool debug = false;
+#if UNITY_EDITOR
+        debug = Input.GetKeyDown(KeyCode.S);
+#endif
 
         bool isArrived = true;
 
@@ -33,11 +37,11 @@ public class P2_JudgeClear : MonoBehaviour {
         }
 
 
-        if (isFinished == false && (isArrived == true || cheatKeyIdx == cheatKeyLen)) {
+        if (isFinished == false && (isArrived == true || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
             clearText.SetActive(true);
-            //PuzzleSystem.instance.AfterPuzzle(true);
+            PuzzleSystem.instance.AfterPuzzle(true);
         }
 
         //==================Cheet Key===================

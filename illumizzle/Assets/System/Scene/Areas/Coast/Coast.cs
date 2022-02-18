@@ -58,12 +58,12 @@ public class Coast : Area
         }
         else if (DataSystem.HasData("Puzzle", puzzles[2]) && !DataSystem.HasData("Story", "Coast.Story.00"))
         {
-            DataSystem.SetData("Story", "Forest.Story.00", 1);
+            DataSystem.SetData("Story", "Coast.Story.00", 1);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[1]);
         }
         else if (DataSystem.HasData("Puzzle", puzzles[4]) && !DataSystem.HasData("Story", "Coast.Story.01"))
         {
-            DataSystem.SetData("Story", "Forest.Story.01", 1);
+            DataSystem.SetData("Story", "Coast.Story.01", 1);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[2]);
         }
 

@@ -10,41 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
-  m_Name: Workroom.Desk.02
+  m_Name: Rock.Story.00
   m_EditorClassIdentifier: 
   scripts:
-  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uC5EC\uAE30\uC5D0 \uB3C4\uC6C0\uC774 \uB420\uB9CC\uD55C \uC790\uB8CC\uB4E4\uC774
-      \uC788\uC9C0 \uC54A\uC744\uAE4C?"
+    text: "\uC774\uCABD\uC73C\uB85C\uB294 \uB354 \uAC08\uC218\uAC00 \uC5C6\uB124..."
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: ...
-    hide: []
-    command: 
-  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
-    sprite: 0
-    text: "\uC5EC\uAE30 \uBD80\uD488\uB4E4\uC744 \uB9CC\uB4E4 \uB54C \uD544\uC694\uD55C
-      \uC7AC\uB8CC\uAC00 \uC801\uD600 \uC788\uC5B4."
+    text: "\uC544\uAE4C \uB2E4\uB978 \uAE38\uC774 \uC788\uC5C8\uB294\uB370 \uADF8\uCABD\uC73C\uB85C
+      \uAC00\uBCF4\uC790"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uB3D9\uB825\uC6D0? \uB3D9\uB825\uC6D0\uC774 \uBB50\uC9C0? \uC124\uACC4\uB3C4\uC5D0
-      \uC5C6\uC5C8\uC796\uC544."
+    text: "\uADF8\uCABD\uC5D0\uB294 \uACF5\uD559\uC790\uAC00 \uC788\uC73C\uBA74 \uC88B\uACA0\uB2E4!"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uB3D9\uB825\uC6D0\uC744 \uB9CC\uB4E4 \uB54C\uC5D0\uB294 \uD2B9\uC218\uD55C
-      \uBC14\uC704\uAC00 \uD544\uC694\uD558\uB300."
+    text: "\uADF8\uB7EC\uAC8C... \uACF5\uD559\uC790\uB294 \uC5B4\uB5BB\uAC8C \uC0DD\uACBC\uC744\uAE4C?"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC5C4\uCCAD \uACF5\uBD80 \uC798\uD558\uAC8C \uC0DD\uAE30\uC9C0 \uC54A\uC558\uC744\uAE4C?"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uB098\uC911\uC5D0 \uD544\uC694\uD560\uC9C0\uB3C4 \uBAA8\uB974\uB2C8 \uAE30\uC5B5\uD574\uB450\uC790."
+    text: "\uB098\uB3C4 \uADF8\uB7F4 \uAC83 \uAC19\uC544!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uBE68\uB9AC \uB9CC\uB098\uACE0\uC2F6\uC5B4! \uC11C\uB450\uB974\uC790!"
     hide: []
     command: 
   characters:
