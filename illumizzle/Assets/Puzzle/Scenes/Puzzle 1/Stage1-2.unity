@@ -3468,6 +3468,11 @@ PrefabInstance:
       propertyPath: sceneController
       value: 
       objectReference: {fileID: 1193779238}
+    - target: {fileID: 2471014905194187800, guid: e764256ceea7c344fb3ee9b8748abf2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3355481867276457611, guid: e764256ceea7c344fb3ee9b8748abf2d,
         type: 3}
       propertyPath: sceneController
@@ -4113,6 +4118,11 @@ PrefabInstance:
       propertyPath: sceneController
       value: 
       objectReference: {fileID: 1193779238}
+    - target: {fileID: 2471014905194187800, guid: e764256ceea7c344fb3ee9b8748abf2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3355481867276457611, guid: e764256ceea7c344fb3ee9b8748abf2d,
         type: 3}
       propertyPath: sceneController

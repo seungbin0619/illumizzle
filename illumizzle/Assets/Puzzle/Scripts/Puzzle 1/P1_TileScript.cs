@@ -7,6 +7,11 @@ public class P1_TileScript : MonoBehaviour {
     public GameObject sceneController;
     public GameObject leftButton;
     public GameObject rightButton;
+    private GameObject cubeBase;
+
+    private void Start() {
+        cubeBase = gameObject.transform.parent.gameObject;
+    }
 
     private void OnMouseDown() {
         P1_ExchangeTile exchangeTile = sceneController.GetComponent<P1_ExchangeTile>();
@@ -20,10 +25,29 @@ public class P1_TileScript : MonoBehaviour {
             if (exchangeTile.calledTile1 == null) {
                 exchangeTile.calledTile1 = gameObject;
                 Debug.Log("첫 번째 타일 선택됨");
+
+                gameObject.transform.GetChild(4).gameObject.SetActive(true);
+                int childCnt = cubeBase.transform.childCount;
+                for (int i = 0; i < childCnt; i++) {
+                    GameObject crObject = cubeBase.transform.GetChild(i).gameObject;
+                    if (crObject.name[1] != 'i') break;
+                    if (crObject.name[5] != gameObject.name[5] || 
+                        crObject.name[6] != gameObject.name[6]) {
+                        crObject.transform.GetChild(4).gameObject.SetActive(true);
+                    }
+                }
+
             }
             else {
                 exchangeTile.calledTile2 = gameObject;
                 Debug.Log("두 번째 타일 선택됨");
+
+                int childCnt = cubeBase.transform.childCount;
+                for (int i = 0; i < childCnt; i++) {
+                    GameObject crObject = cubeBase.transform.GetChild(i).gameObject;
+                    if (crObject.name[1] != 'i') break;
+                    crObject.transform.GetChild(4).gameObject.SetActive(false);
+                }
             }
         }
     }
