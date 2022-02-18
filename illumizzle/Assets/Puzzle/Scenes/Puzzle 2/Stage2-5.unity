@@ -10744,6 +10744,9 @@ MonoBehaviour:
   - {fileID: 1920646371}
   - {fileID: 1971659751}
   clearText: {fileID: 587480726}
+  cheatKey: showmetheending
+  cheatKeyLen: 15
+  cheatKeyIdx: 0
 --- !u!1001 &1208290337
 PrefabInstance:
   m_ObjectHideFlags: 0

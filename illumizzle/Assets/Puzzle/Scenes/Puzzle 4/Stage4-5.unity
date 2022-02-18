@@ -4693,8 +4693,8 @@ MonoBehaviour:
   clearText: {fileID: 139338065}
   rule: {fileID: 544152315}
   isRuleOn: 0
-  cheatKey: showmetheending
-  cheatKeyLen: 15
+  cheatKey: showmethenextstage
+  cheatKeyLen: 18
   cheatKeyIdx: 0
 --- !u!4 &1464804226
 Transform:
