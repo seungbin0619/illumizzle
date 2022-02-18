@@ -4924,7 +4924,7 @@ MonoBehaviour:
   maxGroupCubeCnt: 4
   meepleCnt: 1
   rule: {fileID: 5073711795297625098}
-  isRuleOn: 1
+  isRuleOn: 0
 --- !u!4 &1193779240
 Transform:
   m_ObjectHideFlags: 0
@@ -8748,7 +8748,7 @@ PrefabInstance:
     - target: {fileID: 5692389399845729737, guid: c94c91e8e4e580e4d9eb8fa8596662e2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8042501670090458178, guid: c94c91e8e4e580e4d9eb8fa8596662e2,
         type: 3}

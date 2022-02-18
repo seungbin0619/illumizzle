@@ -2399,7 +2399,7 @@ MonoBehaviour:
   cntFitTile: 0
   clearText: {fileID: 139338065}
   rule: {fileID: 8595731361518147865}
-  isRuleOn: 1
+  isRuleOn: 0
 --- !u!4 &1464804226
 Transform:
   m_ObjectHideFlags: 0
@@ -3851,7 +3851,7 @@ PrefabInstance:
     - target: {fileID: 7544912557082752262, guid: 6597f9fa6b12fea41bc599fe9869c27f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6597f9fa6b12fea41bc599fe9869c27f, type: 3}
