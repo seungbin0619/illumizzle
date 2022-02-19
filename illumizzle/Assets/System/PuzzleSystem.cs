@@ -53,11 +53,13 @@ public class PuzzleSystem : MonoBehaviour
 
         IEnumerator CoAfterPuzzle()
         {
+            FadeSystem.instance.StartFade(1);
+            yield return new WaitWhile(() => FadeSystem.instance.isAnimated);
+
             AsyncOperation operation = SceneManager.LoadSceneAsync(beforeScene);
             yield return new WaitUntil(() => operation.isDone);
 
             // 돌아간 이후?
-
         }
 
         StartCoroutine(CoAfterPuzzle());

@@ -37,6 +37,11 @@ public class Workroom : Area
             {
                 talks[18].scripts[0].text = "(현재 부품을 " + totalParts + "개 모았다.)";
                 ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[18]);
+
+                if (DataSystem.HasData("Story", "Workroom.Blueprint.Check.03"))
+                {
+                    ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[20]);
+                }
             }
             else
             {
@@ -60,9 +65,12 @@ public class Workroom : Area
                     talks[17].scripts[1].text += "지? 남은 부품도 빨리 찾으러 가자!";
                     ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[17]);
                 }
-                else // 부품 다 구한 경우
+                else if (!DataSystem.HasData("Story", "Workroom.Blueprint.Check.03"))// 부품 다 구한 경우
                 {
+                    DataSystem.SetData("Story", "Workroom.Blueprint.Check.03", 1);
 
+                    ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[19]);
+                    ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[20]);
                 }
             }
         }
@@ -90,8 +98,29 @@ public class Workroom : Area
 
     public void ClickPower()
     {
-        if (!DataSystem.HasData("Story", "Workroom.Blueprint.00"))
-            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[12]);
+        if (!DataSystem.HasData("Story", "Workroom.Blueprint.Check.03"))
+        {
+            if (!DataSystem.HasData("Story", "Workroom.Blueprint.00"))
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[12]);
+            else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[13]);
+        }else if(DataSystem.HasData("Story", "Workroom.Desk.02") || DataSystem.HasData("Story", "Workroom.Desk.04"))
+        {
+            if (!DataSystem.HasData("Story", "Workroom.Power.02"))
+            {
+                DataSystem.SetData("Story", "Workroom.Power.02", 1);
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[22]);
+
+                // 연결
+                if (DataSystem.HasData("Story", "Workroom.Desk.04") &&
+                    DataSystem.HasData("Story", "Workroom.Power.02") &&
+                    DataSystem.HasData("Story", "Village.Home1.01"))
+                {
+                    base.GoScene("Map");
+                    return;
+                }
+            }
+            else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[23]);
+        }
         else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[13]);
 
         ActionSystem.instance.Play();
@@ -117,24 +146,45 @@ public class Workroom : Area
 
     public void ClickDesk()
     {
-        if (!DataSystem.HasData("Story", "Workroom.Blueprint.00"))
+        if (!DataSystem.HasData("Story", "Workroom.Blueprint.Check.03"))
         {
-            if (!DataSystem.HasData("Story", "Workroom.Desk.00"))
+            if (!DataSystem.HasData("Story", "Workroom.Blueprint.00"))
             {
-                DataSystem.SetData("Story", "Workroom.Desk.00", 1);
-                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[6]);
+                if (!DataSystem.HasData("Story", "Workroom.Desk.00"))
+                {
+                    DataSystem.SetData("Story", "Workroom.Desk.00", 1);
+                    ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[6]);
+                }
+                else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[7]);
             }
-            else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[7]);
-        }
-        else
-        {
-            if (!DataSystem.HasData("Story", "Workroom.Desk.02"))
+            else
             {
-                DataSystem.SetData("Story", "Workroom.Desk.02", 1);
-                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[8]);
+                if (!DataSystem.HasData("Story", "Workroom.Desk.02"))
+                {
+                    DataSystem.SetData("Story", "Workroom.Desk.02", 1);
+                    ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[8]);
+                }
+                else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[9]);
+            }
+        }else
+        {
+            if (!DataSystem.HasData("Story", "Workroom.Desk.04"))
+            {
+                DataSystem.SetData("Story", "Workroom.Desk.04", 1);
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[21]);
+
+                // 연결
+                if (DataSystem.HasData("Story", "Workroom.Desk.04") &&
+                    DataSystem.HasData("Story", "Workroom.Power.02") &&
+                    DataSystem.HasData("Story", "Village.Home1.01"))
+                {
+                    base.GoScene("Map");
+                    return;
+                }
             }
             else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[9]);
         }
+
         ActionSystem.instance.Play();
     }
 

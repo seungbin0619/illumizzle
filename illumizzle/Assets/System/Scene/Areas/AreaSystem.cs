@@ -39,6 +39,8 @@ public class AreaSystem : MonoBehaviour
 
     #endregion
 
+    private RectTransform target;
+
     private void Start()
     {
         int charCount = DataSystem.GetData("Setting", "Faces", 2);
@@ -92,7 +94,7 @@ public class AreaSystem : MonoBehaviour
         if (CurrentArea == null) return;
         if (isWalking) return;
 
-        RectTransform target = GetTarget(index);
+        target = GetTarget(index);
         if (target == null) return;
 
         isWalking = true;
@@ -137,6 +139,11 @@ public class AreaSystem : MonoBehaviour
 
     private void Update()
     {
+        //if(!isWalking && target != null)
+        //{
+        //    position = characterPanel.anchoredPosition = target.anchoredPosition;
+        //}
+
         bool flag = true;
 
         flag = flag && CurrentArea != null;

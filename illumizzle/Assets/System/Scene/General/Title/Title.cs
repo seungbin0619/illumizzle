@@ -36,7 +36,7 @@ public class Title : MonoBehaviour
         DataSystem.Load();
 
         string currentName = new string[] { 
-                "Village", "Forest", "Desert", "Coast", "Workroom" 
+                "Village", "Forest", "Desert", "Coast", "Rock", "Workroom" 
             }[DataSystem.GetData("Setting", "CurrentMap", 0)];
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 1f);

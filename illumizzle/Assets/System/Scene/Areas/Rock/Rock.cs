@@ -29,6 +29,8 @@ public class Rock : Area
 
     public void LoadPuzzle(int index)
     {
+        if (!ActionSystem.instance.IsCompleted) return;
+
         #region [ 퍼즐 시작 전 ]
         switch (index)
         {
@@ -74,6 +76,8 @@ public class Rock : Area
 
     public override void GoScene(string name)
     {
+        if (!ActionSystem.instance.IsCompleted) return;
+
         if (!DataSystem.HasData("Story", "Rock.Story.01"))
         {
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);

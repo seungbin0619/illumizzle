@@ -16,7 +16,8 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
     text: "\uC73C\uC545! \uAE5C\uC9DD\uC774\uC57C,"
-    hide: []
+    hide:
+    - {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
     command: 
   - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
     sprite: 0

@@ -49,7 +49,7 @@ MonoBehaviour:
     sprite: 0
     text: ... ...!!
     hide: []
-    command: 
+    command: SHOW 4
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
     text: "\uCC3E\uC558\uC5B4! \uBE68\uB9AC \uC774\uAC70 \uAC00\uC9C0\uACE0 \uC815\uBE44\uC2E4\uB85C
@@ -60,7 +60,7 @@ MonoBehaviour:
     sprite: 0
     text: "\uADF8\uB7EC\uC790, \uC5B4\uC11C \uAD50\uCCB4\uD574\uBCF4\uC790! "
     hide: []
-    command: 
+    command: CLEAR
   characters:
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     position: 0

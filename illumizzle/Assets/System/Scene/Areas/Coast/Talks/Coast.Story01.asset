@@ -28,7 +28,7 @@ MonoBehaviour:
     sprite: 0
     text: "\uC9C4\uC9DC \uD1B1\uB2C8\uBC14\uD034\uC796\uC544!"
     hide: []
-    command: 
+    command: SHOW 5
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
     text: "\uC774\uC81C \uBD80\uD488\uC744 \uB2E4 \uBAA8\uC558\uC73C\uB2C8\uAE50
@@ -39,7 +39,7 @@ MonoBehaviour:
     sprite: 0
     text: "\uB2F9\uC7A5 \uB9C8\uC744\uB85C \uB3CC\uC544\uAC00\uC790!"
     hide: []
-    command: 
+    command: CLEAR
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
     text: "\uAC70\uBD10, \uC5ED\uC2DC \uC798\uBABB\uBCF8\uAC8C \uC544\uB2C8\uC5C8\uC5B4!

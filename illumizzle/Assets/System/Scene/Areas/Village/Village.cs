@@ -38,14 +38,36 @@ public class Village : Area
         if (!ActionSystem.instance.IsCompleted) return;
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 0);
+
+        if (DataSystem.HasData("Story", "Workroom.Blueprint.Check.03") && !DataSystem.HasData("Story", "Village.Home1.01"))
+        {
+            DataSystem.SetData("Story", "Village.Home1.01", 1);
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[6]);
+
+            // ¿¬°á
+            if (DataSystem.HasData("Story", "Workroom.Desk.04") &&
+                DataSystem.HasData("Story", "Workroom.Power.02") &&
+                DataSystem.HasData("Story", "Village.Home1.01"))
+            {
+                base.GoScene("Map");
+                return;
+            }
+        }
+        else
+        {
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
+        }
+
         ActionSystem.instance.Play();
     }
 
     public void GoHome2()
     {
         if (!ActionSystem.instance.IsCompleted) return;
-
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 2);
+
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
+
         ActionSystem.instance.Play();
     }
 

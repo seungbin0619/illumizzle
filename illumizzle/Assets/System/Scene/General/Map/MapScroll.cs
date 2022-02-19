@@ -28,6 +28,7 @@ public class MapScroll : MonoBehaviour
     }
 
     public void OnScroll(UnityEngine.EventSystems.BaseEventData e) {
+        if (!ActionSystem.instance.IsCompleted) return;
         float delta = e.currentInputModule.input.mouseScrollDelta.y * scrollRange;
 
         currentPosition.y = Mathf.Clamp(currentPosition.y - delta, -horizontalRange, horizontalRange);
@@ -35,6 +36,7 @@ public class MapScroll : MonoBehaviour
 
     private void Update()
     {
+        if (!ActionSystem.instance.IsCompleted) return;
         rect.localPosition = Vector3.Lerp(rect.localPosition, currentPosition, Time.deltaTime * scrollSpeed);
     }
 }
