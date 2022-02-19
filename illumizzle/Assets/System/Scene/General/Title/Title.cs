@@ -27,7 +27,7 @@ public class Title : MonoBehaviour
         DataSystem.Load(true);
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 1f);
-        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Village");
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Prologue");
         ActionSystem.instance.Play();
     }
 
@@ -35,9 +35,17 @@ public class Title : MonoBehaviour
     {
         DataSystem.Load();
 
+        int index = DataSystem.GetData("Setting", "CurrentMap");
+        if (index == -1)
+        {
+            StartGame();
+
+            return;
+        }
+
         string currentName = new string[] { 
                 "Village", "Forest", "Desert", "Coast", "Rock", "Workroom" 
-            }[DataSystem.GetData("Setting", "CurrentMap", 0)];
+            }[index];
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 1f);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, currentName);

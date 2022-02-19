@@ -23,9 +23,18 @@ public class MapScroll : MonoBehaviour
     {
         horizontalRange = rect.sizeDelta.y * 0.5f;
         int current = DataSystem.GetData("Setting", "CurrentMap", 0);
-        current = current == 4 ? -1 : 1;
+        float clm = 0;
+        switch(current)
+        {
+            case 0:
+            case 1:
+            case 2: clm = 1; break;
+            case 3: clm = -0.5f; break;
+            case 4: clm = -1; break;
+            default: clm = 1; break;
+        }
 
-        currentPosition = new Vector3(0, horizontalRange * current, 0);
+        currentPosition = new Vector3(0, horizontalRange * clm, 0);
         rect.localPosition = currentPosition;
     }
 

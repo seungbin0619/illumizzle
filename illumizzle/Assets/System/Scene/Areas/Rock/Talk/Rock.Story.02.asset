@@ -54,7 +54,7 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
     sprite: 0
-    text: "\uD0DC\uC591? \uD0DC\uC591\uC774\uB77C\uBA74 \uC804\uAD6C\uB97C \uB9D0\uD558\uB294\uAC70\uB2C8?"
+    text: "\uD0DC\uC591? \uD0DC\uC591\uC774\uB77C\uBA74 \uC804\uAD6C\uB97C \uB9D0\uD558\uB294\uAC74\uAC00?"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
@@ -77,7 +77,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
     sprite: 0
     text: "\uB098\uB294 \uC5EC\uAE30\uC11C \uADF8 \uD0DC\uC591\uC5D0 \uD544\uC694\uD55C
-      \uB3D9\uB825\uC6D0\uC744 \uB9CC\uB4E4\uACE0 \uC788\uC5C8\uC5B4."
+      \uB3D9\uB825\uC6D0\uC744 \uB9CC\uB4E4\uACE0 \uC788\uC5C8\uB2E8\uB2E4.."
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
@@ -88,7 +88,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
     sprite: 0
     text: "\uD0DC\uC591\uC774 \uBC1D\uAC8C \uBE5B\uB098\uB294 \uB370\uC5D0 \uAF2D
-      \uD544\uC694\uD55C \uBD80\uD488\uC774\uC57C."
+      \uD544\uC694\uD55C \uBD80\uD488\uC774\uB780\uB2E4."
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}

@@ -43,11 +43,6 @@ MonoBehaviour:
     text: "\uB410\uC5B4!"
     hide: []
     command: SHOW 0
-  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
-    sprite: 0
-    text: "\uC774\uC81C \uD0DC\uC591\uC744 \uC791\uB3D9\uC2DC\uCF1C\uBCF4\uC790!"
-    hide: []
-    command: 
   - character: {fileID: 0}
     sprite: 0
     text: "(\uCCA0\uCEE5)"
@@ -55,7 +50,7 @@ MonoBehaviour:
     command: CLEAR
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: ...
+    text: ... ...
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}

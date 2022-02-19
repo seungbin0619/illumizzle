@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: "\uD310\uD050\uC804\uB825\uACF5\uC0AC"
+  companyName: PEPCO
   productName: illumizzle
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}

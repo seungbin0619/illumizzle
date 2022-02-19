@@ -413,6 +413,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fc18278e513af9f44918709ce792f26f, type: 2}
   - {fileID: 11400000, guid: b55309b3cc75ee44184520acfffc8171, type: 2}
   - {fileID: 11400000, guid: 13debe76fc2489e4f9dbe36dacc1dd4b, type: 2}
+  - {fileID: 11400000, guid: 6826d0ab1f1436c4683d9f4e4ab894d5, type: 2}
+  - {fileID: 11400000, guid: 48be0de9f87a01943af6d232f34957a9, type: 2}
+  - {fileID: 11400000, guid: a742cb0e13703114cb2a4223c65364bd, type: 2}
   isPuzzle: 0
   face: 0
 --- !u!4 &255755238

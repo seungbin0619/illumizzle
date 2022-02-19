@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/System/Scene/General/Intro.unity
     guid: 6a53ca292cf856f46a623fe00507b646
   - enabled: 1
-    path: Assets/System/Scene/General/Prologue/Prologue.unity
+    path: Assets/System/Scene/General/PE/Prologue.unity
     guid: fa5675e94c3d4a24b90c233c05ca4ce4
+  - enabled: 1
+    path: Assets/System/Scene/General/PE/Ending.unity
+    guid: dea54e41292b53f49ba2e8f0002dd8a3
   - enabled: 1
     path: Assets/System/Scene/General/Map/Map.unity
     guid: 038b04fb30f994d41bfcd0fbe4ff4678

@@ -91,6 +91,17 @@ public class Rock : Area
 
     public void ClickLight()
     {
+        if (!ActionSystem.instance.IsCompleted) return;
 
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
+        ActionSystem.instance.Play();
+    }
+
+    public void ClickGrass()
+    {
+        if (!ActionSystem.instance.IsCompleted) return;
+
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[6]);
+        ActionSystem.instance.Play();
     }
 }
