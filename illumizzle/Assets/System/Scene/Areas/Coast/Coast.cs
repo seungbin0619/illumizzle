@@ -65,6 +65,23 @@ public class Coast : Area
         {
             DataSystem.SetData("Story", "Coast.Story.01", 1);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[2]);
+        }else if (DataSystem.HasData("Story", "Workroom.Desk.04") &&
+                DataSystem.HasData("Story", "Workroom.Power.02") &&
+                DataSystem.HasData("Story", "Village.Home1.01") &&
+                !DataSystem.HasData("Story", "RockOpen"))
+        {
+            DataSystem.SetData("Story", "RockOpen", 1);
+
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
+            GoScene("Map");
+
+            //
+            return;
+        }else if(DataSystem.HasData("Story", "ViewRock") && !DataSystem.HasData("Story", "ViewRock2"))
+        {
+            DataSystem.SetData("Story", "ViewRock2", 1);
+
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[6]);
         }
 
         ActionSystem.instance.Play();

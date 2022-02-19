@@ -115,7 +115,7 @@ public class Workroom : Area
                     DataSystem.HasData("Story", "Workroom.Power.02") &&
                     DataSystem.HasData("Story", "Village.Home1.01"))
                 {
-                    base.GoScene("Map");
+                    base.GoScene("Coast");
                     return;
                 }
             }
@@ -178,7 +178,7 @@ public class Workroom : Area
                     DataSystem.HasData("Story", "Workroom.Power.02") &&
                     DataSystem.HasData("Story", "Village.Home1.01"))
                 {
-                    base.GoScene("Map");
+                    base.GoScene("Coast");
                     return;
                 }
             }

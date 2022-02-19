@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
+  m_Name: Coast.Rockopen
+  m_EditorClassIdentifier: 
+  scripts:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uBB54\uAC00 \uC54C \uAC83 \uAC19\uC544? \uD574\uBCC0\uC73C\uB85C\uB294
+      \uC65C \uC628\uAC70\uC57C?"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uC751, \uB2E8\uC11C\uB294 \uC774\uC815\uB3C4\uBA74 \uCDA9\uBD84\uD55C
+      \uAC83 \uAC19\uC544."
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uBB54\uB370! \uBE68\uB9AC \uC54C\uB824\uC918!!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uC544\uAE4C \uB3D9\uB825\uC6D0\uC774 \uBC14\uC704\uB85C \uB9CC\uB4E4\uC5B4\uC9C4\uB2E4
+      \uD588\uC796\uC544."
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uADF8\uB9AC\uACE0 \uACF5\uD559\uC790\uB294 \uB9C8\uC9C0\uB9C9\uC73C\uB85C
+      \uD574\uBCC0\uC5D0\uC11C \uBD24\uB2E4\uACE0 \uD558\uACE0.."
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC751 \uADF8\uAC8C \uBB34\uC2A8 \uC0C1\uAD00\uC774\uC57C?"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uC800\uAE30 \uBD10\uBD10!"
+    hide: []
+    command: 
+  characters:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    position: 1

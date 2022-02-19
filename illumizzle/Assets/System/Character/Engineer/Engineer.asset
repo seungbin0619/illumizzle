@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: "\uACF5\uD559\uC790"
   sprites:
-  - {fileID: 21300000, guid: e6777da4f635c4e4f8d1ddfc6e4e4095, type: 3}
+  - {fileID: 1595982907714843850, guid: 765869b204ced7c46a4a9cb8ed4d76d0, type: 3}
+  face: {fileID: 0}

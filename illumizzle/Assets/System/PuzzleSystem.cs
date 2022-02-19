@@ -20,6 +20,9 @@ public class PuzzleSystem : MonoBehaviour
     public static string currentPuzzle;
     public static bool isCleared;
 
+    [SerializeField]
+    private TalkBase failed;
+
     public void GoPuzzle(string name)
     {
         beforeScene = SceneManager.GetActiveScene().name;
@@ -58,8 +61,13 @@ public class PuzzleSystem : MonoBehaviour
 
             AsyncOperation operation = SceneManager.LoadSceneAsync(beforeScene);
             yield return new WaitUntil(() => operation.isDone);
+            yield return new WaitForEndOfFrame();
 
             // 돌아간 이후?
+            if(!isCleared)
+            {
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, failed);
+            }
         }
 
         StartCoroutine(CoAfterPuzzle());

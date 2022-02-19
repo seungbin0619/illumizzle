@@ -20,7 +20,7 @@ public class Map : Area
 
         for (int i = 0; i < puzzles.Length; i++)
         {
-            Transform child = bgRect.GetChild(i);
+            //Transform child = bgRect.GetChild(i);
             bool valid = i <= 1 || DataSystem.HasData("Puzzle", puzzles[i - 1]);
 
             //child.gameObject.SetActive(valid);
@@ -38,13 +38,20 @@ public class Map : Area
         {
             DataSystem.SetData("Story", "Map.Entry.00", 1);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[0]);
-        }else if (DataSystem.HasData("Story", "Workroom.Desk.04") &&
-                DataSystem.HasData("Story", "Workroom.Power.02") &&
-                DataSystem.HasData("Story", "Village.Home1.01"))
+        }else if(DataSystem.HasData("Story", "RockOpen") && !DataSystem.HasData("Story", "ViewRock"))
         {
-            // ¿Í¿ì~
+            DataSystem.SetData("Story", "ViewRock", 1);
 
+            IEnumerator CoView()
+            {
+                scroll.currentPosition = new Vector3(0, -scroll.horizontalRange, 0);
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[2]);
 
+                yield return new WaitForSeconds(1);
+                GoScene("Coast");
+            }
+            StartCoroutine(CoView());
+            return;
         }
 
         ActionSystem.instance.Play();
@@ -52,6 +59,8 @@ public class Map : Area
 
     public void Go(string name)
     {
+        if (DataSystem.HasData("Story", "ViewRock2")) cnt = 6;
+
         if (System.Array.IndexOf(new string[] { "Village", "Forest", "Desert", "Coast", "Rock" }, name) >= cnt)
         {
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[1]);

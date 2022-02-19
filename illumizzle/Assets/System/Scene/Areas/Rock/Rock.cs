@@ -88,4 +88,9 @@ public class Rock : Area
 
         base.GoScene(name);
     }
+
+    public void ClickLight()
+    {
+
+    }
 }

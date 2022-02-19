@@ -866,6 +866,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 651c955f320817348a3ae01a12041b89, type: 2}
   - {fileID: 11400000, guid: 50378503f3974104b8181f2583603871, type: 2}
   - {fileID: 11400000, guid: 4306d146824444d4ea34ba8b97fad85b, type: 2}
+  - {fileID: 11400000, guid: f5abd4566000b554e8b1aa18b571e12e, type: 2}
+  - {fileID: 11400000, guid: e6c0d0aa9ca9a04489fca218d9b0a3ce, type: 2}
   isPuzzle: 1
   face: 1
 --- !u!4 &620780959
@@ -2131,6 +2133,7 @@ GameObject:
   - component: {fileID: 1293299726}
   - component: {fileID: 1293299725}
   - component: {fileID: 1293299723}
+  - component: {fileID: 1293299724}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -2168,6 +2171,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1293299724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293299722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0413ce8116f4109459f0690eef367d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgImage:
+  - {fileID: 21300000, guid: 614d57a55aeb03241a12eb68faeff112, type: 3}
+  - {fileID: 21300000, guid: e44f0c1ca6a343a4ab4db54b907c6027, type: 3}
 --- !u!222 &1293299725
 CanvasRenderer:
   m_ObjectHideFlags: 0
