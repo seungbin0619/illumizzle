@@ -3,36 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class P2_BaseRotater : MonoBehaviour, IDragHandler {
+public class P2_BaseRotater : MonoBehaviour {
 
     public GameObject cubeBase;
     public GameObject sceneController;
 
     P2_ActionController actionController;
 
-    private float rotateSpeed = 0.002f;
+    private float rotateSpeed = 130f;
     private bool isRotating = false;
 
-    private long lastOnDragTime = 0;
+    private bool isMouseStop = true;
+    private Vector2 preMousePos;
+    private Vector2 crMousePos;
 
     private void Start() {
         actionController = sceneController.GetComponent<P2_ActionController>();
     }
 
-    public void OnDrag(PointerEventData eventData) {
-        if (isRotating == true && lastOnDragTime != 0) {
 
-            long deltaTime = System.DateTime.Now.Ticks - lastOnDragTime;
+    private void FixedUpdate() {
+        if (isRotating == true) {
+            crMousePos = Input.mousePosition;
 
-            float x = eventData.delta.x * deltaTime * rotateSpeed / Screen.width;
-            float y = eventData.delta.y * deltaTime * rotateSpeed / Screen.width;
+            if (isMouseStop == false) {
+                float deltaX = crMousePos.x - preMousePos.x;
+                float deltaY = crMousePos.y - preMousePos.y;
 
-            transform.Rotate(0, -x, y, Space.World);
+                float x = deltaX * rotateSpeed / Screen.width;
+                float y = deltaY * rotateSpeed / Screen.width;
+                //Debug.Log(x + " " + y);
+                transform.Rotate(0, -x, y, Space.World);
 
-            Debug.Log("드래그 중");
+                if (x == 0 && y == 0) isMouseStop = true;
+            }
+            else {
+                isMouseStop = false;
+            }
+
+            preMousePos = crMousePos;
         }
-
-        lastOnDragTime = System.DateTime.Now.Ticks;
     }
 
     private void Update() {
@@ -40,12 +50,16 @@ public class P2_BaseRotater : MonoBehaviour, IDragHandler {
             cubeBase.GetComponent<SphereCollider>().enabled = true;
             isRotating = true;
             actionController.isActioning = true;
+
+            Debug.Log("드래그 시작");
         }
         if (!Input.GetMouseButton(1) && cubeBase.GetComponent<SphereCollider>().enabled == true) {
             cubeBase.GetComponent<SphereCollider>().enabled = false;
             isRotating = false;
             actionController.isActioning = false;
-            lastOnDragTime = 0;
+            isMouseStop = true;
+
+            Debug.Log("드래그 종료");
         }
     }
 }

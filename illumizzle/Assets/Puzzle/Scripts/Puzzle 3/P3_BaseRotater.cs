@@ -9,10 +9,13 @@ public class P3_BaseRotater : MonoBehaviour {
 
     private P3_JudgeClear judgeClear;
 
-    private float rotateSpeed = 30f;
+    private float rotateSpeed = 40f;
     private bool isRotating = false;
     private float rotateDir = 0, rotateDist = 5f;
     private Quaternion target;
+
+    private const float upperBound = 0.28f;
+    private const float lowerBound = -0.06f;
 
     private void Start() {
         judgeClear = sceneController.GetComponent<P3_JudgeClear>();
@@ -21,14 +24,14 @@ public class P3_BaseRotater : MonoBehaviour {
 
     private void Update() {
         float wheelInput = Input.GetAxis("Mouse ScrollWheel");
-        if (wheelInput > 0 && rotateDir >= 0 && transform.localRotation.x >= -0.06) {
+        if (wheelInput > 0 && rotateDir >= 0 && transform.localRotation.x >= lowerBound) {
             target *= Quaternion.Euler(new Vector3(-rotateDist, 0, 0));
             rotateDir = 1;
             isRotating = true;
             judgeClear.isActioning = true;
 
         }
-        else if (wheelInput < 0 && rotateDir <= 0 && transform.localRotation.x <= 0.20) {
+        else if (wheelInput < 0 && rotateDir <= 0 && transform.localRotation.x <= upperBound) {
             target *=  Quaternion.Euler(new Vector3(rotateDist, 0, 0));
             rotateDir = -1;
             isRotating = true;
@@ -52,8 +55,8 @@ public class P3_BaseRotater : MonoBehaviour {
 
                 target = gameObject.transform.localRotation;
             }
-            else if ((transform.localRotation.x < -0.06 && rotateDir > 0)
-                || (transform.localRotation.x > 0.20 && rotateDir < 0)) {
+            else if ((transform.localRotation.x < lowerBound && rotateDir > 0)
+                || (transform.localRotation.x > upperBound && rotateDir < 0)) {
 
                 isRotating = false;
                 judgeClear.isActioning = false;

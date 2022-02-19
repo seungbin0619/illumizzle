@@ -31,8 +31,9 @@ public class P1_TileScript : MonoBehaviour {
                 for (int i = 0; i < childCnt; i++) {
                     GameObject crObject = cubeBase.transform.GetChild(i).gameObject;
                     if (crObject.name[1] != 'i') break;
-                    if (crObject.name[5] != gameObject.name[5] || 
-                        crObject.name[6] != gameObject.name[6]) {
+                    if (crObject.name[5] != gameObject.name[5] ||
+                        crObject.name[6] != gameObject.name[6] ||
+                        crObject.name[7] != gameObject.name[7] ) {
                         crObject.transform.GetChild(4).gameObject.SetActive(true);
                     }
                 }

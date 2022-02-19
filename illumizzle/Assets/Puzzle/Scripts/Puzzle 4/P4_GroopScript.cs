@@ -59,39 +59,6 @@ public class P4_GroopScript : MonoBehaviour {
             }
         }
 
-        //그룹에 마우스 갖다대기
-        if (isHover == true && isFin == false && judgeClear.isActioning == false) {
-
-            if (transform.localPosition.x < sizeX - 1 - 0.1) { //Front
-                ChangeEnabled(arrows[0], true);
-            }
-            if (transform.localPosition.z < sizeZ - 1 - 0.1) { //Right
-                ChangeEnabled(arrows[1], true);
-            }
-            if (transform.localPosition.x > 0 + 0.1) { //Back
-                ChangeEnabled(arrows[2], true);
-            }
-            if (transform.localPosition.z > 0 + 0.1) { //Left
-                ChangeEnabled(arrows[3], true);
-            }
-
-            for (int i = 0; i < 4; i++) { //가장 위 블록도 못 가는 경우
-                if (isBlocked[i][cntBlocks - 1] >= 1) {
-                    ChangeEnabled(arrows[i], false);
-                }
-            }
-        }
-
-        //그룹에서 마우스 치우기
-        else if (isHover == false && isArrowHover == false || isArrowOn == true || judgeClear.isActioning == true) {
-
-            for (int i = 0; i < 4; i++) {
-                ChangeEnabled(arrows[i], false);
-            }
-
-            isArrowOn = false;
-        }
-
         //낙하할 수 있는지 확인
         if (judgeClear.isActioning == false
             && Physics.Raycast(transform.position, -transform.up, out hit, MaxDistance)) {
@@ -187,6 +154,39 @@ public class P4_GroopScript : MonoBehaviour {
                     judgeClear.cntFitBlock++;
                 }
             }
+        }
+
+        //그룹에 마우스 갖다대기
+        if (isHover == true && isFin == false && judgeClear.isActioning == false) {
+
+            if (transform.localPosition.x < sizeX - 1 - 0.1) { //Front
+                ChangeEnabled(arrows[0], true);
+            }
+            if (transform.localPosition.z < sizeZ - 1 - 0.1) { //Right
+                ChangeEnabled(arrows[1], true);
+            }
+            if (transform.localPosition.x > 0 + 0.1) { //Back
+                ChangeEnabled(arrows[2], true);
+            }
+            if (transform.localPosition.z > 0 + 0.1) { //Left
+                ChangeEnabled(arrows[3], true);
+            }
+
+            for (int i = 0; i < 4; i++) { //가장 위 블록도 못 가는 경우
+                if (isBlocked[i][cntBlocks - 1] >= 1) {
+                    ChangeEnabled(arrows[i], false);
+                }
+            }
+        }
+
+        //그룹에서 마우스 치우기
+        else if (isHover == false && isArrowHover == false || isArrowOn == true || judgeClear.isActioning == true) {
+
+            for (int i = 0; i < 4; i++) {
+                ChangeEnabled(arrows[i], false);
+            }
+
+            isArrowOn = false;
         }
 
         //if (judgeClear.isActioning == false) { //
