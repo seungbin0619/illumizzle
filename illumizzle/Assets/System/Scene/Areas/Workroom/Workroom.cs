@@ -11,18 +11,21 @@ public class Workroom : Area
             DataSystem.SetData("Story", "Workroom.Entry.00", 1);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[0]);
         } 
-        else if(DataSystem.HasData("Story", "Rock.Story.01") && !DataSystem.HasData("Story", "Workroom.Entry.01"))
+        else if(DataSystem.HasData("Story", "Rock.Story.01")) 
         {
-            DataSystem.SetData("Story", "Workroom.Entry.01", 1);
-            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[24]);
-            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 1.5f);
-            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Ending");
-        }
-        else if (!DataSystem.HasData("Story", "Workroom.Entry.02"))
-        {
-            DataSystem.SetData("Story", "Workroom.Entry.02", 1);
-            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[25]);
-            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[26]);
+            if (!DataSystem.HasData("Story", "Workroom.Entry.01"))
+            {
+                DataSystem.SetData("Story", "Workroom.Entry.01", 1);
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[24]);
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 1.5f);
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Ending");
+            }
+            else if (!DataSystem.HasData("Story", "Workroom.Entry.02"))
+            {
+                DataSystem.SetData("Story", "Workroom.Entry.02", 1);
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[25]);
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[26]);
+            }
         }
 
         ActionSystem.instance.Play();
