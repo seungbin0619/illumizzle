@@ -12,5 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
   m_Name: AL.Home2.00
   m_EditorClassIdentifier: 
-  scripts: []
-  characters: []
+  scripts:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uACF5\uD559\uC790\uB2D8!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
+    sprite: 0
+    text: .... ...
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uACF5\uD559\uC790\uB2D8!!!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
+    sprite: 0
+    text: ".........\uC73C\uC74C.."
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uC548 \uB4E4\uB9AC\uC2DC\uB098\uBD10."
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uC800\uB807\uAC8C \uD558\uB8E8\uC885\uC77C \uC0DD\uAC01\uB9CC \uD558\uBA74
+      \uC548 \uC9C0\uB8E8\uD558\uC2E0\uAC00?"
+    hide: []
+    command: 
+  characters:
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
+    position: 1

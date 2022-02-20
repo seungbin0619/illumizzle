@@ -12,5 +12,97 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
   m_Name: AL.Home2.01
   m_EditorClassIdentifier: 
-  scripts: []
-  characters: []
+  scripts:
+  - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
+    sprite: 0
+    text: "... \uC5EC\uD2BC \uADF8\uB807\uAC8C \uB41C \uAC81\uB2C8\uB2E4."
+    hide:
+    - {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    - {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    command: 
+  - character: {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    sprite: 0
+    text: "\uADF8\uB7FC \uC9C4\uC9DC \uC0AC\uC2E4\uC774\uC5C8\uAD6C\uB9CC."
+    hide:
+    - {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    - {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uAC70\uC9D3\uB9D0 \uC544\uB2C8\uB77C\uB2C8\uAE4C\uC694!!!"
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    sprite: 0
+    text: "\uC544, \uAE5C\uC9DD\uC774\uC57C."
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    sprite: 0
+    text: "\uADF8\uB798 \uB0B4\uAC00 \uC0AC\uACFC\uD558\uB9C8. \uC815\uB9D0 \uB300\uB2E8\uD558\uAD6C\uB098."
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    sprite: 0
+    text: "\uADF8\uB7FC \uB098\uB294 \uB4E4\uC5B4\uAC00\uBCF4\uB9C8."
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
+    sprite: 0
+    text: "\uC548\uB155\uD788 \uB4E4\uC5B4\uAC00\uC138\uC694."
+    hide: []
+    command: 
+  - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
+    sprite: 0
+    text: "\uB108\uD76C\uB3C4 \uC544\uC800\uC528\uD55C\uD14C \uB108\uBB34 \uADF8\uB7EC\uC9C0
+      \uB9C8\uB77C."
+    hide:
+    - {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    command: 
+  - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
+    sprite: 0
+    text: "\uADF8\uB9CC\uD07C \uB108\uD76C\uB4E4\uC774 \uB300\uB2E8\uD55C \uC77C\uC744
+      \uD574\uB0B8\uAC70\uB2C8\uAE4C!"
+    hide:
+    - {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uD6C4.. \uC774\uBC88\uB9CC \uC6A9\uC11C\uD574\uB4DC\uB824\uC57C\uACA0\uB124\uC694."
+    hide:
+    - {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    command: 
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    sprite: 0
+    text: "\uBB50\uB77C\uB294\uAC70\uC57C \uBC84\uB987\uC5C6\uC774."
+    hide:
+    - {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    command: 
+  - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
+    sprite: 0
+    text: "\uD558\uD558\uD558. \uB098\uB3C4 \uB2E4\uC2DC \uC5F0\uAD6C\uC5D0 \uC9D1\uC911
+      \uD574\uC57C\uACA0\uAD6C\uB098."
+    hide:
+    - {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    command: 
+  - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
+    sprite: 0
+    text: "\uC598\uAE30 \uC990\uAC70\uC6E0\uB2E4."
+    hide:
+    - {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    command: 
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    sprite: 0
+    text: "\uB124! \uC548\uB155\uD788\uACC4\uC138\uC694."
+    hide:
+    - {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    command: 
+  characters:
+  - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
+    position: 0
+  - character: {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
+    position: 1
+  - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
+    position: 1

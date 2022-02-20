@@ -263,6 +263,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4bcac194ce8f82a4aa554de246e18094, type: 2}
   - {fileID: 11400000, guid: 848519684ce4e0f4396af7ebfc5263b7, type: 2}
   - {fileID: 11400000, guid: eecb57fcc84e64e49a8c7e17061f9f16, type: 2}
+  - {fileID: 11400000, guid: 20b4913d6490c5142b7015e64e059f3c, type: 2}
+  - {fileID: 11400000, guid: 864f0964124a6ad4ab62074399f681c9, type: 2}
+  - {fileID: 11400000, guid: 50c8c7eda70c6c041ab460cfdb8130c0, type: 2}
+  - {fileID: 11400000, guid: 06ce4e549e6edcb41984dc18e7ec28ed, type: 2}
+  - {fileID: 11400000, guid: be60aedeffbee4f488c94305cb657da4, type: 2}
   isPuzzle: 0
   face: 1
 --- !u!4 &255755238

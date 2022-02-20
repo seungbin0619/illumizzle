@@ -62,7 +62,15 @@ public class Village : Area
         }
         else if(DataSystem.HasData("Story", "LIGHT"))
         {
-
+            if (!DataSystem.HasData("Story", "AL.Home1.00"))
+            {
+                DataSystem.SetData("Story", "AL.Home1.00", 1);
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[7]);
+            }
+            else
+            {
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[8]);
+            }
         }
         else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
         ActionSystem.instance.Play();
@@ -78,7 +86,22 @@ public class Village : Area
 
         if (DataSystem.HasData("Story", "LIGHT"))
         {
-
+            if(!DataSystem.HasData("Story", "AL.Home1.00"))
+            {
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[9]);
+            }
+            else
+            {
+                if (!DataSystem.HasData("Story", "AL.Home2.01"))
+                {
+                    DataSystem.SetData("Story", "AL.Home2.01", 1);
+                    ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[10]);
+                }
+                else
+                {
+                    ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[11]);
+                }
+            }
         }
         else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
         ActionSystem.instance.Play();

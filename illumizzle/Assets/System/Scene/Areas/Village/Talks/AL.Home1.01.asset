@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
   m_Name: AL.Home1.01
   m_EditorClassIdentifier: 
-  scripts: []
+  scripts:
+  - character: {fileID: 0}
+    sprite: 0
+    text: "(\uB9C8\uC744 \uC544\uC800\uC528\uB294 \uC7A0\uC744 \uC790\uACE0 \uC788\uB2E4.)"
+    hide: []
+    command: 
   characters: []

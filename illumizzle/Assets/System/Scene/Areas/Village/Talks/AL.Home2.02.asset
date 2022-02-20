@@ -10,13 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 588aaa9b2ca167647a123057c97ebfa9, type: 3}
-  m_Name: AL.Bulb2
+  m_Name: AL.Home2.02
   m_EditorClassIdentifier: 
   scripts:
   - character: {fileID: 0}
     sprite: 0
-    text: "(\uB77C\uCF54\uC640 \uBCA0\uB77C, \uACF5\uD559\uC790\uAC00 \uD798\uC744
-      \uD569\uCCD0 \uB9CC\uB4E0 \uD0DC\uC591\uC774\uB2E4.)"
+    text: "(\uACF5\uD559\uC790\uB2D8\uC740 \uC5F0\uAD6C\uC5D0 \uBAB0\uB450\uD558\uACE0
+      \uC788\uB2E4.)"
+    hide: []
+    command: 
+  - character: {fileID: 0}
+    sprite: 0
+    text: "(\uAC74\uB4DC\uB9AC\uC9C0 \uC54A\uB294\uAC8C \uC88B\uC544\uBCF4\uC778\uB2E4.)"
     hide: []
     command: 
   characters: []
