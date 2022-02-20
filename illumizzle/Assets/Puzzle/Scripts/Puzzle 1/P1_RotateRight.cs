@@ -37,7 +37,7 @@ public class P1_RotateRight : MonoBehaviour {
             cubeBase.transform.RotateAround(cubeBase.transform.position, -Vector3.up, rotateSpeed * Time.deltaTime);
 
             float angle = Quaternion.Angle(cubeBase.transform.rotation, target);
-            if (angle < Time.deltaTime * 200.0f) {
+            if (angle < Time.deltaTime * 250.0f) {
                 isRotatingRight = false;
                 //Debug.Log("오른쪽으로 회전 완료");
                 cubeBase.transform.rotation = target;
