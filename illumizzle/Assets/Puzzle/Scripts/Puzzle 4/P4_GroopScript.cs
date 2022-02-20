@@ -150,6 +150,9 @@ public class P4_GroopScript : MonoBehaviour {
 
                 //Debug.Log("³«ÇÏ Á¾·á");
 
+
+                SFXSystem.instance.PlaySound(14);
+
                 if (isFit == true) {
                     judgeClear.cntFitBlock++;
                 }

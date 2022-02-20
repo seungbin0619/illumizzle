@@ -41,7 +41,7 @@ public class P1_TileScript : MonoBehaviour {
                     }
                 }
 
-                //audioTile.Play();
+                SFXSystem.instance.PlaySound(10);
 
             }
             else {

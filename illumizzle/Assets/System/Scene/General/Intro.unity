@@ -1701,6 +1701,41 @@ MonoBehaviour:
     trim:
     - 0
     - -1
+  - sound: {fileID: 8300000, guid: c2d9a9ca9d1ab044180496e9088a748c, type: 3}
+    volume: 1
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: 1dda9467a0eb40148b1e3650953c2d6c, type: 3}
+    volume: 1
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: bf72ef6072c80044c92609d4bf61e2d7, type: 3}
+    volume: 1
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: 6ac85c16c80731c48a9fc75ea8129a63, type: 3}
+    volume: 1
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: 1a1c0dd3bb650dd478cd8f47d9316022, type: 3}
+    volume: 1
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: c7890b7ed7220c54a9e9a3782892565a, type: 3}
+    volume: 1
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: 5af1bdaf492e4274685a84932f47336c, type: 3}
+    volume: 1
+    trim:
+    - 0
+    - -1
 --- !u!4 &834946434
 Transform:
   m_ObjectHideFlags: 0

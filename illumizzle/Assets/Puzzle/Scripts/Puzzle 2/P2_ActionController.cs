@@ -19,11 +19,13 @@ public class P2_ActionController : MonoBehaviour {
             rule.SetActive(true);
             isRuleOn = true;
             isActioning = true;
+            SFXSystem.instance.PlaySound(8);
         }
         else {
             rule.SetActive(false);
             isRuleOn = false;
             isActioning = false;
+            SFXSystem.instance.PlaySound(9);
         }
     }
     //==============================================

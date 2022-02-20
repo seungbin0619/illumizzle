@@ -16,5 +16,6 @@ public class TestController : MonoBehaviour{
 
     public void SceneReload() {
         UnityEngine.SceneManagement.SceneManager.LoadScene(gameObject.scene.name);
+        SFXSystem.instance.PlaySound(13);
     }
 }

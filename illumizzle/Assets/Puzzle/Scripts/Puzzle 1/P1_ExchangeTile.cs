@@ -15,13 +15,6 @@ public class P1_ExchangeTile : MonoBehaviour {
     public bool isRuleOn = false;
     //==============================================
 
-    public AudioSource successAudio;
-    public AudioSource failAudio;
-
-    private void Start() {
-        //successAudio.Stop();
-        //failAudio.Stop();
-    }
 
     void Update() {
         if (calledTile1 != null && calledTile2 != null && isMooving == false) {
@@ -42,14 +35,15 @@ public class P1_ExchangeTile : MonoBehaviour {
 
                 dist = Vector3.Distance(position1, position2);
 
-                //successAudio.Play();
+                SFXSystem.instance.PlaySound(12);
+
             }
             else {
                 calledTile1 = null;
                 calledTile2 = null;
-                //Debug.Log("타일 교환 불가");
 
-                //failAudio.Play();
+                SFXSystem.instance.PlaySound(11);
+
             }
         }
     }
@@ -79,11 +73,13 @@ public class P1_ExchangeTile : MonoBehaviour {
             rule.SetActive(true);
             isRuleOn = true;
             isMooving = true;
+            SFXSystem.instance.PlaySound(8);
         }
         else {
             rule.SetActive(false);
             isRuleOn = false;
             isMooving = false;
+            SFXSystem.instance.PlaySound(9);
         }
     }
     //==============================================
