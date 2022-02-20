@@ -42,7 +42,7 @@ public class Workroom : Area
         else if (DataSystem.HasData("Story", "LIGHT"))
         {
             ///
-
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[27]);
         }
         else
         {
@@ -105,8 +105,16 @@ public class Workroom : Area
         else if (DataSystem.HasData("Story", "LIGHT"))
         {
             ///
+            if(!DataSystem.HasData("Story", "AL.Bulb"))
+            {
+                DataSystem.SetData("Story", "AL.Bulb", 1);
 
-
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[28]);
+            }
+            else
+            {
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[29]);
+            }
         }
         else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
 
@@ -119,7 +127,7 @@ public class Workroom : Area
         {
             ///
 
-
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[32]);
         }
         else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[14]);
 
@@ -151,13 +159,13 @@ public class Workroom : Area
                     return;
                 }
             }
+            else if (DataSystem.HasData("Story", "LIGHT"))
+            {
+                ///
+
+                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[31]);
+            }
             else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[23]);
-        }
-        else if (DataSystem.HasData("Story", "LIGHT"))
-        {
-            ///
-
-
         }
         else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[13]);
 
@@ -209,7 +217,7 @@ public class Workroom : Area
         {
             ///
 
-
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[30]);
         }
         else
         {

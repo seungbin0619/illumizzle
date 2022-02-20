@@ -73,7 +73,7 @@ public class Area : MonoBehaviour
 
         StartCoroutine(LateStart());
 
-        if (mapIndex >= 0 && mapIndex < 5)
+        if (mapIndex >= 0 && mapIndex < 6)
         {
             DataSystem.SetData("Setting", "CurrentMap", mapIndex);
             DataSystem.SaveData();

@@ -23,6 +23,8 @@ public class Prologue : MonoBehaviour
             img.sprite = image[0];
             yield return new WaitForSeconds(1f);
 
+            SFXSystem.instance.PlaySound(7);
+
             img.sprite = image[1];
             yield return new WaitForSeconds(0.05f);
 
@@ -34,6 +36,8 @@ public class Prologue : MonoBehaviour
 
             img.sprite = image[0];
             yield return new WaitForSeconds(0.1f);
+
+            SFXSystem.instance.StopSound(1f);
 
             img.sprite = image[1];
 
