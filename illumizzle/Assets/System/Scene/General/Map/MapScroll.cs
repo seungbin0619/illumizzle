@@ -29,7 +29,11 @@ public class MapScroll : MonoBehaviour
             case 0:
             case 1:
             case 2: clm = 1; break;
-            case 3: clm = -0.5f; break;
+            case 3:
+                if (DataSystem.HasData("Story", "ViewRock2")) clm = -1;
+                else clm = 1;
+
+                break;
             case 4: clm = -1; break;
             default: clm = 1; break;
         }

@@ -38,6 +38,7 @@ public class PuzzleSystem : MonoBehaviour
             yield return new WaitForEndOfFrame();
 
             FadeSystem.instance.StartFade(0);
+            CursorSystem.instance.SetCursor(0);
         }
 
         StartCoroutine(CoGoPuzzle());

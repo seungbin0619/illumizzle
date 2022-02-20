@@ -71,8 +71,11 @@ public class ActionSystem : MonoBehaviour
                 switch (currentAction.type)
                 {
                     case Action.ActionType.Talk: break;
-                    case Action.ActionType.Move: break;
-                    case Action.ActionType.Puzzle: break;
+                    case Action.ActionType.Move:
+                        CursorSystem.instance.SetCursor(0);
+                        break;
+                    case Action.ActionType.Puzzle:
+                        CursorSystem.instance.SetCursor(0); break;
                 }
             }
         }
@@ -87,6 +90,8 @@ public class ActionSystem : MonoBehaviour
         switch(currentAction.type)
         {
             case Action.ActionType.Talk:
+                CursorSystem.instance.SetCursor(0);
+
                 TalkBase talk = (TalkBase)currentAction.args[0];
 
                 TalkSystem.instance.SetTalk(talk);
@@ -96,6 +101,8 @@ public class ActionSystem : MonoBehaviour
 
                 break;
             case Action.ActionType.Move:
+                CursorSystem.instance.SetCursor(0);
+
                 string SceneName = (string)currentAction.args[0];
                 operation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(SceneName);
 
@@ -103,6 +110,8 @@ public class ActionSystem : MonoBehaviour
 
                 break;
             case Action.ActionType.Puzzle:
+                CursorSystem.instance.SetCursor(0);
+
                 string PuzzleName = (string)currentAction.args[0];
                 PuzzleSystem.instance.GoPuzzle(PuzzleName);
 
@@ -110,6 +119,8 @@ public class ActionSystem : MonoBehaviour
 
                 break;
             case Action.ActionType.Fade:
+                CursorSystem.instance.SetCursor(0);
+
                 float target = float.Parse(currentAction.args[0].ToString());
                 float duration = float.Parse(currentAction.args[1].ToString());
 
