@@ -117,7 +117,7 @@ public class P4_ArrowScript : MonoBehaviour {
 
             float dist = Vector3.Distance(targetObject.transform.localPosition, targetPosition);
 
-            if (dist < Time.deltaTime * 2.1f) {
+            if (dist <= Time.deltaTime * 1.8f) {
                 targetObject.transform.localPosition = targetPosition;
                 isMooving = false;
                 judgeClear.isActioning = false;

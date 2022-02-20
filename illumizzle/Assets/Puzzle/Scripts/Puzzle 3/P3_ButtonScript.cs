@@ -27,20 +27,18 @@ public class P3_ButtonScript : MonoBehaviour {
 
         if (isOver && isMooving == false) {
             if (Input.GetMouseButton(0)) {
-                isMooving = true;
-                judgeClear.isActioning = true;
-
                 if (targetLine.transform.localPosition.y < judgeClear.maxHeight - 0.5f) {
+                    isMooving = true;
+                    judgeClear.isActioning = true;
                     moveDir = 1f;
                     targetHeight = targetLine.transform.localPosition.y + 1;
                     Debug.Log("이동 시작");
                 }
             }
             else if (Input.GetMouseButton(1)) {
-                isMooving = true;
-                judgeClear.isActioning = true;
-
                 if (targetLine.transform.localPosition.y > 0.5f) {
+                    isMooving = true;
+                    judgeClear.isActioning = true;
                     moveDir = -1f;
                     targetHeight = targetLine.transform.localPosition.y - 1;
                     Debug.Log("이동 시작");
@@ -56,7 +54,7 @@ public class P3_ButtonScript : MonoBehaviour {
             float dist = targetLine.transform.localPosition.y - targetHeight;
             if (dist < 0) dist = -dist;
 
-            if (dist <= 0.07f * Time.deltaTime * 180) {
+            if (dist <= Time.deltaTime * 4f) {
                 targetLine.transform.localPosition = new Vector3(targetLine.transform.localPosition.x, 
                     targetHeight, targetLine.transform.localPosition.z);
                 isMooving = false;

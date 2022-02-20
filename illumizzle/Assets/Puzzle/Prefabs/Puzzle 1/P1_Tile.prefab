@@ -854,6 +854,7 @@ MonoBehaviour:
   sceneController: {fileID: 0}
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
+  audio_G: {fileID: 0}
 --- !u!65 &7832953918115526723
 BoxCollider:
   m_ObjectHideFlags: 0

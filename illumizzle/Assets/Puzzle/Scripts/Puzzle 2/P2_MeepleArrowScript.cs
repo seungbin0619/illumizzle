@@ -44,11 +44,11 @@ public class P2_MeepleArrowScript : MonoBehaviour {
     private void Update() {
         if (isMooving == true) {
 
-            meeple.transform.position += targetDir * 4 * Time.deltaTime;
+            meeple.transform.position += targetDir * 3 * Time.deltaTime;
 
             float dist = Vector3.Distance(meeple.transform.position, target);
 
-            if (dist < 0.05f * Time.deltaTime * 180) {
+            if (dist < Time.deltaTime * 2f) {
                 meeple.transform.position = target;
                 isMooving = false;
                 actionController.isActioning = false;

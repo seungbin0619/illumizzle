@@ -9,8 +9,11 @@ public class P1_TileScript : MonoBehaviour {
     public GameObject rightButton;
     private GameObject cubeBase;
 
+    public AudioSource audioTile;
+
     private void Start() {
         cubeBase = gameObject.transform.parent.gameObject;
+        audioTile.Stop();
     }
 
     private void OnMouseDown() {
@@ -37,6 +40,8 @@ public class P1_TileScript : MonoBehaviour {
                         crObject.transform.GetChild(4).gameObject.SetActive(true);
                     }
                 }
+
+                audioTile.Play();
 
             }
             else {

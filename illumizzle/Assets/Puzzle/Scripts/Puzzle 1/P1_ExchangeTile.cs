@@ -15,6 +15,14 @@ public class P1_ExchangeTile : MonoBehaviour {
     public bool isRuleOn = false;
     //==============================================
 
+    public AudioSource successAudio;
+    public AudioSource failAudio;
+
+    private void Start() {
+        successAudio.Stop();
+        failAudio.Stop();
+    }
+
     void Update() {
         if (calledTile1 != null && calledTile2 != null && isMooving == false) {
             if (calledTile1 != calledTile2 && calledTile1.CompareTag(calledTile2.tag)) {
@@ -33,11 +41,15 @@ public class P1_ExchangeTile : MonoBehaviour {
                 }
 
                 dist = Vector3.Distance(position1, position2);
+
+                successAudio.Play();
             }
             else {
                 calledTile1 = null;
                 calledTile2 = null;
                 Debug.Log("타일 교환 불가");
+
+                failAudio.Play();
             }
         }
     }
@@ -48,7 +60,7 @@ public class P1_ExchangeTile : MonoBehaviour {
             calledTile2.transform.position += (position1 - position2) / (8 + dist * 3) * 40 * Time.deltaTime;
 
             if (Vector3.Distance(calledTile1.transform.position,
-                                 position2) <= 0.1f) {
+                                 position2) <= Time.deltaTime * (8 + dist * 3) * 0.4f) {
                 calledTile1.transform.position = position2;
                 calledTile2.transform.position = position1;
 

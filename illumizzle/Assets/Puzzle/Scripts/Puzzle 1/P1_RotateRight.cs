@@ -12,8 +12,11 @@ public class P1_RotateRight : MonoBehaviour {
 
     Quaternion target;
 
+    public AudioSource audioRotateRight;
+
     private void Start() {
         target = cubeBase.transform.rotation;
+        audioRotateRight.Stop();
     }
 
     public void MakeRightRotate() {
@@ -23,6 +26,8 @@ public class P1_RotateRight : MonoBehaviour {
             isRotatingRight = true;
             //Debug.Log("오른쪽으로 회전 시작");
             target = cubeBase.transform.rotation * Quaternion.Euler(0, -90, 0);
+
+            audioRotateRight.Play();
         }
     }
 
@@ -32,7 +37,7 @@ public class P1_RotateRight : MonoBehaviour {
             cubeBase.transform.RotateAround(cubeBase.transform.position, -Vector3.up, rotateSpeed * Time.deltaTime);
 
             float angle = Quaternion.Angle(cubeBase.transform.rotation, target);
-            if (angle < 5f * Time.deltaTime * 180) {
+            if (angle < 5f * Time.deltaTime * 50) {
                 isRotatingRight = false;
                 //Debug.Log("오른쪽으로 회전 완료");
                 cubeBase.transform.rotation = target;
