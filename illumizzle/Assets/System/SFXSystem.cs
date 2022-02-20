@@ -107,13 +107,25 @@ public class SFXSystem : MonoBehaviour
             coroutine = StartCoroutine(CoPlay(index));
     }
 
-    public void StopSound()
+    public void StopSound(float fade = 0)
     {
         if (coroutine != null) StopCoroutine(coroutine);
         coroutine = null;
 
-        sound.Stop();
-        sound.clip = null;
+        IEnumerator CoFade()
+        {
+            float progress = 0, vol = sound.volume;
+            while(progress < fade)
+            {
+                sound.volume = vol * (1 - progress / fade);
+                yield return delay;
+
+                progress += Time.deltaTime;
+            }
+            sound.Stop();
+            sound.clip = null;
+        }
+        StartCoroutine(CoFade());
     }
 
     private IEnumerator CoPlay(int index)

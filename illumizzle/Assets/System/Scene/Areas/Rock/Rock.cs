@@ -42,6 +42,7 @@ public class Rock : Area
         }
         #endregion
 
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 6);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, index);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 0.5f);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Puzzle, puzzles[index]);

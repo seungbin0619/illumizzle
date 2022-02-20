@@ -54,15 +54,17 @@ public class Village : Area
                 DataSystem.HasData("Story", "Workroom.Power.02") &&
                 DataSystem.HasData("Story", "Village.Home1.01"))
             {
+                SFXSystem.instance.PlaySound(3);
+
                 base.GoScene("Coast");
                 return;
             }
         }
-        else
+        else if(DataSystem.HasData("Story", "LIGHT"))
         {
-            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
-        }
 
+        }
+        else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
         ActionSystem.instance.Play();
     }
 
@@ -74,8 +76,11 @@ public class Village : Area
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 2);
         //ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, -1);
 
-        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
+        if (DataSystem.HasData("Story", "LIGHT"))
+        {
 
+        }
+        else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
         ActionSystem.instance.Play();
     }
 

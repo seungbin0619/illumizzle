@@ -129,7 +129,7 @@ public class TalkSystem : MonoBehaviour
     public void Next()
     {
         if (!IsLoaded) return;
-        if (talkIndex > 0) SFXSystem.instance.PlaySound(5);
+        //if (talkIndex > 0) SFXSystem.instance.PlaySound(5);
 
         if (CurrentTalk.Count <= talkIndex)
         {

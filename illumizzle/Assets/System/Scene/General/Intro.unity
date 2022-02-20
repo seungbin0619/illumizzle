@@ -1667,7 +1667,7 @@ MonoBehaviour:
     - 0
     - -1
   - sound: {fileID: 8300000, guid: 63a5a5ec8b702704680f90ce9356ddf2, type: 3}
-    volume: 1
+    volume: 0.5
     trim:
     - 0
     - -1
@@ -1676,7 +1676,7 @@ MonoBehaviour:
     trim:
     - 0
     - -1
-  - sound: {fileID: 8300000, guid: a67d1183636a5af448e99e943947b08e, type: 3}
+  - sound: {fileID: 8300000, guid: 80e011186be79b648951cd3a7125edc1, type: 3}
     volume: 1
     trim:
     - 0
@@ -1686,7 +1686,12 @@ MonoBehaviour:
     trim:
     - 0.8
     - 1.5
-  - sound: {fileID: 8300000, guid: 19a278acde8e24d4291fc926709e01a3, type: 3}
+  - sound: {fileID: 8300000, guid: bc4e77fee312907458ef4c532d03de95, type: 3}
+    volume: 1
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: fed64dd0ebe0df940854fd1ca9559c23, type: 3}
     volume: 1
     trim:
     - 0

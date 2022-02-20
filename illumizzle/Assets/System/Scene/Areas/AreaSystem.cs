@@ -115,7 +115,7 @@ public class AreaSystem : MonoBehaviour
                 yield return frame;
             }
             position = characterPanel.anchoredPosition = target.anchoredPosition;
-            SFXSystem.instance.StopSound();
+            SFXSystem.instance.StopSound(0.25f);
 
             yield return new WaitForSeconds(0.5f);
             isWalking = false;

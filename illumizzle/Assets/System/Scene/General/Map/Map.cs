@@ -61,12 +61,15 @@ public class Map : Area
     {
         if (DataSystem.HasData("Story", "ViewRock2")) cnt = 6;
 
-        if (System.Array.IndexOf(new string[] { "Village", "Forest", "Desert", "Coast", "Rock" }, name) >= cnt)
+        int index = System.Array.IndexOf(new string[] { "Village", "Forest", "Desert", "Coast", "Rock" }, name);
+        if (index >= cnt)
         {
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[1]);
         }
         else
         {
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 
+                new int[] { 3, 5, 3, 3, 6 }[index]);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 0.5f);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, name);
         }

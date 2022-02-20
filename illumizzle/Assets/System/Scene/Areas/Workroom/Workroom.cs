@@ -39,6 +39,11 @@ public class Workroom : Area
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[2]);
         }else if(!DataSystem.HasData("Story", "Map.Entry.00"))
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[15]);
+        else if (DataSystem.HasData("Story", "LIGHT"))
+        {
+            ///
+
+        }
         else
         {
             Blueprint.UpdateParts();
@@ -97,6 +102,12 @@ public class Workroom : Area
             DataSystem.SetData("Story", "Workroom.Bulb.00", 1);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
         }
+        else if (DataSystem.HasData("Story", "LIGHT"))
+        {
+            ///
+
+
+        }
         else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
 
         ActionSystem.instance.Play();
@@ -104,7 +115,14 @@ public class Workroom : Area
 
     public void ClickWindow()
     {
-        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[14]);
+        if (DataSystem.HasData("Story", "LIGHT"))
+        {
+            ///
+
+
+        }
+        else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[14]);
+
         ActionSystem.instance.Play();
     }
 
@@ -127,11 +145,19 @@ public class Workroom : Area
                     DataSystem.HasData("Story", "Workroom.Power.02") &&
                     DataSystem.HasData("Story", "Village.Home1.01"))
                 {
+                    SFXSystem.instance.PlaySound(3);
+
                     base.GoScene("Coast");
                     return;
                 }
             }
             else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[23]);
+        }
+        else if (DataSystem.HasData("Story", "LIGHT"))
+        {
+            ///
+
+
         }
         else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[13]);
 
@@ -178,7 +204,14 @@ public class Workroom : Area
                 }
                 else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[9]);
             }
-        }else
+        }
+        else if (DataSystem.HasData("Story", "LIGHT"))
+        {
+            ///
+
+
+        }
+        else
         {
             if (!DataSystem.HasData("Story", "Workroom.Desk.04"))
             {
@@ -190,6 +223,8 @@ public class Workroom : Area
                     DataSystem.HasData("Story", "Workroom.Power.02") &&
                     DataSystem.HasData("Story", "Village.Home1.01"))
                 {
+                    SFXSystem.instance.PlaySound(3);
+
                     base.GoScene("Coast");
                     return;
                 }
