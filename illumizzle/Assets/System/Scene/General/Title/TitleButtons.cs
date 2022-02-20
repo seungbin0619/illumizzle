@@ -36,6 +36,8 @@ public class TitleButtons : MonoBehaviour
 
         foreach(TitleButtons button in buttons)
         {
+            if (button == null) continue;
+
             if(button == obj)
             {
                 button.text.color = focusedColor[0];
