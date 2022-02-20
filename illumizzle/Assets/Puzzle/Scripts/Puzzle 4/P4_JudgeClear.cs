@@ -9,7 +9,7 @@ public class P4_JudgeClear : MonoBehaviour {
     public int sizeX, sizeZ;
 
     public int cntFitBlock = 0;
-    public GameObject clearText; //
+    //public GameObject clearText; 
 
     private bool isFinished = false;
 
@@ -34,7 +34,7 @@ public class P4_JudgeClear : MonoBehaviour {
         if (isFinished == false && (cntBlocks == cntFitBlock || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
-            clearText.SetActive(true); //
+            //clearText.SetActive(true); 
             PuzzleSystem.instance.AfterPuzzle(true);
         }
 

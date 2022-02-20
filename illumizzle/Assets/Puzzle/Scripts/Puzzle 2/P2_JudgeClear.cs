@@ -8,7 +8,7 @@ public class P2_JudgeClear : MonoBehaviour {
 
     public GameObject[] meeples = new GameObject[2];
     public GameObject[] destinations = new GameObject[2];
-    public GameObject clearText; //
+    //public GameObject clearText;
 
     private bool isFinished = false;
 
@@ -40,7 +40,7 @@ public class P2_JudgeClear : MonoBehaviour {
         if (isFinished == false && (isArrived == true || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
-            clearText.SetActive(true);
+            //clearText.SetActive(true);
             PuzzleSystem.instance.AfterPuzzle(true);
         }
 

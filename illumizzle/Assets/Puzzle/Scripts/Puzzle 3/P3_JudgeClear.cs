@@ -9,7 +9,7 @@ public class P3_JudgeClear : MonoBehaviour {
 
     public int cntTotFitTile;
     public int cntFitTile = 0;
-    public GameObject clearText; //
+   // public GameObject clearText;
 
     private bool isFinished = false;
 
@@ -38,7 +38,7 @@ public class P3_JudgeClear : MonoBehaviour {
         if (isFinished == false && (cntFitTile == cntTotFitTile || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
-            clearText.SetActive(true); //
+            //clearText.SetActive(true); //
             PuzzleSystem.instance.AfterPuzzle(true);
         }
 
