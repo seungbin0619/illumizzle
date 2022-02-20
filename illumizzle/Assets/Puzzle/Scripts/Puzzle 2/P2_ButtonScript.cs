@@ -30,7 +30,7 @@ public class P2_ButtonScript : MonoBehaviour {
         if (actionController.isActioning == false) {
             OnMouseExit();
 
-            Debug.Log("회전 버튼 클릭됨");
+            //Debug.Log("회전 버튼 클릭됨");
             actionController.isActioning = true;
             groupScript.buttonScript = gameObject.GetComponent<P2_ButtonScript>();
             group.GetComponent<BoxCollider>().enabled = true;
@@ -59,7 +59,7 @@ public class P2_ButtonScript : MonoBehaviour {
                 isRotating = false;
                 actionController.isActioning = false;
 
-                Debug.Log("회전 종료");
+                //Debug.Log("회전 종료");
             }
 
         }

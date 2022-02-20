@@ -37,7 +37,7 @@ public class P3_ButtonScript : MonoBehaviour {
                     judgeClear.isActioning = true;
                     moveDir = 1f;
                     targetHeight = targetLine.transform.localPosition.y + 1;
-                    Debug.Log("이동 시작");
+                    //Debug.Log("이동 시작");
                 }
             }
             else if (Input.GetMouseButton(1)) {
@@ -46,7 +46,7 @@ public class P3_ButtonScript : MonoBehaviour {
                     judgeClear.isActioning = true;
                     moveDir = -1f;
                     targetHeight = targetLine.transform.localPosition.y - 1;
-                    Debug.Log("이동 시작");
+                    //Debug.Log("이동 시작");
                 }
             }
         }
@@ -65,7 +65,7 @@ public class P3_ButtonScript : MonoBehaviour {
                 isMooving = false;
                 judgeClear.isActioning = false;
 
-                Debug.Log("이동 종료");
+                //Debug.Log("이동 종료");
             }
 
         }

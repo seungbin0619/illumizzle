@@ -58,12 +58,12 @@ public class P3_CheckerScript : MonoBehaviour {
                 if (isFit) {
                     judgeClear.cntFitTile++;
                     myTile.transform.GetChild(0).gameObject.GetComponent<TextMesh>().color = Color.green;
-                    Debug.Log("일치한 타일 개수 증가");
+                    //Debug.Log("일치한 타일 개수 증가");
                 }
                 else {
                     judgeClear.cntFitTile--;
                     myTile.transform.GetChild(0).gameObject.GetComponent<TextMesh>().color = Color.black;
-                    Debug.Log("일치한 타일 개수 감소");
+                    //Debug.Log("일치한 타일 개수 감소");
                 }
             }
 

@@ -47,7 +47,7 @@ public class P1_ExchangeTile : MonoBehaviour {
             else {
                 calledTile1 = null;
                 calledTile2 = null;
-                Debug.Log("타일 교환 불가");
+                //Debug.Log("타일 교환 불가");
 
                 //failAudio.Play();
             }
@@ -68,7 +68,7 @@ public class P1_ExchangeTile : MonoBehaviour {
                 calledTile2 = null;
                 isMooving = false;
 
-                Debug.Log("타일 교환 종료");
+                //Debug.Log("타일 교환 종료");
             }
         }
     }

@@ -24,7 +24,7 @@ public class P2_GroupScript : MonoBehaviour {
             MakeChild();
             buttonScript.isRotating = true;
             gameObject.GetComponent<BoxCollider>().enabled = false;
-            Debug.Log("그룹에 자식 오브젝트 등록 완료 및 회전 시작");
+            //Debug.Log("그룹에 자식 오브젝트 등록 완료 및 회전 시작");
         }
     }
 

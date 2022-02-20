@@ -17,11 +17,11 @@ public class P1_TriggerScript : MonoBehaviour {
 
             if (isFit == true) {
                 judgeClear.cntFitTrigger += 1;
-                Debug.Log("일치한 트리거 개수 증가");
+                //Debug.Log("일치한 트리거 개수 증가");
             }
             else {
                 judgeClear.cntFitTrigger -= 1;
-                Debug.Log("일치한 트리거 개수 감소");
+                //Debug.Log("일치한 트리거 개수 감소");
             }
         }
 

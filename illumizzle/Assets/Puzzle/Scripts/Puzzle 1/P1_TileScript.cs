@@ -27,7 +27,7 @@ public class P1_TileScript : MonoBehaviour {
 
             if (exchangeTile.calledTile1 == null) {
                 exchangeTile.calledTile1 = gameObject;
-                Debug.Log("첫 번째 타일 선택됨");
+                //Debug.Log("첫 번째 타일 선택됨");
 
                 gameObject.transform.GetChild(4).gameObject.SetActive(true);
                 int childCnt = cubeBase.transform.childCount;
@@ -46,7 +46,7 @@ public class P1_TileScript : MonoBehaviour {
             }
             else {
                 exchangeTile.calledTile2 = gameObject;
-                Debug.Log("두 번째 타일 선택됨");
+                //Debug.Log("두 번째 타일 선택됨");
 
                 int childCnt = cubeBase.transform.childCount;
                 for (int i = 0; i < childCnt; i++) {

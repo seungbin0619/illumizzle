@@ -51,7 +51,7 @@ public class P2_BaseRotater : MonoBehaviour {
             isRotating = true;
             actionController.isActioning = true;
 
-            Debug.Log("드래그 시작");
+           // Debug.Log("드래그 시작");
         }
         if (!Input.GetMouseButton(1) && cubeBase.GetComponent<SphereCollider>().enabled == true) {
             cubeBase.GetComponent<SphereCollider>().enabled = false;
@@ -59,7 +59,7 @@ public class P2_BaseRotater : MonoBehaviour {
             actionController.isActioning = false;
             isMouseStop = true;
 
-            Debug.Log("드래그 종료");
+            //Debug.Log("드래그 종료");
         }
     }
 }
