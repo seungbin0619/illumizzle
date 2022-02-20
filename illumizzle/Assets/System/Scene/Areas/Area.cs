@@ -89,6 +89,7 @@ public class Area : MonoBehaviour
 
     public virtual void GoScene(string name)
     {
+        if(name == "Map") ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 4);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 0.5f);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, name);
 

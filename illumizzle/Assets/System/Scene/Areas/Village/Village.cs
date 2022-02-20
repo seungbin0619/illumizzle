@@ -22,7 +22,9 @@ public class Village : Area
     {
         if (!ActionSystem.instance.IsCompleted) return;
 
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 3);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 1);
+        //ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, -1);
 
         if (!DataSystem.HasData("Story", "Village.Workroom.00"))
         {
@@ -30,6 +32,7 @@ public class Village : Area
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
         }
 
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 0);
         GoScene("Workroom");
     }
 
@@ -37,7 +40,9 @@ public class Village : Area
     {
         if (!ActionSystem.instance.IsCompleted) return;
 
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 3);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 0);
+        //ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, -1);
 
         if (DataSystem.HasData("Story", "Workroom.Blueprint.Check.03") && !DataSystem.HasData("Story", "Village.Home1.01"))
         {
@@ -64,7 +69,10 @@ public class Village : Area
     public void GoHome2()
     {
         if (!ActionSystem.instance.IsCompleted) return;
+
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 3);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 2);
+        //ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, -1);
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
 

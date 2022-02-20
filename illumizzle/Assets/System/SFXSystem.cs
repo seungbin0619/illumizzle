@@ -28,7 +28,7 @@ public class SFXSystem : MonoBehaviour
     {
         public AudioClip sound;
         public float volume = 1;
-        public float progress = 0;
+        public double[] trim = new double[2] { 0, -1 };
     }
 
     [SerializeField]
@@ -40,17 +40,20 @@ public class SFXSystem : MonoBehaviour
     private int index = -1;
     private SoundData currentBgm;
 
-    public void SoundChange(int index = -1)
+    WaitForEndOfFrame delay = new WaitForEndOfFrame();
+
+    private Coroutine coroutine = null;
+
+    public void BgmChange(int index = -1)
     {
         if (index == -1) return;
-        StartCoroutine(CoSoundChange(index));
+        StartCoroutine(CoBgmChange(index));
     }
 
-    public IEnumerator CoSoundChange(int index)
+    private IEnumerator CoBgmChange(int index)
     {
-        WaitForEndOfFrame delay = new WaitForEndOfFrame();
         float progress = 0, duration = 0.5f;
-        float weight = DataSystem.GetData("Setting", "Bgm", 0) * 0.01f;
+        float weight = DataSystem.GetData("Setting", "Bgm", 100) * 0.01f;
         float volume;
 
         if (current.isPlaying)
@@ -94,25 +97,37 @@ public class SFXSystem : MonoBehaviour
     public void PlaySound(int index)
     {
         if (index < 0 || index >= sounds.Length) return;
-        float weight = DataSystem.GetData("Setting", "Sound", 0) * 0.01f;
+        float weight = DataSystem.GetData("Setting", "Sound", 100) * 0.01f;
 
         sound.clip = sounds[index].sound;
         sound.volume = weight * sounds[index].volume;
-        sound.PlayScheduled(sounds[index].progress);
+        sound.PlayScheduled(sounds[index].trim[0]);
+
+        if(sounds[index].trim[1] != -1)
+            coroutine = StartCoroutine(CoPlay(index));
+    }
+
+    public void StopSound()
+    {
+        if (coroutine != null) StopCoroutine(coroutine);
+        coroutine = null;
+
+        sound.Stop();
+        sound.clip = null;
+    }
+
+    private IEnumerator CoPlay(int index)
+    {
+        while (sound.time < sounds[index].trim[1])
+        {
+            yield return delay;
+        }
+        sound.Stop();
+        sound.clip = null;
     }
 
     private void Update()
     {
         //
-    }
-
-    public void OnSoundChange()
-    {
-        float bgmWeight = DataSystem.GetData("Setting", "Bgm", 0) * 0.01f;
-        //float soundsWeight = DataSystem.GetData("Setting", "Sound", 0) * 0.01f;
-
-        current.volume = bgmWeight / currentBgm.volume;
-        //if(currentSound != null)
-        //    sound.volume = soundsWeight / currentSound.volume;
     }
 }

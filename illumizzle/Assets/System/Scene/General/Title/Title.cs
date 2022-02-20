@@ -11,6 +11,8 @@ public class Title : MonoBehaviour
 
     private void Start()
     {
+        SFXSystem.instance.BgmChange(1);
+
         IEnumerator LateStart()
         {
             yield return ActionSystem.waitComplete;
@@ -29,6 +31,9 @@ public class Title : MonoBehaviour
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 1f);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Prologue");
         ActionSystem.instance.Play();
+
+        SFXSystem.instance.PlaySound(1); // 시작
+        SFXSystem.instance.BgmChange(0);
     }
 
     public void LoadGame()
@@ -50,10 +55,15 @@ public class Title : MonoBehaviour
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 1f);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, currentName);
         ActionSystem.instance.Play();
+
+        SFXSystem.instance.PlaySound(1); // 시작
+        SFXSystem.instance.BgmChange(0);
     }
 
     public void ExitGame()
     {
+        SFXSystem.instance.BgmChange(0);
+
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

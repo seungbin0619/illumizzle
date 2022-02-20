@@ -27,7 +27,7 @@ MonoBehaviour:
     sprite: 0
     text: "\uADF8\uB0E5 \uC5F4\uB9AC\uB124...?"
     hide: []
-    command: 
+    command: SOUND 2
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
     text: "\uC0AC\uB78C\uB4E4\uC774 \uB4DC\uB098\uB4E0 \uC9C0 \uC624\uB798\uB3FC\uC11C

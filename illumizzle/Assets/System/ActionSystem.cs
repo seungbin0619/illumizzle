@@ -25,6 +25,7 @@ public class ActionSystem : MonoBehaviour
             Puzzle, // ∆€¡Ò∑Œ ¿Ãµø
             Fade,
             Walk,
+            Sound,
         }
         public ActionType type;
         public List<object> args;
@@ -139,6 +140,15 @@ public class ActionSystem : MonoBehaviour
                 DataSystem.SetData("LastPosition", AreaSystem.CurrentArea.name, index);
 
                 wait = waitWalk;
+
+                break;
+            case Action.ActionType.Sound:
+                int sound = int.Parse(currentAction.args[0].ToString());
+
+                if (sound == -1) SFXSystem.instance.StopSound();
+                else SFXSystem.instance.PlaySound(sound);
+                
+                wait = null;
 
                 break;
         }

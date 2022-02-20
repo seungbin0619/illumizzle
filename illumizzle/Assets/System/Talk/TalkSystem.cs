@@ -129,7 +129,9 @@ public class TalkSystem : MonoBehaviour
     public void Next()
     {
         if (!IsLoaded) return;
-        if(CurrentTalk.Count <= talkIndex)
+        if (talkIndex > 0) SFXSystem.instance.PlaySound(5);
+
+        if (CurrentTalk.Count <= talkIndex)
         {
             // 대화 종료
             Close();
@@ -175,6 +177,11 @@ public class TalkSystem : MonoBehaviour
                     break;
                 case "SET_PARTS":
                     Blueprint.SetParts();
+
+                    break;
+                case "SOUND":
+                    int sound = int.Parse(tmp[1]);
+                    SFXSystem.instance.PlaySound(sound);
 
                     break;
             }

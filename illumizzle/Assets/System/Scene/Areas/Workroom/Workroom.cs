@@ -211,6 +211,7 @@ public class Workroom : Area
             return;
         }
 
+        ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 0);
         base.GoScene(name);
     }
 }
