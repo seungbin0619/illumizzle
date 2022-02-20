@@ -11,6 +11,11 @@ public class P3_ButtonScript : MonoBehaviour {
     private bool isMooving = false, isOver = false;
     private float moveDir, targetHeight;
 
+    private void Awake() {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+    }
+
     private void Start() {
         judgeClear = sceneController.GetComponent<P3_JudgeClear>();
     }
@@ -54,7 +59,7 @@ public class P3_ButtonScript : MonoBehaviour {
             float dist = targetLine.transform.localPosition.y - targetHeight;
             if (dist < 0) dist = -dist;
 
-            if (dist <= Time.deltaTime * 4f) {
+            if (dist <= Time.deltaTime * 3f) {
                 targetLine.transform.localPosition = new Vector3(targetLine.transform.localPosition.x, 
                     targetHeight, targetLine.transform.localPosition.z);
                 isMooving = false;

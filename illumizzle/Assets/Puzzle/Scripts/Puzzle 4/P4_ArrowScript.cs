@@ -18,6 +18,11 @@ public class P4_ArrowScript : MonoBehaviour {
 
     private GameObject newGroop;
 
+    private void Awake() {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+    }
+
     void Start() {
         judgeClear = sceneController.GetComponent<P4_JudgeClear>();
         cntBlocks = judgeClear.cntBlocks;
@@ -112,12 +117,12 @@ public class P4_ArrowScript : MonoBehaviour {
     }
 
     void Update() {
-        if (isMooving == true) {
+        if (isMooving == true) { //그룹 이동
             targetObject.transform.localPosition += moveDir * 3 * Time.deltaTime;
 
             float dist = Vector3.Distance(targetObject.transform.localPosition, targetPosition);
 
-            if (dist <= Time.deltaTime * 1.8f) {
+            if (dist <= Time.deltaTime * 1.5f) {
                 targetObject.transform.localPosition = targetPosition;
                 isMooving = false;
                 judgeClear.isActioning = false;

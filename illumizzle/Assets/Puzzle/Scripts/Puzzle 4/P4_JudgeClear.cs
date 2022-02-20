@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.UI;
 
 public class P4_JudgeClear : MonoBehaviour {
 
@@ -12,6 +13,9 @@ public class P4_JudgeClear : MonoBehaviour {
     //public GameObject clearText; 
 
     private bool isFinished = false;
+
+
+    //public Text deltaTimeText; //
 
     //================Rule Displayer================
     public GameObject rule;
@@ -42,7 +46,7 @@ public class P4_JudgeClear : MonoBehaviour {
         string str = Input.inputString;
         if (str != "" && isFinished == false) {
 
-            if (System.DateTime.Now.Ticks - lastKeyInputTime > 10000000) {
+            if (System.DateTime.Now.Ticks - lastKeyInputTime > 10000000) { // 1초 이상 경과
                 cheatKeyIdx = 0;
             }
 
@@ -62,6 +66,9 @@ public class P4_JudgeClear : MonoBehaviour {
             lastKeyInputTime = System.DateTime.Now.Ticks;
         }
         //==============================================
+
+
+        //deltaTimeText.text = (Time.deltaTime).ToString();
     }
 
     //================Rule Displayer================

@@ -143,7 +143,7 @@ public class P4_GroopScript : MonoBehaviour {
 
             float dist = Vector3.Distance(transform.localPosition, targetPosition);
 
-            if (dist < Time.deltaTime * 4f) {
+            if (dist < Time.deltaTime * 5f) {
                 transform.localPosition = targetPosition;
                 isFalling = false;
                 judgeClear.isActioning = false;
