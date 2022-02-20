@@ -18,10 +18,10 @@ public class P4_ArrowScript : MonoBehaviour {
 
     private GameObject newGroop;
 
-    private void Awake() {
-        QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 60;
-    }
+    //private void Awake() {
+    //    QualitySettings.vSyncCount = 0;
+    //    Application.targetFrameRate = 60;
+    //}
 
     void Start() {
         judgeClear = sceneController.GetComponent<P4_JudgeClear>();

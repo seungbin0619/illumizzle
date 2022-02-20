@@ -8,7 +8,7 @@ public class P1_RotateLeft : MonoBehaviour {
     public GameObject rightButton;
     public bool isRotatingLeft = false;
 
-    public float rotateSpeed = 400;
+    public float rotateSpeed = 200;
 
     Quaternion target;
 
@@ -16,7 +16,7 @@ public class P1_RotateLeft : MonoBehaviour {
 
     private void Start() {
         target = cubeBase.transform.rotation;
-        audioRotateLeft.Stop();
+        //audioRotateLeft.Stop();
     }
 
     public void MakeLeftRotate() {
@@ -24,10 +24,10 @@ public class P1_RotateLeft : MonoBehaviour {
 
         if (isRotatingLeft == false && rotateRight.isRotatingRight == false) {
             isRotatingLeft = true;
-            Debug.Log("왼쪽으로 회전 시작");
+            //Debug.Log("왼쪽으로 회전 시작");
             target = cubeBase.transform.rotation * Quaternion.Euler(0, 90, 0);
 
-            audioRotateLeft.Play();
+            //audioRotateLeft.Play();
         }
     }
 
@@ -37,9 +37,9 @@ public class P1_RotateLeft : MonoBehaviour {
             cubeBase.transform.RotateAround(cubeBase.transform.position, Vector3.up, rotateSpeed * Time.deltaTime);
 
             float angle = Quaternion.Angle(cubeBase.transform.rotation, target);
-            if (angle < 5f * Time.deltaTime * 50) {
+            if (angle < Time.deltaTime * 200.0f) {
                 isRotatingLeft = false;
-                Debug.Log("왼쪽으로 회전 완료");
+                //Debug.Log("왼쪽으로 회전 완료");
                 cubeBase.transform.rotation = target;
             }
         }

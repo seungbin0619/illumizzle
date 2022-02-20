@@ -11,10 +11,10 @@ public class P3_ButtonScript : MonoBehaviour {
     private bool isMooving = false, isOver = false;
     private float moveDir, targetHeight;
 
-    private void Awake() {
-        QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 60;
-    }
+    //private void Awake() {
+    //    QualitySettings.vSyncCount = 0;
+    //    Application.targetFrameRate = 60;
+    //}
 
     private void Start() {
         judgeClear = sceneController.GetComponent<P3_JudgeClear>();

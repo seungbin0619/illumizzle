@@ -13,7 +13,7 @@ public class P1_TileScript : MonoBehaviour {
 
     private void Start() {
         cubeBase = gameObject.transform.parent.gameObject;
-        audioTile.Stop();
+        //audioTile.Stop();
     }
 
     private void OnMouseDown() {
@@ -41,7 +41,7 @@ public class P1_TileScript : MonoBehaviour {
                     }
                 }
 
-                audioTile.Play();
+                //audioTile.Play();
 
             }
             else {

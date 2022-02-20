@@ -19,8 +19,8 @@ public class P1_ExchangeTile : MonoBehaviour {
     public AudioSource failAudio;
 
     private void Start() {
-        successAudio.Stop();
-        failAudio.Stop();
+        //successAudio.Stop();
+        //failAudio.Stop();
     }
 
     void Update() {
@@ -42,14 +42,14 @@ public class P1_ExchangeTile : MonoBehaviour {
 
                 dist = Vector3.Distance(position1, position2);
 
-                successAudio.Play();
+                //successAudio.Play();
             }
             else {
                 calledTile1 = null;
                 calledTile2 = null;
                 Debug.Log("타일 교환 불가");
 
-                failAudio.Play();
+                //failAudio.Play();
             }
         }
     }

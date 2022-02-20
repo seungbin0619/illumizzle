@@ -2442,7 +2442,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.2
+  orthographic size: 2.3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3416,6 +3416,8 @@ MonoBehaviour:
   isMooving: 0
   rule: {fileID: 1421880692}
   isRuleOn: 0
+  successAudio: {fileID: 0}
+  failAudio: {fileID: 0}
 --- !u!4 &1193779240
 Transform:
   m_ObjectHideFlags: 0
@@ -3444,6 +3446,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cntTotFitTrigger: 16
   cntFitTrigger: 0
+  cheatKey: showmethenextstage
+  cheatKeyLen: 18
+  cheatKeyIdx: 0
 --- !u!4 &1232053538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8973536496799186188, guid: e764256ceea7c344fb3ee9b8748abf2d,
