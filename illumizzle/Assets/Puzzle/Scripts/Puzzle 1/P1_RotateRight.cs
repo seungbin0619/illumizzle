@@ -12,11 +12,8 @@ public class P1_RotateRight : MonoBehaviour {
 
     Quaternion target;
 
-    public AudioSource audioRotateRight;
-
     private void Start() {
         target = cubeBase.transform.rotation;
-        //audioRotateRight.Stop();
     }
 
     public void MakeRightRotate() {
@@ -27,7 +24,7 @@ public class P1_RotateRight : MonoBehaviour {
             //Debug.Log("오른쪽으로 회전 시작");
             target = cubeBase.transform.rotation * Quaternion.Euler(0, -90, 0);
 
-            //audioRotateRight.Play();
+            SFXSystem.instance.PlaySound(16);
         }
     }
 

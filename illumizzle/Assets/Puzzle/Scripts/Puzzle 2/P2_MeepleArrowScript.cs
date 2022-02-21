@@ -31,7 +31,9 @@ public class P2_MeepleArrowScript : MonoBehaviour {
 
             meeple.GetComponent<P2_ClickAreaScript>().isArrowHover = false;
 
-            //Debug.Log("말 이동 버튼 클릭됨");
+
+            SFXSystem.instance.PlaySound(20);
+
             actionController.isActioning = true;
             isMooving = true;
 
