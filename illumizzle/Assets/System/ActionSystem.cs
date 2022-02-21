@@ -34,6 +34,7 @@ public class ActionSystem : MonoBehaviour
     private static Action currentAction;
 
     public bool IsCompleted { get { return actions.Count == 0; } }
+    public bool isPlaying = false;
 
     private WaitWhile wait = null;
     private static readonly WaitWhile waitTalk = new WaitWhile(() => TalkSystem.IsLoaded); // 대화 켜진 동안 기다리기
@@ -68,18 +69,11 @@ public class ActionSystem : MonoBehaviour
                 Next();
                 yield return wait;
                 actions.RemoveAt(0);
-                
-                switch (currentAction.type)
-                {
-                    case Action.ActionType.Talk: break;
-                    case Action.ActionType.Move:
-                        CursorSystem.instance.SetCursor(0);
-                        break;
-                    case Action.ActionType.Puzzle:
-                        CursorSystem.instance.SetCursor(0); break;
-                }
             }
+            isPlaying = false;
         }
+        isPlaying = true;
+
         StartCoroutine(CoPlay());
     }
 

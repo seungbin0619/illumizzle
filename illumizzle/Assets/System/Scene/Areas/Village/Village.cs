@@ -20,7 +20,7 @@ public class Village : Area
 
     public void GoWorkroom()
     {
-        if (!ActionSystem.instance.IsCompleted) return;
+        if (ActionSystem.instance.isPlaying) return;
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 3);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 1);
@@ -38,7 +38,7 @@ public class Village : Area
 
     public void GoHome1()
     {
-        if (!ActionSystem.instance.IsCompleted) return;
+        if (ActionSystem.instance.isPlaying) return;
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 3);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 0);
@@ -78,7 +78,7 @@ public class Village : Area
 
     public void GoHome2()
     {
-        if (!ActionSystem.instance.IsCompleted) return;
+        if (ActionSystem.instance.isPlaying) return;
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Sound, 3);
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Walk, 2);

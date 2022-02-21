@@ -29,7 +29,7 @@ public class Coast : Area
 
     public void LoadPuzzle(int index)
     {
-        if (!ActionSystem.instance.IsCompleted) return;
+        if (ActionSystem.instance.isPlaying) return;
 
         #region [ ∆€¡Ò Ω√¿€ ¿¸ ]
         switch (index)
@@ -93,7 +93,7 @@ public class Coast : Area
 
     public void ClickTree()
     {
-        if (!ActionSystem.instance.IsCompleted) return;
+        if (ActionSystem.instance.isPlaying) return;
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
         ActionSystem.instance.Play();
@@ -101,7 +101,7 @@ public class Coast : Area
 
     public void ClickStack()
     {
-        if (!ActionSystem.instance.IsCompleted) return;
+        if (ActionSystem.instance.isPlaying) return;
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
         ActionSystem.instance.Play();

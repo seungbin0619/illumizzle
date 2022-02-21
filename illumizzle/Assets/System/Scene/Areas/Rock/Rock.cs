@@ -29,7 +29,7 @@ public class Rock : Area
 
     public void LoadPuzzle(int index)
     {
-        if (!ActionSystem.instance.IsCompleted) return;
+        if (ActionSystem.instance.isPlaying) return;
 
         #region [ ∆€¡Ò Ω√¿€ ¿¸ ]
         switch (index)
@@ -92,7 +92,7 @@ public class Rock : Area
 
     public void ClickLight()
     {
-        if (!ActionSystem.instance.IsCompleted) return;
+        if (ActionSystem.instance.isPlaying) return;
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
         ActionSystem.instance.Play();
@@ -100,7 +100,7 @@ public class Rock : Area
 
     public void ClickGrass()
     {
-        if (!ActionSystem.instance.IsCompleted) return;
+        if (ActionSystem.instance.isPlaying) return;
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[6]);
         ActionSystem.instance.Play();
