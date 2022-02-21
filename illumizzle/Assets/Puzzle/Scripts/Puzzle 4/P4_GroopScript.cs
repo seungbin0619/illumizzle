@@ -139,19 +139,23 @@ public class P4_GroopScript : MonoBehaviour {
 
         //³«ÇÏÇÏ±â
         if (isFalling == true) {
-            transform.localPosition += Vector3.down * 8 * Time.deltaTime;
-
             float dist = Vector3.Distance(transform.localPosition, targetPosition);
 
+            if (dist < Time.deltaTime * 30f) {
+                transform.localPosition += Vector3.down * 8 * Time.deltaTime;
+            }
+            else {
+                transform.localPosition += Vector3.down * 12 * Time.deltaTime;
+            }
+
             if (dist < Time.deltaTime * 5f) {
+                SFXSystem.instance.PlaySound(14);
+
                 transform.localPosition = targetPosition;
                 isFalling = false;
                 judgeClear.isActioning = false;
 
                 //Debug.Log("³«ÇÏ Á¾·á");
-
-
-                SFXSystem.instance.PlaySound(14);
 
                 if (isFit == true) {
                     judgeClear.cntFitBlock++;

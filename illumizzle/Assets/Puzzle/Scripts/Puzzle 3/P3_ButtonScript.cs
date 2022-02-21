@@ -37,7 +37,8 @@ public class P3_ButtonScript : MonoBehaviour {
                     judgeClear.isActioning = true;
                     moveDir = 1f;
                     targetHeight = targetLine.transform.localPosition.y + 1;
-                    //Debug.Log("이동 시작");
+
+                    SFXSystem.instance.PlaySound(18);
                 }
             }
             else if (Input.GetMouseButton(1)) {
@@ -46,7 +47,8 @@ public class P3_ButtonScript : MonoBehaviour {
                     judgeClear.isActioning = true;
                     moveDir = -1f;
                     targetHeight = targetLine.transform.localPosition.y - 1;
-                    //Debug.Log("이동 시작");
+
+                    SFXSystem.instance.PlaySound(19);
                 }
             }
         }

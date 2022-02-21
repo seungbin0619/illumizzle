@@ -37,6 +37,8 @@ public class P4_ArrowScript : MonoBehaviour {
 
             myGroop.GetComponent<P4_GroopScript>().isArrowHover = false;
 
+            SFXSystem.instance.PlaySound(17);
+
             //Debug.Log("그룹 이동 버튼 클릭됨");
             judgeClear.isActioning = true;
             isMooving = true;

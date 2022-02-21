@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class TestController : MonoBehaviour{
 
-    public string sceneName;
-    public void MoveScene() {
-        SceneManager.LoadScene(sceneName);
-    }
+    //public string sceneName;
+    //public void MoveScene() {
+    //    SceneManager.LoadScene(sceneName);
+    //}
 
-    public void ExitGame() {
-        Application.Quit();
-    }
+    //public void ExitGame() {
+    //    Application.Quit();
+    //}
 
     public void SceneReload() {
         UnityEngine.SceneManagement.SceneManager.LoadScene(gameObject.scene.name);

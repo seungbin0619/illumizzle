@@ -2045,6 +2045,31 @@ MonoBehaviour:
     trim:
     - 0
     - -1
+  - sound: {fileID: 8300000, guid: f329b63e024bf724386c8fcf43b0c8e2, type: 3}
+    volume: 1
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: f70e5792abd293b47aab4fee1299a559, type: 3}
+    volume: 0.6
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: 2379010ffc1c58e4aa49fd76ff7d9d88, type: 3}
+    volume: 0.5
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: 582b60217b00c0e4e982819640ccc84b, type: 3}
+    volume: 0.5
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: 130736b96e5b6544ba20e634dfc963aa, type: 3}
+    volume: 0.6
+    trim:
+    - 0
+    - -1
 --- !u!4 &834946434
 Transform:
   m_ObjectHideFlags: 0
@@ -2787,6 +2812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ca8a2ed1d567d44b46a5afeac28712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlaying: 0
 --- !u!114 &1218458197
 MonoBehaviour:
   m_ObjectHideFlags: 0
