@@ -50,6 +50,8 @@ public class SettingSystem : MonoBehaviour
     
     public void ToTitle()
     {
+        ActionSystem.instance.actions.Clear();
+
         CloseSetting();
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 0.5f);
@@ -70,7 +72,7 @@ public class SettingSystem : MonoBehaviour
 
     private void Update()
     {
-        if (!ActionSystem.instance.IsCompleted) return;
+        if (!ActionSystem.instance.IsCompleted && ActionSystem.instance.actions[0].type != ActionSystem.Action.ActionType.Puzzle) return;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Setting(!isOpen);

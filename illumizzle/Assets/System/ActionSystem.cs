@@ -30,7 +30,7 @@ public class ActionSystem : MonoBehaviour
         public ActionType type;
         public List<object> args;
     }
-    private List<Action> actions;
+    public List<Action> actions;
     private static Action currentAction;
 
     public bool IsCompleted { get { return actions.Count == 0; } }
