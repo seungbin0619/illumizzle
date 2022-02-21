@@ -75,7 +75,7 @@ public class Coast : Area
 
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 0.5f);
-            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, name);
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Map");
 
             ActionSystem.instance.Play();
 

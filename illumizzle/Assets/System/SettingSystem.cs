@@ -28,7 +28,10 @@ public class SettingSystem : MonoBehaviour
     public void OpenSetting()
     {
         if (!DataSystem.HasData("Setting", "Bgm")) DataSystem.SetData("Setting", "Bgm", 50);
+        else slider[0].value = DataSystem.GetData("Setting", "Bgm", 50) * 0.01f;
+
         if (!DataSystem.HasData("Setting", "Sound")) DataSystem.SetData("Setting", "Sound", 50);
+        else slider[1].value = DataSystem.GetData("Setting", "Sound", 50) * 0.01f;
 
         Setting(true);
     }
