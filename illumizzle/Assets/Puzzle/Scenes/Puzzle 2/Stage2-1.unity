@@ -357,7 +357,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 17.147375
+  field of view: 19.515814
   orthographic: 0
   orthographic size: 2.9
   m_Depth: -1
@@ -4955,7 +4955,9 @@ MonoBehaviour:
   - {fileID: 373306683}
   destinations:
   - {fileID: 1920646371}
-  clearText: {fileID: 1987879903}
+  cheatKey: showmethenextstage
+  cheatKeyLen: 18
+  cheatKeyIdx: 0
 --- !u!4 &1233362788 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4282550502630099480, guid: 518ee52e67d6cdb4a97fd981c19a6066,
@@ -9157,6 +9159,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7181698968453784898, guid: d0dfa6013f1b6814fac8f24b49ccd594,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.7735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181698968453784898, guid: d0dfa6013f1b6814fac8f24b49ccd594,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181698968453784898, guid: d0dfa6013f1b6814fac8f24b49ccd594,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7735849
+      objectReference: {fileID: 0}
     - target: {fileID: 7181698968453784899, guid: d0dfa6013f1b6814fac8f24b49ccd594,
         type: 3}
       propertyPath: m_RootOrder

@@ -445,7 +445,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 17.147375
+  field of view: 19.515814
   orthographic: 0
   orthographic size: 2.9
   m_Depth: -1
@@ -5601,7 +5601,9 @@ MonoBehaviour:
   destinations:
   - {fileID: 1920646371}
   - {fileID: 30050051}
-  clearText: {fileID: 695888672}
+  cheatKey: showmethenextstage
+  cheatKeyLen: 18
+  cheatKeyIdx: 0
 --- !u!1001 &1217120928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7719,17 +7721,17 @@ PrefabInstance:
     - target: {fileID: 7181698968453784898, guid: d0dfa6013f1b6814fac8f24b49ccd594,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.972549
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 7181698968453784898, guid: d0dfa6013f1b6814fac8f24b49ccd594,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.972549
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 7181698968453784898, guid: d0dfa6013f1b6814fac8f24b49ccd594,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.972549
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 7181698968453784899, guid: d0dfa6013f1b6814fac8f24b49ccd594,
         type: 3}

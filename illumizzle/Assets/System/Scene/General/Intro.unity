@@ -2051,7 +2051,7 @@ MonoBehaviour:
     - 0
     - -1
   - sound: {fileID: 8300000, guid: f70e5792abd293b47aab4fee1299a559, type: 3}
-    volume: 0.6
+    volume: 1
     trim:
     - 0
     - -1
@@ -2066,7 +2066,7 @@ MonoBehaviour:
     - 0
     - -1
   - sound: {fileID: 8300000, guid: 130736b96e5b6544ba20e634dfc963aa, type: 3}
-    volume: 0.6
+    volume: 0.8
     trim:
     - 0
     - -1
