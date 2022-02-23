@@ -34,7 +34,7 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uBB54\uAC00 \uBC14\uC704\uAC00 \uB9CE\uC740 \uACF3\uC73C\uB85C \uAC00\uC57C\uACA0\uB124...
+    text: "\uBC14\uC704\uAC00 \uB9CE\uC740 \uACF3\uC73C\uB85C \uAC00\uC57C\uACA0\uB124...
       \uC0AC\uB9C9? \uD574\uBCC0?"
     hide: []
     command: 

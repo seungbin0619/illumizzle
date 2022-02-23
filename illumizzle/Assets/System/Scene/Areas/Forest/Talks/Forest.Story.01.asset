@@ -15,7 +15,7 @@ MonoBehaviour:
   scripts:
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uC5B4, \uBC1C\uAD11\uCCB4 \uCC3E\uC558\uC5B4."
+    text: "\uC5B4, \uBC1C\uAD11\uCCB4 \uCC3E\uC558\uC5B4!"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
@@ -65,7 +65,7 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uB300\uBC15! \uC6D0\uB798 \uD558\uB098\uC600\uB294\uB370 \uAE68\uC84C\uB358
+    text: "\uB300\uBC15! \uC6D0\uB798 \uD558\uB098\uC600\uB294\uB370 \uCABC\uAC1C\uC9C4
       \uAC74\uAC00?"
     hide: []
     command: 
