@@ -15,12 +15,13 @@ MonoBehaviour:
   scripts:
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uACF5\uD559\uC790\uB294 \uB300\uCCB4 \uC5B4\uB514\uC5D0 \uC788\uB294\uAC70\uC57C!"
+    text: "\uACF5\uD559\uC790\uB294 \uB300\uCCB4 \uC5B4\uB514\uC5D0 \uC788\uB294
+      \uAC70\uC57C!"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uC544\uC9C1 \uB05D\uAE4C\uC9C0 \uC548\uB4E4\uC5B4\uAC00\uBD24\uC796\uC544."
+    text: "\uC544\uC9C1 \uB05D\uAE4C\uC9C0 \uC548 \uB4E4\uC5B4\uAC00\uBD24\uC796\uC544."
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}

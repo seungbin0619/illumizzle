@@ -15,14 +15,14 @@ MonoBehaviour:
   scripts:
   - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
     sprite: 0
-    text: "... \uC5EC\uD2BC \uADF8\uB807\uAC8C \uB41C \uAC81\uB2C8\uB2E4."
+    text: "...\uC5EC\uD558\uD2BC \uADF8\uB807\uAC8C \uB41C \uAC81\uB2C8\uB2E4."
     hide:
     - {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     - {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     command: 
   - character: {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
     sprite: 0
-    text: "\uADF8\uB7FC \uC9C4\uC9DC \uC0AC\uC2E4\uC774\uC5C8\uAD6C\uB9CC."
+    text: "\uADF8\uB7FC \uC815 \uC0AC\uC2E4\uC774\uC5C8\uAD6C\uB9CC."
     hide:
     - {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     - {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
@@ -68,20 +68,19 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uD6C4.. \uC774\uBC88\uB9CC \uC6A9\uC11C\uD574\uB4DC\uB824\uC57C\uACA0\uB124\uC694."
+    text: "\uD6C4... \uC774\uBC88\uB9CC \uC6A9\uC11C\uD574\uB4DC\uB824\uC57C\uACA0\uB124\uC694."
     hide:
     - {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uBB50\uB77C\uB294\uAC70\uC57C \uBC84\uB987\uC5C6\uC774."
+    text: "\uBB50\uB77C\uB294 \uAC70\uC57C \uBC84\uB987\uC5C6\uC774."
     hide:
     - {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
     command: 
   - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
     sprite: 0
-    text: "\uD558\uD558\uD558. \uB098\uB3C4 \uB2E4\uC2DC \uC5F0\uAD6C\uC5D0 \uC9D1\uC911
-      \uD574\uC57C\uACA0\uAD6C\uB098."
+    text: "\uD558\uD558\uD558. \uB098\uB3C4 \uB2E4\uC2DC \uC5F0\uAD6C\uC5D0 \uC9D1\uC911\uD574\uC57C\uACA0\uAD6C\uB098."
     hide:
     - {fileID: 11400000, guid: becb5232b58e22149be5e544f2f6b891, type: 2}
     command: 

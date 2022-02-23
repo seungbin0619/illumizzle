@@ -20,7 +20,7 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uC190\uC774 \uC548\uB2FF\uC544..."
+    text: "\uC190\uC774 \uC548 \uB2FF\uC544..."
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}

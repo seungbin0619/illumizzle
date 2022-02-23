@@ -54,7 +54,7 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uC800\uD76C\uAC00 \uACE0\uCE5C\uAC74\uB370 \uC808\uB300 \uC548 \uAEBC\uC9C8\uAC70\uC5D0\uC694!"
+    text: "\uC800\uD76C\uAC00 \uACE0\uCE5C \uAC74\uB370 \uC808\uB300 \uC548 \uAEBC\uC9C8\uAC70\uC694!"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}

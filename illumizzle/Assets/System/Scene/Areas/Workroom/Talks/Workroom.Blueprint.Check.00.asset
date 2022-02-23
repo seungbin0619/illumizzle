@@ -55,7 +55,7 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "...\uC548\uB418\uB124."
+    text: "...\uC548 \uB418\uB124."
     hide: []
     command: 
   characters:

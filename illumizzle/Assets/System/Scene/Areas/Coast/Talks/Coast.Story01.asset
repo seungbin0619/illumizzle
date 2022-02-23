@@ -31,7 +31,7 @@ MonoBehaviour:
     command: SHOW 5
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uC774\uC81C \uBD80\uD488\uC744 \uB2E4 \uBAA8\uC558\uC73C\uB2C8\uAE50
+    text: "\uC774\uC81C \uBD80\uD488\uC744 \uB2E4 \uBAA8\uC558\uC73C\uB2C8\uAE4C
       \uD0DC\uC591\uC744 \uACE0\uCE60 \uC218 \uC788\uACA0\uC5B4!"
     hide: []
     command: 
