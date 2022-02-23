@@ -38,7 +38,7 @@ public class P3_JudgeClear : MonoBehaviour {
         if (isFinished == false && (cntFitTile == cntTotFitTile || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
-            //clearText.SetActive(true); //
+            SFXSystem.instance.PlaySound(22);
             PuzzleSystem.instance.AfterPuzzle(true);
         }
 

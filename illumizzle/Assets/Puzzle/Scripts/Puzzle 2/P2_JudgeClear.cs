@@ -40,7 +40,7 @@ public class P2_JudgeClear : MonoBehaviour {
         if (isFinished == false && (isArrived == true || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
-            //clearText.SetActive(true);
+            SFXSystem.instance.PlaySound(22);
             PuzzleSystem.instance.AfterPuzzle(true);
         }
 

@@ -24,6 +24,7 @@ public class P1_JudgeClear : MonoBehaviour {
         if (isFinished == false && (cntFitTrigger == cntTotFitTrigger || cheatKeyIdx == cheatKeyLen || debug)) { 
             isFinished = true;
             Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
+            SFXSystem.instance.PlaySound(22);
             PuzzleSystem.instance.AfterPuzzle(true);
         }
 
