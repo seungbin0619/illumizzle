@@ -23,6 +23,9 @@ public class SettingSystem : MonoBehaviour
     [SerializeField]
     private UnityEngine.UI.Slider[] slider;
 
+    [SerializeField]
+    private UnityEngine.UI.Button button;
+
     private bool isOpen = false;
     
     public void OpenSetting()
@@ -32,6 +35,10 @@ public class SettingSystem : MonoBehaviour
 
         if (!DataSystem.HasData("Setting", "Sound")) DataSystem.SetData("Setting", "Sound", 50);
         else slider[1].value = DataSystem.GetData("Setting", "Sound", 50) * 0.01f;
+
+        bool isPuzzle = ActionSystem.instance.isPlaying;
+        isPuzzle = isPuzzle && ActionSystem.instance.actions[0].type == ActionSystem.Action.ActionType.Puzzle;
+        button.gameObject.SetActive(isPuzzle);
 
         Setting(true);
     }
@@ -59,10 +66,17 @@ public class SettingSystem : MonoBehaviour
 
         ActionSystem.instance.Play();
     }
+    
+    public void ExitPuzzle()
+    {
+        PuzzleSystem.instance.AfterPuzzle();
+        CloseSetting();
+    }
 
     public void OnBGMChanged()
     {
         DataSystem.SetData("Setting", "Bgm", (int)(slider[0].value * 100));
+        //SFXSystem.instance.BgmVolume(slider[0].value);
     }
 
     public void OnSoundChanged()
@@ -75,7 +89,8 @@ public class SettingSystem : MonoBehaviour
         if (!ActionSystem.instance.IsCompleted && ActionSystem.instance.actions[0].type != ActionSystem.Action.ActionType.Puzzle) return;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Setting(!isOpen);
+            if (isOpen) CloseSetting();
+            else OpenSetting();
         }
     }
 }

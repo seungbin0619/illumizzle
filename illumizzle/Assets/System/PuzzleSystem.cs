@@ -25,7 +25,8 @@ public class PuzzleSystem : MonoBehaviour
 
     public void GoPuzzle(string name)
     {
-        SFXSystem.instance.BgmChange(0);
+        //SFXSystem.instance.BgmChange(0);
+        SFXSystem.instance.BgmVolume(0.3f);
 
         beforeScene = SceneManager.GetActiveScene().name;
         isCleared = false;
@@ -56,6 +57,7 @@ public class PuzzleSystem : MonoBehaviour
             DataSystem.SetData("Puzzle", currentPuzzle, 1);
 
         currentPuzzle = "";
+        SFXSystem.instance.BgmVolume(1f);
 
         IEnumerator CoAfterPuzzle()
         {
@@ -65,12 +67,6 @@ public class PuzzleSystem : MonoBehaviour
             AsyncOperation operation = SceneManager.LoadSceneAsync(beforeScene);
             yield return new WaitUntil(() => operation.isDone);
             yield return new WaitForEndOfFrame();
-
-            // 돌아간 이후?
-            if(!isCleared)
-            {
-                ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, failed);
-            }
         }
 
         StartCoroutine(CoAfterPuzzle());

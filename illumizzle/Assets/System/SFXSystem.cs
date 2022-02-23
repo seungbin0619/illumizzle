@@ -42,6 +42,9 @@ public class SFXSystem : MonoBehaviour
 
     WaitForEndOfFrame delay = new WaitForEndOfFrame();
 
+    private bool bgmFade = false;
+    private float puzzleSnd = 1f;
+
     private Coroutine coroutine = null;
 
     public void BgmChange(int index = -1)
@@ -50,8 +53,31 @@ public class SFXSystem : MonoBehaviour
         StartCoroutine(CoBgmChange(index));
     }
 
+    public void BgmVolume(float value)
+    {
+        IEnumerator CoBgmVolume()
+        {
+            float cvol = current.volume / currentBgm.volume;
+            float progress = 0;
+
+            while(progress < 0.5f)
+            {
+                float clamp = progress * 2f;
+                puzzleSnd = LineAnimation.Lerp(cvol, value, clamp, 0.5f);
+
+                yield return delay;
+                progress += Time.deltaTime;
+            }
+
+            puzzleSnd = value;
+        }
+
+        StartCoroutine(CoBgmVolume());
+    }
+
     private IEnumerator CoBgmChange(int index)
     {
+        bgmFade = true;
         float progress = 0, duration = 0.5f;
         float weight = DataSystem.GetData("Setting", "Bgm", 100) * 0.01f;
         float volume;
@@ -92,6 +118,7 @@ public class SFXSystem : MonoBehaviour
         }
 
         current.volume = weight * currentBgm.volume;
+        bgmFade = false;
     }
 
     public void PlaySound(int index)
@@ -140,6 +167,9 @@ public class SFXSystem : MonoBehaviour
 
     private void Update()
     {
+        if (bgmFade) return;
+        if (currentBgm == null) return;
         //
+        current.volume = currentBgm.volume * puzzleSnd;
     }
 }

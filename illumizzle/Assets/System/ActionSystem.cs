@@ -64,6 +64,7 @@ public class ActionSystem : MonoBehaviour
     {
         IEnumerator CoPlay()
         {
+            isPlaying = true;
             while (!IsCompleted)
             {
                 Next();
@@ -72,7 +73,6 @@ public class ActionSystem : MonoBehaviour
             }
             isPlaying = false;
         }
-        isPlaying = true;
 
         StartCoroutine(CoPlay());
     }
