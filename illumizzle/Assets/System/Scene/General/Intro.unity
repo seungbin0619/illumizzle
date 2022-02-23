@@ -2132,17 +2132,17 @@ MonoBehaviour:
     - 0
     - -1
   - sound: {fileID: 8300000, guid: bf72ef6072c80044c92609d4bf61e2d7, type: 3}
-    volume: 1
+    volume: 0.9
     trim:
     - 0
     - -1
   - sound: {fileID: 8300000, guid: 6ac85c16c80731c48a9fc75ea8129a63, type: 3}
-    volume: 1
+    volume: 0.9
     trim:
     - 0
     - -1
   - sound: {fileID: 8300000, guid: 1a1c0dd3bb650dd478cd8f47d9316022, type: 3}
-    volume: 1
+    volume: 0.9
     trim:
     - 0
     - -1
