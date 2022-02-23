@@ -54,7 +54,7 @@ public class Desert : Area
     {
         if (!DataSystem.HasData("Story", "LIGHT"))
             SFXSystem.instance.BgmChange(4);
-        else { }
+        else SFXSystem.instance.BgmChange(6);
 
         if (!DataSystem.HasData("Story", "Desert.Entry.00"))
         {

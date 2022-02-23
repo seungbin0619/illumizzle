@@ -2074,6 +2074,12 @@ MonoBehaviour:
   - sound: {fileID: 8300000, guid: 70dc6360fee120d45b295d68f4b5234e, type: 3}
     volume: 0.5
     trim: []
+  - sound: {fileID: 8300000, guid: ef69a0e18ea08c34381adc9ab0d585f3, type: 3}
+    volume: 0.5
+    trim: []
+  - sound: {fileID: 8300000, guid: 3502329796c885045a728ca378599dfd, type: 3}
+    volume: 0.5
+    trim: []
   sounds:
   - sound: {fileID: 8300000, guid: 96f3afb1ab7755a408b745b31aa168bd, type: 3}
     volume: 1

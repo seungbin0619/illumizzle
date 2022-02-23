@@ -53,8 +53,8 @@ public class Rock : Area
     protected override void LateStart()
     {
         if (!DataSystem.HasData("Story", "LIGHT"))
-            SFXSystem.instance.BgmChange(0);
-        else { }
+            SFXSystem.instance.BgmChange(7);
+        else SFXSystem.instance.BgmChange(6);
 
         if (!DataSystem.HasData("Story", "Rock.Entry.00"))
         {

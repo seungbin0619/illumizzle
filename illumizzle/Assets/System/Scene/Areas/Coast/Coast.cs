@@ -54,7 +54,7 @@ public class Coast : Area
     {
         if (!DataSystem.HasData("Story", "LIGHT"))
             SFXSystem.instance.BgmChange(5);
-        else { }
+        else SFXSystem.instance.BgmChange(6);
 
         if (!DataSystem.HasData("Story", "Coast.Entry.00"))
         {

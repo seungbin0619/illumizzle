@@ -54,7 +54,7 @@ public class Forest : Area
     {
         if (!DataSystem.HasData("Story", "LIGHT"))
             SFXSystem.instance.BgmChange(3);
-        else { }
+        else SFXSystem.instance.BgmChange(6);
 
         if (!DataSystem.HasData("Story", "Forest.Entry.00"))
         {

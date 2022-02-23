@@ -46,7 +46,7 @@ public class SFXSystem : MonoBehaviour
 
     public void BgmChange(int index = -1)
     {
-        if (index == -1) return;
+        if (index == -1 || index == this.index) return;
         StartCoroutine(CoBgmChange(index));
     }
 

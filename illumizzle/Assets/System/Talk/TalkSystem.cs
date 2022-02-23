@@ -206,15 +206,16 @@ public class TalkSystem : MonoBehaviour
 
                     break;
                 case "ANIM":
-                    //animIndex = tmp[1];
+                    animIndex = tmp[1];
 
                     break;
             }
         }
 
-        if(targetScript.character != null)
+        if(targetScript.character != null && animIndex != "NULL")
             charAnimate[targetScript.character].Play(animIndex);
 
+        if (scriptCoroutine != null) StopCoroutine(scriptCoroutine);
         scriptCoroutine = StartCoroutine(CoNext(targetScript));
     }
 
@@ -241,6 +242,7 @@ public class TalkSystem : MonoBehaviour
             yield return wait;
         }
 
+        scriptCoroutine = null;
         scriptText.text = script.text;
 
         nextButton.gameObject.SetActive(true);

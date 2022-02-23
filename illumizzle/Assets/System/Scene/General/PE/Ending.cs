@@ -11,6 +11,8 @@ public class Ending : MonoBehaviour
 
     private void Start()
     {
+        SFXSystem.instance.BgmChange(0);
+
         UnityEngine.UI.Image img = GetComponent<UnityEngine.UI.Image>();
         rect = img.rectTransform;
 

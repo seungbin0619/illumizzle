@@ -17,7 +17,7 @@ MonoBehaviour:
     sprite: 0
     text: "\uD750\uC74C..."
     hide: []
-    command: 
+    command: ANIM NULL
   - character: {fileID: 0}
     sprite: 0
     text: "(\uACE0\uBBFC\uC5D0 \uBE60\uC838\uC788\uB294 \uAC83 \uAC19\uB2E4.)"

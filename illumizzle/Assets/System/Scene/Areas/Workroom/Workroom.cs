@@ -8,7 +8,7 @@ public class Workroom : Area
     {
         if (!DataSystem.HasData("Story", "LIGHT"))
             SFXSystem.instance.BgmChange(2);
-        else { }
+        else SFXSystem.instance.BgmChange(6);
 
         if (!DataSystem.HasData("Story", "Workroom.Entry.00"))
         {
