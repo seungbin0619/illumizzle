@@ -170,6 +170,6 @@ public class SFXSystem : MonoBehaviour
         if (bgmFade) return;
         if (currentBgm == null) return;
         //
-        current.volume = currentBgm.volume * puzzleSnd;
+        current.volume = DataSystem.GetData("Setting", "Sound", 100) * 0.01f * currentBgm.volume * puzzleSnd;
     }
 }
