@@ -79,7 +79,7 @@ public class SFXSystem : MonoBehaviour
     {
         bgmFade = true;
         float progress = 0, duration = 0.5f;
-        float weight = DataSystem.GetData("Setting", "Bgm", 100) * 0.01f;
+        float weight = DataSystem.GetData("Setting", "Bgm", 50) * 0.01f;
         float volume;
 
         if (current.isPlaying)
@@ -124,7 +124,7 @@ public class SFXSystem : MonoBehaviour
     public void PlaySound(int index)
     {
         if (index < 0 || index >= sounds.Length) return;
-        float weight = DataSystem.GetData("Setting", "Sound", 100) * 0.01f;
+        float weight = DataSystem.GetData("Setting", "Sound", 50) * 0.01f;
 
         sound.clip = sounds[index].sound;
         sound.volume = weight * sounds[index].volume;
