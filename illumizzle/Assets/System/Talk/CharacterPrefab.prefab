@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 712898518414628525}
   - component: {fileID: 4026802589770382149}
   - component: {fileID: 8926441277012984355}
+  - component: {fileID: 3980891090266790867}
   m_Layer: 5
   m_Name: CharImage
   m_TagString: Untagged
@@ -126,7 +127,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 5360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4026802589770382149
 CanvasRenderer:
@@ -166,3 +167,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &3980891090266790867
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621265149171685049}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 2b3aeac6dce1b1a448e89435cf89e1ae, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

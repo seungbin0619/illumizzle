@@ -52,6 +52,10 @@ public class Coast : Area
 
     protected override void LateStart()
     {
+        if (!DataSystem.HasData("Story", "LIGHT"))
+            SFXSystem.instance.BgmChange(5);
+        else { }
+
         if (!DataSystem.HasData("Story", "Coast.Entry.00"))
         {
             DataSystem.SetData("Story", "Coast.Entry.00", 1);

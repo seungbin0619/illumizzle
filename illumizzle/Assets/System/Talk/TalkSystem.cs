@@ -49,6 +49,9 @@ public class TalkSystem : MonoBehaviour
     [SerializeField]
     private Target characterPrefab;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
     #endregion
 
     #region [ 대화 정보 ]
@@ -68,6 +71,8 @@ public class TalkSystem : MonoBehaviour
     }
 
     public static Dictionary<CharacterBase, Target> Characters { get; private set; }
+
+    private Dictionary<CharacterBase, Animation> charAnimate;
 
     public static bool IsLoaded { get { return CurrentTalk != null; } }
     private static int talkIndex;
@@ -93,6 +98,9 @@ public class TalkSystem : MonoBehaviour
 
         talkIndex = 0;
         Characters = new Dictionary<CharacterBase, Target>();
+        charAnimate = new Dictionary<CharacterBase, Animation>();
+
+        audioSource.volume = DataSystem.GetData("Setting", "Sound", 50) * 0.01f;
 
         // 캐릭터 배치
         for (int i = 0; i < CurrentTalk.characters.Length; i++) {
@@ -103,6 +111,7 @@ public class TalkSystem : MonoBehaviour
             obj.Initialize(character, position);
 
             Characters.Add(character, obj);
+            charAnimate.Add(character, obj.GetComponentInChildren<Animation>());
         }
 
         Next();
@@ -139,6 +148,16 @@ public class TalkSystem : MonoBehaviour
             return;
         }
 
+        if(targetScript.character != null)
+        {
+            if(charAnimate.ContainsKey(targetScript.character))
+                if(charAnimate[targetScript.character].isPlaying)
+                {
+                    charAnimate[targetScript.character].Stop();
+                    Characters[targetScript.character].transform.localPosition = Vector3.zero;
+                }
+        }
+
         targetScript = CurrentTalk.GetScript(talkIndex++);
         //Sprite sprite = script.character.sprites[script.sprite];
         //Characters[script.character] // <- 애니메이션 적용할 때 사용
@@ -157,6 +176,8 @@ public class TalkSystem : MonoBehaviour
 
         foreach(Target target in Characters.Values)
             target.ChangeFocus(targetScript.character);
+
+        string animIndex = "Focus";
 
         foreach(string command in targetScript.command.Split(';'))
         {
@@ -184,8 +205,15 @@ public class TalkSystem : MonoBehaviour
                     SFXSystem.instance.PlaySound(sound);
 
                     break;
+                case "ANIM":
+                    //animIndex = tmp[1];
+
+                    break;
             }
         }
+
+        if(targetScript.character != null)
+            charAnimate[targetScript.character].Play(animIndex);
 
         scriptCoroutine = StartCoroutine(CoNext(targetScript));
     }
@@ -200,6 +228,9 @@ public class TalkSystem : MonoBehaviour
         {
             try
             {
+                //SFXSystem.instance.PlaySound(22);
+                audioSource.Play();
+
                 scriptText.text += script.text[progress++];
                 isPlaying = progress < script.text.Length;
             }catch

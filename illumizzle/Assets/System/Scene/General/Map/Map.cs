@@ -33,6 +33,9 @@ public class Map : Area
     }
     protected override void LateStart()
     {
+        if (!DataSystem.HasData("Story", "LIGHT"))
+            SFXSystem.instance.BgmChange(0);
+        else { }
 
         if (!DataSystem.HasData("Story", "Map.Entry.00"))
         {

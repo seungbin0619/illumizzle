@@ -6,6 +6,10 @@ public class Village : Area
 {
     protected override void LateStart()
     {
+        if (!DataSystem.HasData("Story", "LIGHT"))
+            SFXSystem.instance.BgmChange(2);
+        else { }
+
         if (!DataSystem.HasData("Story", "Village.Entry.00"))
         {
             DataSystem.SetData("Story", "Village.Entry.00", 1);

@@ -52,6 +52,10 @@ public class Desert : Area
 
     protected override void LateStart()
     {
+        if (!DataSystem.HasData("Story", "LIGHT"))
+            SFXSystem.instance.BgmChange(4);
+        else { }
+
         if (!DataSystem.HasData("Story", "Desert.Entry.00"))
         {
             DataSystem.SetData("Story", "Desert.Entry.00", 1);

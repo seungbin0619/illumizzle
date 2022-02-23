@@ -52,6 +52,10 @@ public class Forest : Area
 
     protected override void LateStart()
     {
+        if (!DataSystem.HasData("Story", "LIGHT"))
+            SFXSystem.instance.BgmChange(3);
+        else { }
+
         if (!DataSystem.HasData("Story", "Forest.Entry.00"))
         {
             DataSystem.SetData("Story", "Forest.Entry.00", 1);

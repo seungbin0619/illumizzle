@@ -25,6 +25,8 @@ public class PuzzleSystem : MonoBehaviour
 
     public void GoPuzzle(string name)
     {
+        SFXSystem.instance.BgmChange(0);
+
         beforeScene = SceneManager.GetActiveScene().name;
         isCleared = false;
         currentPuzzle = name;
