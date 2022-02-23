@@ -21,22 +21,23 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uC815\uB9D0..?  \uD1B1\uB2C8\uAC00 \uBC14\uB2F7\uAC00\uC5D0 \uC788\uB2E4\uACE0?"
+    text: "\uC815\uB9D0...? \uBC14\uB2F7\uAC00\uC5D0 \uD1B1\uB2C8\uBC14\uD034\uAC00
+      \uC788\uB2E4\uACE0?"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uC81C\uB300\uB85C \uBCF8\uAC70 \uB9DE\uC544?"
+    text: "\uC81C\uB300\uB85C \uBCF8 \uAC70 \uB9DE\uC544?"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uD655\uC2E4\uD574. \uB098\uB9CC\uBBFF\uC5B4!"
+    text: "\uD655\uC2E4\uD574. \uB098\uB9CC \uBBFF\uC5B4!"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uD760."
+    text: "\uD760..."
     hide: []
     command: 
   characters:
