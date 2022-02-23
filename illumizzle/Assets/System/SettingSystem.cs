@@ -30,6 +30,8 @@ public class SettingSystem : MonoBehaviour
     
     public void OpenSetting()
     {
+        if (!ActionSystem.instance.IsCompleted && ActionSystem.instance.actions[0].type != ActionSystem.Action.ActionType.Puzzle) return;
+
         if (!DataSystem.HasData("Setting", "Bgm")) DataSystem.SetData("Setting", "Bgm", 50);
         else slider[0].value = DataSystem.GetData("Setting", "Bgm", 50) * 0.01f;
 
@@ -86,7 +88,6 @@ public class SettingSystem : MonoBehaviour
 
     private void Update()
     {
-        if (!ActionSystem.instance.IsCompleted && ActionSystem.instance.actions[0].type != ActionSystem.Action.ActionType.Puzzle) return;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isOpen) CloseSetting();

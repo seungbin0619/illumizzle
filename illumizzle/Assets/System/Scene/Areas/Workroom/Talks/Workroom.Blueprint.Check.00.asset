@@ -37,7 +37,7 @@ MonoBehaviour:
     sprite: 0
     text: ....
     hide: []
-    command: 
+    command: SOUND 24
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
     text: "\uB410\uC5B4!"

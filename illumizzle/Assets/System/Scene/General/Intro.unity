@@ -2464,6 +2464,16 @@ MonoBehaviour:
     trim:
     - 0
     - -1
+  - sound: {fileID: 8300000, guid: 34df454c522d02b4eb8463d856c50b51, type: 3}
+    volume: 0.6
+    trim:
+    - 0
+    - -1
+  - sound: {fileID: 8300000, guid: 01a8819875596ee409b5b665d15f5036, type: 3}
+    volume: 0.6
+    trim:
+    - 0
+    - 2
 --- !u!4 &834946434
 Transform:
   m_ObjectHideFlags: 0

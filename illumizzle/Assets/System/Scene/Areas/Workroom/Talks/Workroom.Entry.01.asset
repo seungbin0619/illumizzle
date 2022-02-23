@@ -48,12 +48,7 @@ MonoBehaviour:
     sprite: 0
     text: "(\uCCA0\uCEE5)"
     hide: []
-    command: 
-  - character: {fileID: 0}
-    sprite: 0
-    text: "(\uCCA0\uCEE5)"
-    hide: []
-    command: 
+    command: SOUND 24
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
     text: ... ...
@@ -93,7 +88,7 @@ MonoBehaviour:
     sprite: 0
     text: "(\uB538\uAE4D)"
     hide: []
-    command: 
+    command: SOUND 23
   characters:
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     position: 0

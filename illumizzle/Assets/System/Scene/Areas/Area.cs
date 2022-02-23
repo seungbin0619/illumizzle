@@ -97,4 +97,9 @@ public class Area : MonoBehaviour
 
         ActionSystem.instance.Play();
     }
+
+    public void OpenSetting()
+    {
+        SettingSystem.instance.OpenSetting();
+    }
 }
