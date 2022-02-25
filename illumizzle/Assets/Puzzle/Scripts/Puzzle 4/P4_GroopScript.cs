@@ -49,16 +49,11 @@ public class P4_GroopScript : MonoBehaviour {
 
     private void Update() {
 
-        if (judgeClear.isActioning == false) {
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < cntBlocks; j++) {
-                    isBlocked[i][j] = transform.GetChild(j + 1)
-                        .gameObject.GetComponent<P4_BlockScript>().isBlocked[i];
-                }
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < cntBlocks; j++) {
+                isBlocked[i][j] = transform.GetChild(j + 1)
+                    .gameObject.GetComponent<P4_BlockScript>().isBlocked[i];
             }
-
-            //Debug.Log(transform.localPosition.x + ", " + transform.localPosition.z + "" + "\n" +
-            //    "isHover: " + isHover + " isArrowHover: " + isArrowHover);
         }
 
         //낙하할 수 있는지 확인
