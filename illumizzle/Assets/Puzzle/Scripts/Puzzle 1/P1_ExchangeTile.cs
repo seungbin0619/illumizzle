@@ -27,10 +27,16 @@ public class P1_ExchangeTile : MonoBehaviour {
                 if (calledTile1.tag[0] == 'y') {
                     calledTile1.transform.position += Vector3.up / 50;
                     calledTile2.transform.position += Vector3.up / 100;
+
+                    calledTile1.transform.position += Vector3.right / 200 + Vector3.forward / 200;
+                    calledTile2.transform.position += Vector3.right / 400 + Vector3.forward / 400;
                 }
                 else {
                     calledTile1.transform.position += Vector3.right / 50 + Vector3.forward / 50;
                     calledTile2.transform.position += Vector3.right / 100 + Vector3.forward / 100;
+
+                    calledTile1.transform.position += Vector3.up / 200;
+                    calledTile2.transform.position += Vector3.up / 400;
                 }
 
                 dist = Vector3.Distance(position1, position2);
