@@ -16,7 +16,6 @@ public class P4_GroopScript : MonoBehaviour {
 
     public bool isHover = false;
     public bool isArrowHover = false;
-    private bool isArrowOn = false;
 
     private bool isFalling = false;
     private RaycastHit hit;
@@ -57,6 +56,9 @@ public class P4_GroopScript : MonoBehaviour {
                         .gameObject.GetComponent<P4_BlockScript>().isBlocked[i];
                 }
             }
+
+            //Debug.Log(transform.localPosition.x + ", " + transform.localPosition.z + "" + "\n" +
+            //    "isHover: " + isHover + " isArrowHover: " + isArrowHover);
         }
 
         //낙하할 수 있는지 확인
@@ -127,8 +129,7 @@ public class P4_GroopScript : MonoBehaviour {
 
                     BoxCollider collider = targetObject.GetComponent<BoxCollider>();
                     int blockCnt = targetGroupScript.cntBlocks;
-                    collider.size = new Vector3(0.81f, blockCnt + 0.01f, 0.81f);
-                    collider.center = new Vector3(collider.center.x, (blockCnt - 1) / 2.0f, collider.center.z);
+                    collider.center = new Vector3(collider.center.x, blockCnt - 0.6f, collider.center.z);
 
                     targetObject.transform.GetChild(0).localPosition = new Vector3(0, blockCnt - 1, 0);
 
@@ -163,6 +164,7 @@ public class P4_GroopScript : MonoBehaviour {
             }
         }
 
+
         //그룹에 마우스 갖다대기
         if (isHover == true && isFin == false && judgeClear.isActioning == false) {
 
@@ -187,29 +189,16 @@ public class P4_GroopScript : MonoBehaviour {
         }
 
         //그룹에서 마우스 치우기
-        else if (isHover == false && isArrowHover == false || isArrowOn == true || judgeClear.isActioning == true) {
+        else if (isHover == false && isArrowHover == false || judgeClear.isActioning == true) {
 
             for (int i = 0; i < 4; i++) {
                 ChangeEnabled(arrows[i], false);
             }
-
-            isArrowOn = false;
         }
-
-        //if (judgeClear.isActioning == false) { //
-        //    string str = ((int)transform.localPosition.z).ToString() + " " + ((int)transform.localPosition.x).ToString() + "\n";//
-        //    for (int i = 0; i < 4; i++) {
-        //        for (int j = 0; j < cntBlocks; j++) {
-        //            str += isBlocked[i][j] + " ";
-        //        }
-        //        str += '\n';
-        //    }
-        //    Debug.Log(str);
-        //} //
 
     }
 
-    private void ChangeEnabled(GameObject arrow, bool isEnabled) {
+    public void ChangeEnabled(GameObject arrow, bool isEnabled) { //
         arrow.GetComponent<SpriteRenderer>().enabled = isEnabled;
         arrow.GetComponent<BoxCollider>().enabled = isEnabled;
     }

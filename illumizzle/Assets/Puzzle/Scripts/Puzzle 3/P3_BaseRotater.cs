@@ -46,7 +46,7 @@ public class P3_BaseRotater : MonoBehaviour {
             float angle = transform.localRotation.x - target.x;
             if (angle < 0) angle = -angle;
 
-            if (angle < 0.002f) {
+            if (angle < 0.2f * Time.deltaTime) {
                 transform.localRotation = target;
 
                 isRotating = false;

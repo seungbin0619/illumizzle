@@ -15,7 +15,7 @@ MonoBehaviour:
   scripts:
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uC774\uAC70\uBD10, \uC5EC\uAE30\uC11C \uBC14\uB298 \uD754\uB4E4\uB9BC\uC774
+    text: "\uC774\uAC70 \uBD10\uBD10, \uC5EC\uAE30\uC11C \uBC14\uB298 \uD754\uB4E4\uB9BC\uC774
       \uC5C4\uCCAD \uC2EC\uD574. "
     hide: []
     command: 

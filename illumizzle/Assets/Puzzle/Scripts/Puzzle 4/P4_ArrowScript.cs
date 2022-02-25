@@ -93,7 +93,6 @@ public class P4_ArrowScript : MonoBehaviour {
                 P4_GroopScript myGroupScript = myGroop.GetComponent<P4_GroopScript>();
                 P4_GroopScript newGroupScript = newGroop.GetComponent<P4_GroopScript>();
 
-
                 //Debug.Log(myBlockCnt + " " + newBlockCnt);
 
                 if (myGroop.transform.localPosition.y == 0 && myBlockCnt == 1) {
@@ -111,9 +110,7 @@ public class P4_ArrowScript : MonoBehaviour {
 
     private void ReSetGroop(GameObject groop, int blockCnt) {
         BoxCollider collider = groop.GetComponent<BoxCollider>();
-        collider.size = new Vector3(0.81f, blockCnt + 0.01f, 0.81f);
-        collider.center = new Vector3(collider.center.x,
-            (blockCnt - 1) / 2.0f, collider.center.z);
+        collider.center = new Vector3(collider.center.x, blockCnt - 0.6f, collider.center.z);
         groop.transform.GetChild(0).localPosition = new Vector3(0, blockCnt - 1, 0);
         groop.GetComponent<P4_GroopScript>().cntBlocks = blockCnt;
     }
