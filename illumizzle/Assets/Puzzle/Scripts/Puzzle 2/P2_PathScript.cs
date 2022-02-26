@@ -16,7 +16,7 @@ public class P2_PathScript : MonoBehaviour {
         if (actionController.isActioning == false && other.CompareTag("meepleTrigger")) {
             P2_MeepleArrowScript meepleArrowScript = other.transform.parent.gameObject.GetComponent<P2_MeepleArrowScript>();
 
-            if (meepleArrowScript.crColorInit == 'W') {
+            if (meepleArrowScript.crColorInit == 'I' || meepleArrowScript.crColorInit == 'W') {
                 meepleArrowScript.cntdTileCnt++;
                 meepleArrowScript.crColorInit = gameObject.GetComponent<MeshRenderer>().material.name[0];
             }

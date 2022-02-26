@@ -6,7 +6,7 @@ public class P2_MeepleArrowScript : MonoBehaviour {
 
     public GameObject sceneController;
     public GameObject meeple;
-    public char crColorInit = 'W';
+    public char crColorInit = 'I';
 
     public bool isPathCnnted = false;
     public int cntdTileCnt = 0;
@@ -66,7 +66,7 @@ public class P2_MeepleArrowScript : MonoBehaviour {
         else isPathCnnted = false;
 
         cntdTileCnt = 0;
-        crColorInit = 'W';
+        crColorInit = 'I';
     }
 
     private void OnMouseEnter() {
