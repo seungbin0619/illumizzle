@@ -28,7 +28,7 @@ public class P1_JudgeClear : MonoBehaviour {
             isFinished = true;
             
             if (handingCnt <= minHandingCnt) {
-                //도전과제 클리어
+                //AchievementsSystem.instance.ClearAchievement("1");
             }
 
             SFXSystem.instance.PlaySound(22);
