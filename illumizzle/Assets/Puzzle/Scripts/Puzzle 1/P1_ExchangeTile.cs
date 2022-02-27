@@ -10,11 +10,17 @@ public class P1_ExchangeTile : MonoBehaviour {
     private Vector3 position1, position2;
     private float dist;
 
+    public GameObject sceneController;
+    private P1_JudgeClear judgeClear;
+
     //================Rule Displayer================
     public GameObject rule;
     public bool isRuleOn = false;
     //==============================================
 
+    private void Start() {
+        judgeClear = gameObject.GetComponent<P1_JudgeClear>();
+    }
 
     void Update() {
         if (calledTile1 != null && calledTile2 != null && isMooving == false) {
@@ -23,6 +29,8 @@ public class P1_ExchangeTile : MonoBehaviour {
                 position2 = calledTile2.transform.position;
                 isMooving = true;
                 //Debug.Log("타일 교환 시작");
+
+                judgeClear.handingCnt++;
 
                 if (calledTile1.tag[0] == 'y') {
                     calledTile1.transform.position += Vector3.up / 50;

@@ -8,6 +8,9 @@ public class P1_JudgeClear : MonoBehaviour {
     public int cntFitTrigger = 0;
     private bool isFinished = false;
 
+    public int handingCnt = 0;
+    public int minHandingCnt = 0;
+
     //==================Cheet Key===================
     public string cheatKey = "showmethenextstage";
     public int cheatKeyLen = 18;
@@ -23,7 +26,11 @@ public class P1_JudgeClear : MonoBehaviour {
 
         if (isFinished == false && (cntFitTrigger == cntTotFitTrigger || cheatKeyIdx == cheatKeyLen || debug)) { 
             isFinished = true;
-            Debug.Log("퍼즐 클리어!!");
+            
+            if (handingCnt <= minHandingCnt) {
+                //도전과제 클리어
+            }
+
             SFXSystem.instance.PlaySound(22);
             PuzzleSystem.instance.AfterPuzzle(true);
         }

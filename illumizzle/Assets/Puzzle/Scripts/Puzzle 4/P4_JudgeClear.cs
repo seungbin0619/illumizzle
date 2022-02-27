@@ -29,6 +29,9 @@ public class P4_JudgeClear : MonoBehaviour {
     private long lastKeyInputTime = 0;
     //==============================================
 
+    public int handingCnt = 0;
+    public int minHandingCnt = 0;
+
     void Update() {
         bool debug = false;
 #if UNITY_EDITOR

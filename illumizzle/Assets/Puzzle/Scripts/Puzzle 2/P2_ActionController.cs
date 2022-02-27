@@ -12,6 +12,8 @@ public class P2_ActionController : MonoBehaviour {
     public bool isRuleOn = false;
     //==============================================
 
+    public int handingCnt = 0;
+    public int minHandingCnt = 0;
 
     //================Rule Displayer================
     public void DisplayRule() {

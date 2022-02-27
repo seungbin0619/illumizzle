@@ -34,6 +34,7 @@ public class P2_MeepleArrowScript : MonoBehaviour {
 
             SFXSystem.instance.PlaySound(20);
 
+            actionController.handingCnt++;
             actionController.isActioning = true;
             isMooving = true;
 

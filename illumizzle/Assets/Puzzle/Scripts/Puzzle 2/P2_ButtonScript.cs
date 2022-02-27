@@ -32,7 +32,7 @@ public class P2_ButtonScript : MonoBehaviour {
 
             SFXSystem.instance.PlaySound(15);
 
-            //Debug.Log("회전 버튼 클릭됨");
+            actionController.handingCnt++;
             actionController.isActioning = true;
             groupScript.buttonScript = gameObject.GetComponent<P2_ButtonScript>();
             group.GetComponent<BoxCollider>().enabled = true;

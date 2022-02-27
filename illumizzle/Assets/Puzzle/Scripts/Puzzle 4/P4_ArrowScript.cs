@@ -39,7 +39,7 @@ public class P4_ArrowScript : MonoBehaviour {
 
             SFXSystem.instance.PlaySound(17);
 
-            //Debug.Log("그룹 이동 버튼 클릭됨");
+            judgeClear.handingCnt++;
             judgeClear.isActioning = true;
             isMooving = true;
 

@@ -39,7 +39,11 @@ public class P2_JudgeClear : MonoBehaviour {
 
         if (isFinished == false && (isArrived == true || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
-            Debug.Log("퍼즐 클리어!!");
+
+            if (actionController.handingCnt <= actionController.minHandingCnt) {
+                //도전과제 클리어
+            }
+
             SFXSystem.instance.PlaySound(22);
             PuzzleSystem.instance.AfterPuzzle(true);
         }

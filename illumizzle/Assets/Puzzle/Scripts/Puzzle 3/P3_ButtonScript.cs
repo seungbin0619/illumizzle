@@ -34,6 +34,7 @@ public class P3_ButtonScript : MonoBehaviour {
             if (Input.GetMouseButton(0)) {
                 if (targetLine.transform.localPosition.y < judgeClear.maxHeight - 0.5f) {
                     isMooving = true;
+                    judgeClear.handingCnt++;
                     judgeClear.isActioning = true;
                     moveDir = 1f;
                     targetHeight = targetLine.transform.localPosition.y + 1;
@@ -44,6 +45,7 @@ public class P3_ButtonScript : MonoBehaviour {
             else if (Input.GetMouseButton(1)) {
                 if (targetLine.transform.localPosition.y > 0.5f) {
                     isMooving = true;
+                    judgeClear.handingCnt++;
                     judgeClear.isActioning = true;
                     moveDir = -1f;
                     targetHeight = targetLine.transform.localPosition.y - 1;

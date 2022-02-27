@@ -25,6 +25,9 @@ public class P3_JudgeClear : MonoBehaviour {
     private long lastKeyInputTime = 0;
     //==============================================
 
+    public int handingCnt = 0;
+    public int minHandingCnt = 0;
+
     private void Start() {
         cntTotFitTile = maxHeight * maxHeight * 2;
     }
@@ -37,7 +40,11 @@ public class P3_JudgeClear : MonoBehaviour {
 
         if (isFinished == false && (cntFitTile == cntTotFitTile || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
-            Debug.Log("퍼즐 클리어!!");
+
+            if (handingCnt <= minHandingCnt) {
+                //도전과제 클리어
+            }
+
             SFXSystem.instance.PlaySound(22);
             PuzzleSystem.instance.AfterPuzzle(true);
         }
