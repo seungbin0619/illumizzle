@@ -1,9 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.IO;
-using System.Xml.Linq;
 using System.Linq;
+using System.Xml.Linq;
+using System.Security.Cryptography;
+using UnityEngine;
 
 public class DataSystem : MonoBehaviour
 {
@@ -14,6 +14,8 @@ public class DataSystem : MonoBehaviour
     {
         if (instance == null) instance = this;
         else if (instance != this) Destroy(gameObject);
+
+        Load();
     }
 
     #endregion
@@ -25,14 +27,15 @@ public class DataSystem : MonoBehaviour
 #endif
 
     private Dictionary<string, Dictionary<string, int>> data;
-    private static readonly string[] parts = new string[] { "Story", "Puzzle", "Setting", "LastPosition"};
 
-    private void Start()
-    {
-        data = LoadData();
+    [SerializeField]
+    private string[] parts;
 
-        //SaveData();
-    }
+    [SerializeField]
+    private bool crypto;
+
+    [SerializeField]
+    private string password;
 
     public static void Load(bool flag = false)
     {
@@ -57,29 +60,100 @@ public class DataSystem : MonoBehaviour
 
     public static void SaveData()
     {
-        foreach (string part in parts) { 
+        foreach (string part in instance.parts)
+        {
             XElement el = new XElement("root", instance.data[part].Select(kv => new XElement(kv.Key, kv.Value)));
+            //el.Save(path + part + ".xml");
 
-            el.Save(path + part + ".xml");
+            string encryptData = el.ToString();
+            if (instance.crypto) encryptData = AESCrypto.Encrypt(encryptData, instance.password);
+
+            File.WriteAllText(path + part + ".xml", encryptData);
         }
     }
 
     private static Dictionary<string, Dictionary<string, int>> LoadData(bool flag = false)
     {
         var data = new Dictionary<string, Dictionary<string, int>>();
-        foreach (string part in parts)
+        foreach (string part in instance.parts)
         {
-            string tmp = path + part + ".xml";
+            string partPath = path + part + ".xml";
             data[part] = new Dictionary<string, int>();
 
             if (flag) continue;
-            if (File.Exists(tmp)) { 
-                XElement root = XElement.Load(tmp);
-                foreach (var element in root.Elements())
-                    data[part].Add(element.Name.LocalName, int.Parse(element.Value));
+            if (File.Exists(partPath))
+            {
+                try
+                {
+                    string decryptData = File.ReadAllText(partPath);
+                    if (instance.crypto) decryptData = AESCrypto.Decrypt(decryptData, instance.password);
+
+                    XElement root = XElement.Parse(decryptData);
+                    //XElement root = XElement.Parse(decryptData);
+                    foreach (var element in root.Elements())
+                        data[part].Add(element.Name.LocalName, int.Parse(element.Value));
+                }
+                catch
+                {
+                    return LoadData(true);
+                }
             }
         }
 
         return data;
+    }
+}
+
+public static class AESCrypto
+{
+    public static string Encrypt(string InputText, string Password)
+    {
+        RijndaelManaged RijndaelCipher = new RijndaelManaged();
+
+        byte[] PlainText = System.Text.Encoding.Unicode.GetBytes(InputText);
+        byte[] Salt = System.Text.Encoding.ASCII.GetBytes(Password.Length.ToString());
+
+        PasswordDeriveBytes SecretKey = new PasswordDeriveBytes(Password, Salt);
+
+        ICryptoTransform Encryptor = RijndaelCipher.CreateEncryptor(SecretKey.GetBytes(32), SecretKey.GetBytes(16));
+
+        MemoryStream memoryStream = new MemoryStream();
+        CryptoStream cryptoStream = new CryptoStream(memoryStream, Encryptor, CryptoStreamMode.Write);
+
+        cryptoStream.Write(PlainText, 0, PlainText.Length);
+        cryptoStream.FlushFinalBlock();
+
+        byte[] CipherBytes = memoryStream.ToArray();
+
+        memoryStream.Close();
+        cryptoStream.Close();
+
+        string EncryptedData = System.Convert.ToBase64String(CipherBytes);
+
+        return EncryptedData;
+    }
+
+    public static string Decrypt(string InputText, string Password)
+    {
+        RijndaelManaged RijndaelCipher = new RijndaelManaged();
+
+        byte[] EncryptedData = System.Convert.FromBase64String(InputText);
+        byte[] Salt = System.Text.Encoding.ASCII.GetBytes(Password.Length.ToString());
+
+        PasswordDeriveBytes SecretKey = new PasswordDeriveBytes(Password, Salt);
+
+        ICryptoTransform Decryptor = RijndaelCipher.CreateDecryptor(SecretKey.GetBytes(32), SecretKey.GetBytes(16));
+        MemoryStream memoryStream = new MemoryStream(EncryptedData);
+        CryptoStream cryptoStream = new CryptoStream(memoryStream, Decryptor, CryptoStreamMode.Read);
+
+        byte[] PlainText = new byte[EncryptedData.Length];
+
+        int DecryptedCount = cryptoStream.Read(PlainText, 0, PlainText.Length);
+        memoryStream.Close();
+        cryptoStream.Close();
+
+        string DecryptedData = System.Text.Encoding.Unicode.GetString(PlainText, 0, DecryptedCount);
+
+        return DecryptedData;
     }
 }

@@ -3270,6 +3270,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b4879f7ade2bd4cb913378aa2a2025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parts:
+  - Story
+  - Puzzle
+  - Setting
+  - LastPosition
+  crypto: 1
+  password: illumizzle
 --- !u!114 &1218458201
 MonoBehaviour:
   m_ObjectHideFlags: 0
