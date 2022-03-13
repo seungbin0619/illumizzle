@@ -2972,6 +2972,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 605196932}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &605196934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7664656851504524654, guid: f133fb50e5552994eb2daff1f4f2c5f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 605196932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &615605471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6647755092141408082, guid: a9ab367348691ab4f8a7d7fb54a6cc16,
@@ -7743,6 +7749,7 @@ MonoBehaviour:
   calledTile1: {fileID: 0}
   calledTile2: {fileID: 0}
   isMooving: 0
+  sceneController: {fileID: 0}
   rule: {fileID: 605196933}
   isRuleOn: 0
 --- !u!4 &1193779240
@@ -7773,6 +7780,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cntTotFitTrigger: 42
   cntFitTrigger: 0
+  handingCnt: 0
+  minHandingCnt: 0
+  handingCntText: {fileID: 605196934}
   cheatKey: showmethenextstage
   cheatKeyLen: 18
   cheatKeyIdx: 0

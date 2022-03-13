@@ -1065,6 +1065,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 440635606}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &440635608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 859375687072766049, guid: 6597f9fa6b12fea41bc599fe9869c27f,
+    type: 3}
+  m_PrefabInstance: {fileID: 440635606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &469265355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7174981574746510098, guid: 33a7c2c0e1e3fc9408a3da8976fdd134,
@@ -2900,6 +2906,9 @@ MonoBehaviour:
   cheatKey: showmethenextstage
   cheatKeyLen: 18
   cheatKeyIdx: 0
+  handingCnt: 0
+  minHandingCnt: 0
+  handingCntText: {fileID: 440635608}
 --- !u!4 &1193779240
 Transform:
   m_ObjectHideFlags: 0

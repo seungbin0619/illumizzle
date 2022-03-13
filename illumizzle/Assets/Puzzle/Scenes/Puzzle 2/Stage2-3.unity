@@ -5678,6 +5678,9 @@ MonoBehaviour:
   meepleCnt: 2
   rule: {fileID: 1882869890}
   isRuleOn: 0
+  handingCnt: 0
+  minHandingCnt: 0
+  handingCntText: {fileID: 1882869891}
 --- !u!4 &1193779240
 Transform:
   m_ObjectHideFlags: 0
@@ -8867,6 +8870,12 @@ PrefabInstance:
 --- !u!1 &1882869890 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5692389399845729737, guid: c94c91e8e4e580e4d9eb8fa8596662e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1882869889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1882869891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8346471982025322556, guid: c94c91e8e4e580e4d9eb8fa8596662e2,
     type: 3}
   m_PrefabInstance: {fileID: 1882869889}
   m_PrefabAsset: {fileID: 0}

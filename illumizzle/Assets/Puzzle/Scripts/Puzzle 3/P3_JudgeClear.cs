@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class P3_JudgeClear : MonoBehaviour {
 
@@ -9,7 +10,6 @@ public class P3_JudgeClear : MonoBehaviour {
 
     public int cntTotFitTile;
     public int cntFitTile = 0;
-   // public GameObject clearText;
 
     private bool isFinished = false;
 
@@ -27,9 +27,13 @@ public class P3_JudgeClear : MonoBehaviour {
 
     public int handingCnt = 0;
     public int minHandingCnt = 0;
+    public GameObject handingCntText;
 
     private void Start() {
         cntTotFitTile = maxHeight * maxHeight * 2;
+        if (DataSystem.HasData("Story", "LIGHT") == false) {
+            handingCntText.SetActive(false);
+        }
     }
 
     void Update() {
@@ -41,8 +45,8 @@ public class P3_JudgeClear : MonoBehaviour {
         if (isFinished == false && (cntFitTile == cntTotFitTile || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
 
-            if (handingCnt <= minHandingCnt) {
-                //도전과제 클리어
+            if (handingCnt <= minHandingCnt && cheatKeyIdx != cheatKeyLen) {
+                //AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_COAST");
             }
 
             SFXSystem.instance.PlaySound(22);
@@ -73,6 +77,8 @@ public class P3_JudgeClear : MonoBehaviour {
             lastKeyInputTime = System.DateTime.Now.Ticks;
         }
         //==============================================
+
+        handingCntText.GetComponent<Text>().text = handingCnt.ToString();
     }
 
     //================Rule Displayer================

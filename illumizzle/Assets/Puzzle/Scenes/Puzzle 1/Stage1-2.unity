@@ -3414,6 +3414,7 @@ MonoBehaviour:
   calledTile1: {fileID: 0}
   calledTile2: {fileID: 0}
   isMooving: 0
+  sceneController: {fileID: 0}
   rule: {fileID: 1421880692}
   isRuleOn: 0
 --- !u!4 &1193779240
@@ -3444,6 +3445,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cntTotFitTrigger: 16
   cntFitTrigger: 0
+  handingCnt: 0
+  minHandingCnt: 0
+  handingCntText: {fileID: 1421880693}
   cheatKey: showmethenextstage
   cheatKeyLen: 18
   cheatKeyIdx: 0
@@ -4032,6 +4036,12 @@ PrefabInstance:
 --- !u!1 &1421880692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1821757703333685202, guid: f133fb50e5552994eb2daff1f4f2c5f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1421880691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1421880693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7664656851504524654, guid: f133fb50e5552994eb2daff1f4f2c5f0,
     type: 3}
   m_PrefabInstance: {fileID: 1421880691}
   m_PrefabAsset: {fileID: 0}

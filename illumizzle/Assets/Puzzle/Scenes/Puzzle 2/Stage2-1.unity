@@ -4824,6 +4824,9 @@ MonoBehaviour:
   meepleCnt: 1
   rule: {fileID: 5073711795297625098}
   isRuleOn: 0
+  handingCnt: 0
+  minHandingCnt: 0
+  handingCntText: {fileID: 1227370002}
 --- !u!4 &1193779240
 Transform:
   m_ObjectHideFlags: 0
@@ -4857,6 +4860,12 @@ MonoBehaviour:
   cheatKey: showmethenextstage
   cheatKeyLen: 18
   cheatKeyIdx: 0
+--- !u!1 &1227370002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8346471982025322556, guid: c94c91e8e4e580e4d9eb8fa8596662e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 618712789001458115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1233362788 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4282550502630099480, guid: 518ee52e67d6cdb4a97fd981c19a6066,

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class P2_ActionController : MonoBehaviour {
     public bool isActioning = false;
@@ -14,6 +15,13 @@ public class P2_ActionController : MonoBehaviour {
 
     public int handingCnt = 0;
     public int minHandingCnt = 0;
+    public GameObject handingCntText;
+
+    private void Start() {
+        if (DataSystem.HasData("Story", "LIGHT") == false) {
+            handingCntText.SetActive(false);
+        }
+    }
 
     //================Rule Displayer================
     public void DisplayRule() {
@@ -31,4 +39,8 @@ public class P2_ActionController : MonoBehaviour {
         }
     }
     //==============================================
+
+    private void Update() {
+        handingCntText.GetComponent<Text>().text = handingCnt.ToString();
+    }
 }

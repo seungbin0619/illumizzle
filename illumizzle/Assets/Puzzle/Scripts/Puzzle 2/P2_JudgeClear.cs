@@ -8,7 +8,6 @@ public class P2_JudgeClear : MonoBehaviour {
 
     public GameObject[] meeples = new GameObject[2];
     public GameObject[] destinations = new GameObject[2];
-    //public GameObject clearText;
 
     private bool isFinished = false;
 
@@ -40,8 +39,8 @@ public class P2_JudgeClear : MonoBehaviour {
         if (isFinished == false && (isArrived == true || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
 
-            if (actionController.handingCnt <= actionController.minHandingCnt) {
-                //도전과제 클리어
+            if (actionController.handingCnt <= actionController.minHandingCnt && cheatKeyIdx != cheatKeyLen) {
+                //AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_ISLAND");
             }
 
             SFXSystem.instance.PlaySound(22);

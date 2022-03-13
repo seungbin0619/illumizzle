@@ -2047,6 +2047,9 @@ MonoBehaviour:
   cheatKey: showmethenextstage
   cheatKeyLen: 18
   cheatKeyIdx: 0
+  handingCnt: 0
+  minHandingCnt: 0
+  handingCntText: {fileID: 2305497622602083360}
 --- !u!4 &1464804226
 Transform:
   m_ObjectHideFlags: 0
@@ -3502,6 +3505,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6597f9fa6b12fea41bc599fe9869c27f, type: 3}
+--- !u!1 &2305497622602083360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 859375687072766049, guid: 6597f9fa6b12fea41bc599fe9869c27f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2305497622602083359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2497621045965057142
 PrefabInstance:
   m_ObjectHideFlags: 0

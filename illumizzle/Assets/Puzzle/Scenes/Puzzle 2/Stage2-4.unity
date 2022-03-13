@@ -3572,6 +3572,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 465799811}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &465799813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8346471982025322556, guid: c94c91e8e4e580e4d9eb8fa8596662e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 465799811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &467936660 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 514255564679834487, guid: b96ca4e454742c140be72006de074cc1,
@@ -9809,6 +9815,9 @@ MonoBehaviour:
   meepleCnt: 1
   rule: {fileID: 465799812}
   isRuleOn: 0
+  handingCnt: 0
+  minHandingCnt: 0
+  handingCntText: {fileID: 465799813}
 --- !u!4 &1193779240
 Transform:
   m_ObjectHideFlags: 0

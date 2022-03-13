@@ -377,6 +377,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisplayRule
       objectReference: {fileID: 0}
+    - target: {fileID: 4421582494591437334, guid: f133fb50e5552994eb2daff1f4f2c5f0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
     - target: {fileID: 5153039867034833647, guid: f133fb50e5552994eb2daff1f4f2c5f0,
         type: 3}
       propertyPath: m_Sprite
@@ -507,6 +512,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -70
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538166788332795991, guid: f133fb50e5552994eb2daff1f4f2c5f0,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.15686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538166788332795991, guid: f133fb50e5552994eb2daff1f4f2c5f0,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.30980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538166788332795991, guid: f133fb50e5552994eb2daff1f4f2c5f0,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.14117648
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f133fb50e5552994eb2daff1f4f2c5f0, type: 3}
@@ -1551,6 +1571,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6647755092141408082, guid: a9ab367348691ab4f8a7d7fb54a6cc16,
     type: 3}
   m_PrefabInstance: {fileID: 1427949939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &549304454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7664656851504524654, guid: f133fb50e5552994eb2daff1f4f2c5f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 225011407}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &605391074 stripped
 Transform:
@@ -4211,6 +4237,7 @@ MonoBehaviour:
   calledTile1: {fileID: 0}
   calledTile2: {fileID: 0}
   isMooving: 0
+  sceneController: {fileID: 0}
   rule: {fileID: 225011408}
   isRuleOn: 0
 --- !u!4 &1193779240
@@ -4241,6 +4268,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cntTotFitTrigger: 16
   cntFitTrigger: 0
+  handingCnt: 0
+  minHandingCnt: 0
+  handingCntText: {fileID: 549304454}
   cheatKey: showmethenextstage
   cheatKeyLen: 18
   cheatKeyIdx: 0

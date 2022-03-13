@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.UI;
+using UnityEngine.UI;
 
 public class P4_JudgeClear : MonoBehaviour {
 
@@ -10,12 +10,8 @@ public class P4_JudgeClear : MonoBehaviour {
     public int sizeX, sizeZ;
 
     public int cntFitBlock = 0;
-    //public GameObject clearText; 
 
     private bool isFinished = false;
-
-
-    //public Text deltaTimeText; //
 
     //================Rule Displayer================
     public GameObject rule;
@@ -31,6 +27,13 @@ public class P4_JudgeClear : MonoBehaviour {
 
     public int handingCnt = 0;
     public int minHandingCnt = 0;
+    public GameObject handingCntText;
+
+    private void Start() {
+        if (DataSystem.HasData("Story", "LIGHT") == false) {
+            handingCntText.SetActive(false);
+        }
+    }
 
     void Update() {
         bool debug = false;
@@ -40,7 +43,11 @@ public class P4_JudgeClear : MonoBehaviour {
 
         if (isFinished == false && (cntBlocks == cntFitBlock || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
-            Debug.Log("ÆÛÁñ Å¬¸®¾î!!");
+
+            if (handingCnt <= minHandingCnt && cheatKeyIdx != cheatKeyLen) {
+                //AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_DESERT");
+            }
+
             SFXSystem.instance.PlaySound(22);
             PuzzleSystem.instance.AfterPuzzle(true);
         }
@@ -71,7 +78,7 @@ public class P4_JudgeClear : MonoBehaviour {
         //==============================================
 
 
-        //deltaTimeText.text = (Time.deltaTime).ToString();
+        handingCntText.GetComponent<Text>().text = handingCnt.ToString();
     }
 
     //================Rule Displayer================

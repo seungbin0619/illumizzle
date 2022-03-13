@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class P1_JudgeClear : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class P1_JudgeClear : MonoBehaviour {
 
     public int handingCnt = 0;
     public int minHandingCnt = 0;
+    public GameObject handingCntText;
 
     //==================Cheet Key===================
     public string cheatKey = "showmethenextstage";
@@ -17,6 +19,12 @@ public class P1_JudgeClear : MonoBehaviour {
     public int cheatKeyIdx = 0;
     private long lastKeyInputTime = 0;
     //==============================================
+
+    private void Start() {
+        if (DataSystem.HasData("Story", "LIGHT") == false) {
+            handingCntText.SetActive(false);
+        }
+    }
 
     void Update() {
         bool debug = false;
@@ -27,8 +35,8 @@ public class P1_JudgeClear : MonoBehaviour {
         if (isFinished == false && (cntFitTrigger == cntTotFitTrigger || cheatKeyIdx == cheatKeyLen || debug)) { 
             isFinished = true;
             
-            if (handingCnt <= minHandingCnt) {
-                //AchievementsSystem.instance.ClearAchievement("1");
+            if (handingCnt <= minHandingCnt && cheatKeyIdx != cheatKeyLen) {
+                //AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_FOREST");
             }
 
             SFXSystem.instance.PlaySound(22);
@@ -59,5 +67,7 @@ public class P1_JudgeClear : MonoBehaviour {
             lastKeyInputTime = System.DateTime.Now.Ticks;
         }
         //==============================================
+
+        handingCntText.GetComponent<Text>().text = handingCnt.ToString();
     }
 }
