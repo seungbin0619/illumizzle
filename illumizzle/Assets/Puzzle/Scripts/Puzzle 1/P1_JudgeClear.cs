@@ -10,7 +10,7 @@ public class P1_JudgeClear : MonoBehaviour {
     private bool isFinished = false;
 
     public int handingCnt = 0;
-    public int minHandingCnt = 0;
+    public int minHandingCnt = 39;
     public GameObject handingCntText;
 
     //==================Cheet Key===================
@@ -36,7 +36,11 @@ public class P1_JudgeClear : MonoBehaviour {
             isFinished = true;
             
             if (handingCnt <= minHandingCnt && cheatKeyIdx != cheatKeyLen) {
-                //AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_FOREST");
+#if UNITY_EDITOR
+                Debug.Log("ACH_MIN_HDL_FOREST");
+#else
+                AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_FOREST");
+#endif
             }
 
             SFXSystem.instance.PlaySound(22);

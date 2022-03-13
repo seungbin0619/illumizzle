@@ -10622,7 +10622,7 @@ MonoBehaviour:
   rule: {fileID: 694086853}
   isRuleOn: 0
   handingCnt: 0
-  minHandingCnt: 0
+  minHandingCnt: 17
   handingCntText: {fileID: 694086854}
 --- !u!4 &1193779240
 Transform:

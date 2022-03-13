@@ -40,7 +40,11 @@ public class P2_JudgeClear : MonoBehaviour {
             isFinished = true;
 
             if (actionController.handingCnt <= actionController.minHandingCnt && cheatKeyIdx != cheatKeyLen) {
-                //AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_ISLAND");
+#if UNITY_EDITOR
+                Debug.Log("ACH_MIN_HDL_ISLAND");
+#else
+                AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_ISLAND");
+#endif
             }
 
             SFXSystem.instance.PlaySound(22);

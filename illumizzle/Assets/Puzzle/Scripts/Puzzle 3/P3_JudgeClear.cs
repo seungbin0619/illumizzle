@@ -26,7 +26,7 @@ public class P3_JudgeClear : MonoBehaviour {
     //==============================================
 
     public int handingCnt = 0;
-    public int minHandingCnt = 0;
+    public int minHandingCnt = 27;
     public GameObject handingCntText;
 
     private void Start() {
@@ -46,7 +46,11 @@ public class P3_JudgeClear : MonoBehaviour {
             isFinished = true;
 
             if (handingCnt <= minHandingCnt && cheatKeyIdx != cheatKeyLen) {
-                //AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_COAST");
+#if UNITY_EDITOR
+                Debug.Log("ACH_MIN_HDL_COAST"); 
+#else 
+                AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_COAST");
+#endif
             }
 
             SFXSystem.instance.PlaySound(22);

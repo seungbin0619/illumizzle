@@ -14,7 +14,7 @@ public class P2_ActionController : MonoBehaviour {
     //==============================================
 
     public int handingCnt = 0;
-    public int minHandingCnt = 0;
+    public int minHandingCnt = 17;
     public GameObject handingCntText;
 
     private void Start() {

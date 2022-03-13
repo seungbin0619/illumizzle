@@ -12451,7 +12451,7 @@ MonoBehaviour:
   cntTotFitTrigger: 48
   cntFitTrigger: 0
   handingCnt: 0
-  minHandingCnt: 0
+  minHandingCnt: 39
   handingCntText: {fileID: 82076803}
   cheatKey: showmethenextstage
   cheatKeyLen: 18

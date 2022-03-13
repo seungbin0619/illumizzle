@@ -26,7 +26,7 @@ public class P4_JudgeClear : MonoBehaviour {
     //==============================================
 
     public int handingCnt = 0;
-    public int minHandingCnt = 0;
+    public int minHandingCnt = 25;
     public GameObject handingCntText;
 
     private void Start() {
@@ -45,7 +45,11 @@ public class P4_JudgeClear : MonoBehaviour {
             isFinished = true;
 
             if (handingCnt <= minHandingCnt && cheatKeyIdx != cheatKeyLen) {
-                //AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_DESERT");
+#if UNITY_EDITOR
+                Debug.Log("ACH_MIN_HDL_DESERT");
+#else
+                AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_DESERT");
+#endif
             }
 
             SFXSystem.instance.PlaySound(22);

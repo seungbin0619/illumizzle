@@ -3446,7 +3446,7 @@ MonoBehaviour:
   cntTotFitTrigger: 16
   cntFitTrigger: 0
   handingCnt: 0
-  minHandingCnt: 0
+  minHandingCnt: -1
   handingCntText: {fileID: 1421880693}
   cheatKey: showmethenextstage
   cheatKeyLen: 18

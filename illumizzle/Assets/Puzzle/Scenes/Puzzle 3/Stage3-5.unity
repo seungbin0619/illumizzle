@@ -2931,7 +2931,7 @@ MonoBehaviour:
   cheatKeyLen: 18
   cheatKeyIdx: 0
   handingCnt: 0
-  minHandingCnt: 0
+  minHandingCnt: 27
   handingCntText: {fileID: 651885528}
 --- !u!4 &1193779240
 Transform:
