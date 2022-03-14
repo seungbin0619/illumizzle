@@ -92,7 +92,15 @@ public class Forest : Area
             DataSystem.SetData("Story", "Forest.Rock.00", DataSystem.GetData("Story", "Forest.Rock.00", 0) + 1);
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
         }
-        else ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
+        else
+        {
+#if UNITY_EDITOR
+            Debug.Log("ACH_DSCV_STONE");
+#else
+            AchievementsSystem.instance.ClearAchievement("ACH_DSCV_STONE");
+#endif
+            ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
+        }
 
         ActionSystem.instance.Play();
     }
@@ -101,6 +109,11 @@ public class Forest : Area
     {
         if (ActionSystem.instance.isPlaying) return;
 
+#if UNITY_EDITOR
+        Debug.Log("ACH_DSCV_TREE");
+#else
+        AchievementsSystem.instance.ClearAchievement("ACH_DSCV_TREE");
+#endif
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[6]);
         ActionSystem.instance.Play();
     }

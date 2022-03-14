@@ -99,6 +99,12 @@ public class Coast : Area
     {
         if (ActionSystem.instance.isPlaying) return;
 
+#if UNITY_EDITOR
+        Debug.Log("ACH_DSCV_COCONUT");
+#else
+        AchievementsSystem.instance.ClearAchievement("ACH_DSCV_COCONUT");
+#endif
+
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
         ActionSystem.instance.Play();
     }

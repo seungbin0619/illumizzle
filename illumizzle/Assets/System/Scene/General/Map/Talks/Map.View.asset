@@ -17,7 +17,7 @@ MonoBehaviour:
     sprite: 0
     text: "\uC800\uAE30\uC5D0 \uBB50\uAC00... \uC5B4?"
     hide: []
-    command: 
+    command: Steam ACH_FIND_ISLAND
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
     text: "\uBB54\uAC00 \uD76C\uBBF8\uD558\uAC8C \uBE5B\uC774 \uB098\uACE0 \uC788\uC5B4"

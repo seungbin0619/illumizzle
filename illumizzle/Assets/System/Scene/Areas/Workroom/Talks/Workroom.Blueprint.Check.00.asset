@@ -42,7 +42,7 @@ MonoBehaviour:
     sprite: 0
     text: "\uB410\uC5B4!"
     hide: []
-    command: SHOW 0
+    command: SHOW 0;Steam ACH_RPLC_FIRST_PART
   - character: {fileID: 0}
     sprite: 0
     text: "(\uCCA0\uCEE5)"

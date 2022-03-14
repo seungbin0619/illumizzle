@@ -29,5 +29,4 @@ public class AchievementsSystem : MonoBehaviour {
         SteamUserStats.SetAchievement(achID);
         SteamUserStats.StoreStats();
     }
-
 }

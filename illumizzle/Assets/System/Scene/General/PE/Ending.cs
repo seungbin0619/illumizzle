@@ -12,6 +12,11 @@ public class Ending : MonoBehaviour
     private void Start()
     {
         SFXSystem.instance.BgmChange(0);
+#if UNITY_EDITOR
+        Debug.Log("ACH_REPAIR_SUN");
+#else
+        AchievementsSystem.instance.ClearAchievement("ACH_REPAIR_SUN");
+#endif
 
         UnityEngine.UI.Image img = GetComponent<UnityEngine.UI.Image>();
         rect = img.rectTransform;

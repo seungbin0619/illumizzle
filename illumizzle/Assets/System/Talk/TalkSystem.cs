@@ -209,6 +209,15 @@ public class TalkSystem : MonoBehaviour
                     animIndex = tmp[1];
 
                     break;
+                case "STEAM":
+                    string achv = tmp[1].ToString();
+
+#if UNITY_EDITOR
+                    Debug.Log(achv);
+#else
+                    AchievementsSystem.instance.ClearAchievement(achv);
+#endif
+                    break;
             }
         }
 

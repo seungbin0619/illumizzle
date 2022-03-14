@@ -79,6 +79,12 @@ public class Desert : Area
     {
         if (!ActionSystem.instance.IsCompleted) return;
 
+#if UNITY_EDITOR
+        Debug.Log("ACH_DSCV_CACTUS");
+#else
+        AchievementsSystem.instance.ClearAchievement("ACH_DSCV_CACTUS");
+#endif
+
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[3]);
 
         ActionSystem.instance.Play();
@@ -89,7 +95,6 @@ public class Desert : Area
         if (!ActionSystem.instance.IsCompleted) return;
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[4]);
-
         ActionSystem.instance.Play();
     }
 }
