@@ -18,18 +18,18 @@ public class AchievementsSystem : MonoBehaviour {
 
     #endregion 
 
-    public CGameID m_GameID;
-    public AppId_t appId;
+    //public CGameID m_GameID;
+    //public AppId_t appId;
 
-    private void Start() {
-        appId = SteamUtils.GetAppID();
-        m_GameID = new CGameID(SteamUtils.GetAppID());
-    }
+    //private void Start() {
+    //    appId = SteamUtils.GetAppID();
+    //    m_GameID = new CGameID(SteamUtils.GetAppID());
+    //}
 
     public void ClearAchievement(string achID) {
-        if (SteamManager.Initialized) {
-            SteamUserStats.SetAchievement(achID);
-            SteamUserStats.StoreStats();
-        }
+        //if (SteamManager.Initialized) {
+        //    SteamUserStats.SetAchievement(achID);
+        //    SteamUserStats.StoreStats();
+        //}
     }
 }
