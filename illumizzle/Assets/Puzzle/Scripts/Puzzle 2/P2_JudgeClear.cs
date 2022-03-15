@@ -46,6 +46,17 @@ public class P2_JudgeClear : MonoBehaviour {
                 AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_ISLAND");
 #endif
             }
+            else if (cheatKeyIdx == cheatKeyLen) {
+                DataSystem.SetData("Puzzle", "CheatFlag", 1);
+            }
+
+            if (actionController.minHandingCnt != -1 && !DataSystem.HasData("Puzzle", "CheatFlag")) {
+#if UNITY_EDITOR
+                Debug.Log("ACH_NO_CHEATKEY");
+#else
+                AchievementsSystem.instance.ClearAchievement("ACH_NO_CHEATKEY");
+#endif
+            }
 
             SFXSystem.instance.PlaySound(22);
             PuzzleSystem.instance.AfterPuzzle(true);

@@ -51,6 +51,9 @@ public class P4_JudgeClear : MonoBehaviour {
                 AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_DESERT");
 #endif
             }
+            else if (cheatKeyIdx == cheatKeyLen) {
+                DataSystem.SetData("Puzzle", "CheatFlag", 1);
+            }
 
             SFXSystem.instance.PlaySound(22);
             PuzzleSystem.instance.AfterPuzzle(true);

@@ -20,13 +20,16 @@ public class AchievementsSystem : MonoBehaviour {
 
     public CGameID m_GameID;
     public AppId_t appId;
+
     private void Start() {
         appId = SteamUtils.GetAppID();
         m_GameID = new CGameID(SteamUtils.GetAppID());
     }
 
     public void ClearAchievement(string achID) {
-        SteamUserStats.SetAchievement(achID);
-        SteamUserStats.StoreStats();
+        if (SteamManager.Initialized) {
+            SteamUserStats.SetAchievement(achID);
+            SteamUserStats.StoreStats();
+        }
     }
 }

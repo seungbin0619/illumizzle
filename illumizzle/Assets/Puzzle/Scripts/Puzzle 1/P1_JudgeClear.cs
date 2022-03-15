@@ -42,6 +42,9 @@ public class P1_JudgeClear : MonoBehaviour {
                 AchievementsSystem.instance.ClearAchievement("ACH_MIN_HDL_FOREST");
 #endif
             }
+            else if (cheatKeyIdx == cheatKeyLen) {
+                DataSystem.SetData("Puzzle", "CheatFlag", 1);
+            }
 
             SFXSystem.instance.PlaySound(22);
             PuzzleSystem.instance.AfterPuzzle(true);
