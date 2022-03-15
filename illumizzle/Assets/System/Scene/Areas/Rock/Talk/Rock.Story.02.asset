@@ -23,7 +23,7 @@ MonoBehaviour:
     sprite: 0
     text: "\uB108\uD76C\uB294 \uB204\uAD6C\uB2C8?"
     hide: []
-    command: steam ACH_MEET_EGNR
+    command: STEAM ACH_MEET_EGNR
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
     text: "\uC800\uB294 \uBCA0\uB77C\uB77C\uACE0 \uD569\uB2C8\uB2E4. \uC598\uB294

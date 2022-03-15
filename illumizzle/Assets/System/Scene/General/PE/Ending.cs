@@ -12,6 +12,7 @@ public class Ending : MonoBehaviour
     private void Start()
     {
         SFXSystem.instance.BgmChange(0);
+
 #if UNITY_EDITOR
         Debug.Log("ACH_REPAIR_SUN");
 #else

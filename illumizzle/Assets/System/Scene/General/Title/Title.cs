@@ -24,8 +24,19 @@ public class Title : MonoBehaviour
         StartCoroutine(LateStart());
     }
 
-    public void StartGame()
+    [SerializeField]
+    private Canvas notice;
+
+    public void StartGame(bool ignore = false)
     {
+        DataSystem.Load();
+        if(DataSystem.HasData("Story", "Start") && !ignore)
+        {
+            notice.gameObject.SetActive(true);
+
+            return;
+        }
+
         DataSystem.Load(true);
 
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Fade, 1, 1f);
@@ -34,6 +45,11 @@ public class Title : MonoBehaviour
 
         SFXSystem.instance.PlaySound(1); // Ω√¿€
         SFXSystem.instance.BgmChange(0);
+    }
+
+    public void HideNotice()
+    {
+        notice.gameObject.SetActive(false);
     }
 
     public void LoadGame()
