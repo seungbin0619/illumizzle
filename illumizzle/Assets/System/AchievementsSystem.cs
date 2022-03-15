@@ -16,20 +16,26 @@ public class AchievementsSystem : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    #endregion 
+    #endregion
 
-    //public CGameID m_GameID;
-    //public AppId_t appId;
+    public CGameID m_GameID;
+    public AppId_t appId;
 
-    //private void Start() {
-    //    appId = SteamUtils.GetAppID();
-    //    m_GameID = new CGameID(SteamUtils.GetAppID());
-    //}
+#if !UNITY_EDITOR
+    private void Start() {
+        appId = SteamUtils.GetAppID();
+        m_GameID = new CGameID(SteamUtils.GetAppID());
+    }
+#endif
 
     public void ClearAchievement(string achID) {
-        //if (SteamManager.Initialized) {
-        //    SteamUserStats.SetAchievement(achID);
-        //    SteamUserStats.StoreStats();
-        //}
+#if !UNITY_EDITOR
+        return;
+#endif
+        if (SteamManager.Initialized) {
+            SteamUserStats.SetAchievement(achID);
+            SteamUserStats.StoreStats();
+        }
     }
+
 }

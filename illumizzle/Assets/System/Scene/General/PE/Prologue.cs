@@ -9,6 +9,9 @@ public class Prologue : MonoBehaviour
 
     private void Start()
     {
+        DataSystem.SetData("Story", "Start", 1);
+        DataSystem.SaveData();
+
         UnityEngine.UI.Image img = GetComponent<UnityEngine.UI.Image>();
 
         IEnumerator LateStart()
