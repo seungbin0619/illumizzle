@@ -3273,10 +3273,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parts:
-  - Story
-  - Puzzle
-  - Setting
-  - LastPosition
+  - name: Story
+    general: 0
+  - name: Puzzle
+    general: 0
+  - name: Setting
+    general: 1
+  - name: LastPosition
+    general: 0
   crypto: 1
   password: illumizzle
 --- !u!114 &1218458201

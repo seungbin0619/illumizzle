@@ -8,5 +8,7 @@ public class Intro : MonoBehaviour
     {
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Move, "Title");
         ActionSystem.instance.Play();
+
+        DataSystem.Load();
     }
 }

@@ -59,7 +59,7 @@ public class Title : MonoBehaviour
         int index = DataSystem.GetData("Setting", "CurrentMap");
         if (index == -1)
         {
-            StartGame();
+            StartGame(true);
 
             return;
         }

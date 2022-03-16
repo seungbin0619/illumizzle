@@ -28,8 +28,15 @@ public class DataSystem : MonoBehaviour
 
     private Dictionary<string, Dictionary<string, int>> data;
 
+    [System.Serializable]
+    public struct PartsData
+    {
+        public string name;
+        public bool general;
+    }
+
     [SerializeField]
-    private string[] parts;
+    private PartsData[] parts;
 
     [SerializeField]
     private bool crypto;
@@ -60,27 +67,27 @@ public class DataSystem : MonoBehaviour
 
     public static void SaveData()
     {
-        foreach (string part in instance.parts)
+        foreach (PartsData part in instance.parts)
         {
-            XElement el = new XElement("root", instance.data[part].Select(kv => new XElement(kv.Key, kv.Value)));
+            XElement el = new XElement("root", instance.data[part.name].Select(kv => new XElement(kv.Key, kv.Value)));
             //el.Save(path + part + ".xml");
 
             string encryptData = el.ToString();
             if (instance.crypto) encryptData = AESCrypto.Encrypt(encryptData, instance.password);
 
-            File.WriteAllText(path + part + ".xml", encryptData);
+            File.WriteAllText(path + part.name + ".xml", encryptData);
         }
     }
 
     private static Dictionary<string, Dictionary<string, int>> LoadData(bool flag = false)
     {
         var data = new Dictionary<string, Dictionary<string, int>>();
-        foreach (string part in instance.parts)
+        foreach (PartsData part in instance.parts)
         {
-            string partPath = path + part + ".xml";
-            data[part] = new Dictionary<string, int>();
+            string partPath = path + part.name + ".xml";
+            data[part.name] = new Dictionary<string, int>();
 
-            if (flag) continue;
+            if (flag && !part.general) continue;
             if (File.Exists(partPath))
             {
                 try
@@ -91,7 +98,7 @@ public class DataSystem : MonoBehaviour
                     XElement root = XElement.Parse(decryptData);
                     //XElement root = XElement.Parse(decryptData);
                     foreach (var element in root.Elements())
-                        data[part].Add(element.Name.LocalName, int.Parse(element.Value));
+                        data[part.name].Add(element.Name.LocalName, int.Parse(element.Value));
                 }
                 catch
                 {
