@@ -70,3 +70,6 @@ TagManager:
   - name: Front
     uniqueID: 2867742017
     locked: 0
+  - name: Cursor
+    uniqueID: 4009445879
+    locked: 0

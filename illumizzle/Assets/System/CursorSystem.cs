@@ -7,10 +7,19 @@ public class CursorSystem : MonoBehaviour
     #region [ 인스턴스 초기화 ]
 
     public static CursorSystem instance;
+    [SerializeField]
+    private RectTransform CursorCanvas;
+    [SerializeField]
+    private RectTransform rect;
+    [SerializeField]
+    private UnityEngine.UI.RawImage cursor;
+
     private void Awake()
     {
         if (instance == null) instance = this;
         else if (instance != this) Destroy(gameObject);
+
+        DontDestroyOnLoad(CursorCanvas.gameObject);
     }
 
     #endregion
@@ -29,7 +38,9 @@ public class CursorSystem : MonoBehaviour
     public void Start()
     {
         index = 0;
-        StartCoroutine(CoCursor());
+        cursor.texture = cursors[index].texture;
+
+        Cursor.visible = false;
     }
 
     public void SetCursor(int index = 0)
@@ -37,17 +48,12 @@ public class CursorSystem : MonoBehaviour
         if (this.index == index) return;
 
         this.index = index;
-        StartCoroutine(CoCursor());
+        cursor.texture = cursors[index].texture;
     }
 
-    IEnumerator CoCursor()
+    private void Update()
     {
-        //while (true)
-        //{
-            yield return new WaitForEndOfFrame();
-
-            CursorData current = cursors[index];
-            Cursor.SetCursor(current.texture, current.spot, CursorMode.ForceSoftware);
-        //}
+        Vector3 position = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        cursor.rectTransform.anchoredPosition = position * CursorCanvas.sizeDelta + cursors[index].spot;
     }
 }
