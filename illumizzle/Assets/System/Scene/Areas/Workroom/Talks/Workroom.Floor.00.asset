@@ -30,7 +30,7 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uC7AC\uBC0C\uC796\uC544!"
+    text: "\uADF8\uB0E5..."
     hide: []
     command: 
   characters:

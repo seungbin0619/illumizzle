@@ -27,7 +27,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
     text: "\uC660\uC9C0 \uC911\uC694\uD55C \uC7A5\uCE58\uC77C \uAC83 \uAC19\uC740
-      \uC608\uAC10\uC774 \uB4DC\uB294\uB370..."
+      \uB290\uB08C\uC774 \uB4DC\uB294\uB370..."
     hide: []
     command: 
   characters:

@@ -20,7 +20,7 @@ MonoBehaviour:
     command: SHOW 0
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uB2E4\uB978\uAC74 \uC548 \uAC74\uB4DC\uB9AC\uAC8C \uC870\uC2EC\uD574."
+    text: "\uB2E4\uB978 \uAC74 \uC548 \uAC74\uB4DC\uB9AC\uAC8C \uC870\uC2EC\uD574."
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
@@ -30,12 +30,12 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: .....
+    text: ......
     hide: []
     command: CLEAR;SET_PARTS
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: ....
+    text: .......
     hide: []
     command: SOUND 24
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}

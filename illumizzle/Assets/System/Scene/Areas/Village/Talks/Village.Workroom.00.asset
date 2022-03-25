@@ -31,7 +31,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
     text: "\uC0AC\uB78C\uB4E4\uC774 \uB4DC\uB098\uB4E0 \uC9C0 \uC624\uB798\uB3FC\uC11C
-      \uC790\uBB3C\uC1E0\uAC00 \uACE0\uC7A5\uB0AC\uB098\uBD10."
+      \uC790\uBB3C\uC1E0\uAC00 \uACE0\uC7A5 \uB0AC\uB098\uBD10."
     hide: []
     command: 
   characters:

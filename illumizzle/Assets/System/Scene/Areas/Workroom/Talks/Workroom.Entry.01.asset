@@ -31,7 +31,7 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}
     sprite: 0
-    text: "\uC774 \uB3D9\uB825\uC6D0\uB3C4 \uC9C1\uC811 \uAD50\uCCB4\uD574\uBD10\uB77C."
+    text: "\uC774 \uB3D9\uB825\uC6D0\uB3C4 \uC9C1\uC811 \uAD50\uCCB4\uD574\uBCF4\uB834."
     hide: []
     command: SHOW 6
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
@@ -61,12 +61,12 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uC65C \uC548\uB418\uC9C0?"
+    text: "\uC65C \uC548 \uB418\uB294 \uAC70\uC9C0?"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uD558\uC544.. \uC6B0\uB9AC\uAC00 \uBB54\uAC00 \uC798\uBABB\uD55C\uAC78\uAE4C?"
+    text: "\uD558\uC544... \uC6B0\uB9AC\uAC00 \uBB54\uAC00 \uC798\uBABB\uD55C\uAC78\uAE4C?"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 8d3832766a6e00744bca2ab7a59717b8, type: 2}

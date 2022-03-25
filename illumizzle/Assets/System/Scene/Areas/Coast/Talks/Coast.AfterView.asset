@@ -15,8 +15,8 @@ MonoBehaviour:
   scripts:
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
-    text: "\uACF5\uD559\uC790\uB294 \uC800 \uC12C\uC73C\uB85C \uB3D9\uB825\uC6D0\uC5D0
-      \uD544\uC694\uD55C \uC7AC\uB8CC\uB97C \uAD6C\uD558\uB7EC \uAC04 \uAC70 \uC544\uB2D0\uAE4C?"
+    text: "\uACF5\uD559\uC790\uB294 \uB3D9\uB825\uC6D0\uC5D0 \uD544\uC694\uD55C \uC7AC\uB8CC\uB97C
+      \uAD6C\uD558\uB7EC \uC800 \uC12C\uC73C\uB85C \uAC04 \uAC8C \uC544\uB2D0\uAE4C?"
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
@@ -26,7 +26,7 @@ MonoBehaviour:
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uC5BC\uB978 \uAC00\uBCF4\uC790!!"
+    text: "\uC5B4\uC11C \uAC00\uBCF4\uC790!!"
     hide: []
     command: 
   characters:

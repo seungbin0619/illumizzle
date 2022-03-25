@@ -22,7 +22,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
     text: "\uB610 \uBD88\uAC00\uC0AC\uB9AC\uBA74 \uADF8\uB0E5 \uB9C8\uC744\uB85C
-      \uB3CC\uC544\uAC08\uAC70\uC57C."
+      \uB3CC\uC544\uAC08 \uAC70\uC57C."
     hide: []
     command: 
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
@@ -43,7 +43,7 @@ MonoBehaviour:
     command: CLEAR
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
     sprite: 0
-    text: "\uAC70\uBD10, \uC5ED\uC2DC \uC798\uBABB\uBCF8\uAC8C \uC544\uB2C8\uC5C8\uC5B4!
+    text: "\uAC70\uBD10, \uC5ED\uC2DC \uC798\uBABB \uBCF8 \uAC8C \uC544\uB2C8\uC5C8\uC5B4!
       \uC2E0\uB09C\uB2E4!"
     hide: []
     command: 

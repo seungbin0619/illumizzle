@@ -15,8 +15,8 @@ MonoBehaviour:
   scripts:
   - character: {fileID: 0}
     sprite: 0
-    text: "(\uBB54\uAC00 \uC801\uD600 \uC788\uB294 \uC885\uC774\uB4E4\uC774 \uC9C0\uC800\uBD84\uD558\uAC8C
-      \uC5B4\uC9C8\uB7EC\uC838 \uC788\uB2E4.)"
+    text: "(\uBB54\uAC00\uAC00 \uC801\uD600 \uC788\uB294 \uC885\uC774\uB4E4\uC774
+      \uC9C0\uC800\uBD84\uD558\uAC8C \uC5B4\uC9C8\uB7EC\uC838 \uC788\uB2E4.)"
     hide: []
     command: 
   characters: []
