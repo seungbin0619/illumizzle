@@ -22,7 +22,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: ef3eb8afe62155d458d6aa725a62ad75, type: 2}
     sprite: 0
     text: "\uC544\uC9C1\uB3C4 \uADF8 \uC598\uAE30\uC57C...? \uD0DC\uC591\uC740 \uACF5\uD559\uC790\uB2D8\uC774
-      \uB2E4 \uB9CC\uB4E0\uAC70\uC796\uC544."
+      \uB2E4 \uB9CC\uB4E0 \uAC70\uC796\uC544."
     hide: []
     command: 
   - character: {fileID: 11400000, guid: 5ffc820a27b2a924ebce36f00c7f2fc1, type: 2}
