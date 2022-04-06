@@ -29,7 +29,7 @@ public class AchievementsSystem : MonoBehaviour {
 #endif
 
     public void ClearAchievement(string achID) {
-#if !UNITY_EDITOR
+#if UNITY_EDITOR
         return;
 #endif
         if (SteamManager.Initialized) {
