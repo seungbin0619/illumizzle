@@ -37,6 +37,8 @@ public class Workroom : Area
 
     public void ClickBlueprint()
     {
+        if (ActionSystem.instance.isPlaying) return;
+
         if (!DataSystem.HasData("Story", "Workroom.Blueprint.00"))
         {
             DataSystem.SetData("Story", "Workroom.Blueprint.00", 1);
@@ -101,6 +103,8 @@ public class Workroom : Area
 
     public void ClickBulb()
     {
+        if (ActionSystem.instance.isPlaying) return;
+
         if (!DataSystem.HasData("Story", "Workroom.Bulb.00"))
         {
             DataSystem.SetData("Story", "Workroom.Bulb.00", 1);
@@ -127,6 +131,8 @@ public class Workroom : Area
 
     public void ClickWindow()
     {
+        if (ActionSystem.instance.isPlaying) return;
+
         if (DataSystem.HasData("Story", "LIGHT"))
         {
             ///
@@ -140,6 +146,8 @@ public class Workroom : Area
 
     public void ClickPower()
     {
+        if (ActionSystem.instance.isPlaying) return;
+
         if (!DataSystem.HasData("Story", "Workroom.Blueprint.Check.03"))
         {
             if (!DataSystem.HasData("Story", "Workroom.Blueprint.00"))
@@ -178,6 +186,8 @@ public class Workroom : Area
 
     public void ClickFloor()
     {
+        if (ActionSystem.instance.isPlaying) return;
+
         if (!DataSystem.HasData("Story", "Workroom.Floor.00"))
         {
             DataSystem.SetData("Story", "Workroom.Floor.00", 1);
@@ -190,12 +200,16 @@ public class Workroom : Area
 
     public void ClickChair()
     {
+        if (ActionSystem.instance.isPlaying) return;
+
         ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[5]);
         ActionSystem.instance.Play();
     }
 
     public void ClickDesk()
     {
+        if (ActionSystem.instance.isPlaying) return;
+
         if (!DataSystem.HasData("Story", "Workroom.Blueprint.Check.03"))
         {
             if (!DataSystem.HasData("Story", "Workroom.Blueprint.00"))
@@ -250,6 +264,8 @@ public class Workroom : Area
 
     public override void GoScene(string name)
     {
+        if (ActionSystem.instance.isPlaying) return;
+
         if (!DataSystem.HasData("Story", "Workroom.Blueprint.00"))
         {
             ActionSystem.instance.AddAction(ActionSystem.Action.ActionType.Talk, talks[1]);

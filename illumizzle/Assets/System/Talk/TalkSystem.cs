@@ -88,11 +88,15 @@ public class TalkSystem : MonoBehaviour
 
     public void SetTalk(TalkBase talk)
     {
+        if (IsLoaded) return;
+
         CurrentTalk = talk;
     }
 
     public void Play()
     {
+        if (!IsLoaded) return;
+
         //Close();
         gameObject.SetActive(true);
 
@@ -155,6 +159,9 @@ public class TalkSystem : MonoBehaviour
                 {
                     charAnimate[targetScript.character].Stop();
                     Characters[targetScript.character].transform.localPosition = Vector3.zero;
+
+                    for (int i = 0; i < characterPanel.childCount; i++)
+                        UnityEngine.UI.LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)characterPanel.GetChild(i));
                 }
         }
 

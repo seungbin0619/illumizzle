@@ -69,7 +69,8 @@ public class ActionSystem : MonoBehaviour
             {
                 Next();
                 yield return wait;
-                actions.RemoveAt(0);
+
+                if(actions.Count > 0) actions.RemoveAt(0);
             }
             isPlaying = false;
         }
