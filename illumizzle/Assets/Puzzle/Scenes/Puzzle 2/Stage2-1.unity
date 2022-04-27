@@ -4969,11 +4969,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42dff05110cbb649a3f5929ee4281bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActioning: 0
+  isActioning: 1
   maxGroupCubeCnt: 4
   meepleCnt: 1
   rule: {fileID: 5073711795297625098}
-  isRuleOn: 0
+  isRuleOn: 1
   handingCnt: 0
   minHandingCnt: -1
   handingCntText: {fileID: 1227370002}
@@ -8892,7 +8892,7 @@ PrefabInstance:
     - target: {fileID: 5692389399845729737, guid: c94c91e8e4e580e4d9eb8fa8596662e2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8042501670090458178, guid: c94c91e8e4e580e4d9eb8fa8596662e2,
         type: 3}

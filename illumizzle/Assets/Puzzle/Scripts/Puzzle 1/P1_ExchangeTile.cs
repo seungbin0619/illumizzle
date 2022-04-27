@@ -15,7 +15,7 @@ public class P1_ExchangeTile : MonoBehaviour {
 
     //================Rule Displayer================
     public GameObject rule;
-    public bool isRuleOn = false;
+    public int isRuleOn = 0;
     //==============================================
 
     private void Start() {
@@ -60,10 +60,17 @@ public class P1_ExchangeTile : MonoBehaviour {
 
             }
         }
+
+        //================Rule Displayer================
+        if (Input.GetMouseButtonUp(0) && isRuleOn == 2) {
+            ConcealRule();
+        }
+        if (isRuleOn == 1) isRuleOn = 2;
+        //==============================================
     }
 
     private void FixedUpdate() {
-        if (isMooving == true && isRuleOn == false) {
+        if (isMooving == true && isRuleOn == 0) {
             calledTile1.transform.position += (position2 - position1) / (8 + dist * 3) * 40 * Time.deltaTime;
             calledTile2.transform.position += (position1 - position2) / (8 + dist * 3) * 40 * Time.deltaTime;
 
@@ -83,19 +90,21 @@ public class P1_ExchangeTile : MonoBehaviour {
 
     //================Rule Displayer================
     public void DisplayRule() {
-        if (isRuleOn == false) {
+        if (isRuleOn == 0) {
             rule.SetActive(true);
-            isRuleOn = true;
+            isRuleOn = 1;
             isMooving = true;
             SFXSystem.instance.PlaySound(8);
         }
-        else {
-            rule.SetActive(false);
-            isRuleOn = false;
-            isMooving = false;
-            SFXSystem.instance.PlaySound(9);
-        }
     }
+
+    public void ConcealRule() {
+        rule.SetActive(false);
+        isRuleOn = 0;
+        isMooving = false;
+        SFXSystem.instance.PlaySound(9);
+    }
+
     //==============================================
 
 }

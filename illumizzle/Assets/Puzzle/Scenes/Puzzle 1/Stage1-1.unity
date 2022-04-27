@@ -365,7 +365,7 @@ PrefabInstance:
     - target: {fileID: 1821757703333685202, guid: f133fb50e5552994eb2daff1f4f2c5f0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4047601013265503833, guid: f133fb50e5552994eb2daff1f4f2c5f0,
         type: 3}
@@ -4480,10 +4480,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calledTile1: {fileID: 0}
   calledTile2: {fileID: 0}
-  isMooving: 0
+  isMooving: 1
   sceneController: {fileID: 0}
   rule: {fileID: 225011408}
-  isRuleOn: 0
+  isRuleOn: 1
 --- !u!4 &1193779240
 Transform:
   m_ObjectHideFlags: 0

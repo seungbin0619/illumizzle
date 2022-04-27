@@ -1215,12 +1215,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cntBlocks: 3
-  isActioning: 0
+  isActioning: 1
   sizeX: 3
   sizeZ: 3
   cntFitBlock: 0
   rule: {fileID: 2384294537087536422}
-  isRuleOn: 0
+  isRuleOn: 1
   cheatKey: showmethenextstage
   cheatKeyLen: 18
   cheatKeyIdx: 0
@@ -2105,7 +2105,7 @@ PrefabInstance:
     - target: {fileID: 82536151388500255, guid: e93eb1ac7cd0c7f4d9ba99075cdc2027,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2325796288208634004, guid: e93eb1ac7cd0c7f4d9ba99075cdc2027,
         type: 3}

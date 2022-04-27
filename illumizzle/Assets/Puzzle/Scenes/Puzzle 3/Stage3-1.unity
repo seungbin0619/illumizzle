@@ -2289,11 +2289,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHeight: 3
-  isActioning: 0
+  isActioning: 1
   cntTotFitTile: 32
   cntFitTile: 0
   rule: {fileID: 8595731361518147865}
-  isRuleOn: 0
+  isRuleOn: 1
   cheatKey: showmethenextstage
   cheatKeyLen: 18
   cheatKeyIdx: 0
@@ -3751,7 +3751,7 @@ PrefabInstance:
     - target: {fileID: 7544912557082752262, guid: 6597f9fa6b12fea41bc599fe9869c27f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6597f9fa6b12fea41bc599fe9869c27f, type: 3}

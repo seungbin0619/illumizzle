@@ -15,7 +15,7 @@ public class P4_JudgeClear : MonoBehaviour {
 
     //================Rule Displayer================
     public GameObject rule;
-    public bool isRuleOn = false;
+    public int isRuleOn = 0;
     //==============================================
 
     //==================Cheet Key===================
@@ -86,22 +86,30 @@ public class P4_JudgeClear : MonoBehaviour {
 
 
         handingCntText.GetComponent<Text>().text = handingCnt.ToString();
+
+        //================Rule Displayer================
+        if (Input.GetMouseButtonUp(0) && isRuleOn == 2) {
+            ConcealRule();
+        }
+        if (isRuleOn == 1) isRuleOn = 2;
+        //==============================================
     }
 
     //================Rule Displayer================
     public void DisplayRule() {
-        if (isRuleOn == false) {
+        if (isRuleOn == 0) {
             rule.SetActive(true);
-            isRuleOn = true;
+            isRuleOn = 1;
             isActioning = true;
             SFXSystem.instance.PlaySound(8);
         }
-        else {
-            rule.SetActive(false);
-            isRuleOn = false;
-            isActioning = false;
-            SFXSystem.instance.PlaySound(9);
-        }
+    }
+
+    public void ConcealRule() {
+        rule.SetActive(false);
+        isRuleOn = 0;
+        isActioning = false;
+        SFXSystem.instance.PlaySound(9);
     }
     //==============================================
 }
