@@ -45,6 +45,10 @@ public class P3_JudgeClear : MonoBehaviour {
         if (isFinished == false && (cntFitTile == cntTotFitTile || cheatKeyIdx == cheatKeyLen || debug)) {
             isFinished = true;
 
+#if UNITY_EDITOR
+            Debug.Log("ÆÛÁñ Å¬¸®¾î!");
+#endif
+
             if (handingCnt <= minHandingCnt && cheatKeyIdx != cheatKeyLen) {
 #if UNITY_EDITOR
                 Debug.Log("ACH_MIN_HDL_COAST"); 

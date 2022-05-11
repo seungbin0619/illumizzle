@@ -1545,9 +1545,9 @@ Canvas:
   m_GameObject: {fileID: 708218987}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 963194227}
+  m_PlaneDistance: 0.1
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -4141,6 +4141,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5181563533628616761, guid: f133fb50e5552994eb2daff1f4f2c5f0,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 5181563533628616761, guid: f133fb50e5552994eb2daff1f4f2c5f0,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5181563533628616761, guid: f133fb50e5552994eb2daff1f4f2c5f0,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5181563533628616762, guid: f133fb50e5552994eb2daff1f4f2c5f0,
         type: 3}
       propertyPath: m_Name
@@ -6162,6 +6177,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 8593092651234176188, guid: 85467a714b5c72c41b10baa67c238e2d,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593092651234176188, guid: 85467a714b5c72c41b10baa67c238e2d,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8593092651234176191, guid: 85467a714b5c72c41b10baa67c238e2d,
         type: 3}
       propertyPath: m_Name

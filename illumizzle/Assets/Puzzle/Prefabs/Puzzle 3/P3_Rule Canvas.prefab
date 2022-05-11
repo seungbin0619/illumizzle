@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 3896840255764505325}
   - component: {fileID: 3896840255764505324}
   - component: {fileID: 3896840255764505327}
+  - component: {fileID: 6269758112763763091}
   m_Layer: 8
   m_Name: P3_Rule Canvas
   m_TagString: Untagged
@@ -404,6 +405,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6269758112763763091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896840255764505326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06aadfe290b3c6541ae7416fcfcf9cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3984093729732280142
 GameObject:
   m_ObjectHideFlags: 0
