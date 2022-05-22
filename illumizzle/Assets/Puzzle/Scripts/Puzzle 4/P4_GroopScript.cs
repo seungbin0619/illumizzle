@@ -144,7 +144,7 @@ public class P4_GroopScript : MonoBehaviour {
                 transform.localPosition += Vector3.down * 12 * Time.deltaTime;
             }
 
-            if (dist < Time.deltaTime * 5f) {
+            if (dist < Time.deltaTime * 7f) {
                 SFXSystem.instance.PlaySound(14);
 
                 transform.localPosition = targetPosition;

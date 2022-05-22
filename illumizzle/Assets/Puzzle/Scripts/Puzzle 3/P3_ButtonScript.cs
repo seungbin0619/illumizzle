@@ -63,7 +63,7 @@ public class P3_ButtonScript : MonoBehaviour {
             float dist = targetLine.transform.localPosition.y - targetHeight;
             if (dist < 0) dist = -dist;
 
-            if (dist <= Time.deltaTime * 3f) {
+            if (dist <= Time.deltaTime * 5f) {
                 targetLine.transform.localPosition = new Vector3(targetLine.transform.localPosition.x, 
                     targetHeight, targetLine.transform.localPosition.z);
                 isMooving = false;
