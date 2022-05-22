@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CursorSystem : MonoBehaviour
 {
-    #region [ ÀÎ½ºÅÏ½º ÃÊ±âÈ­ ]
+    #region [ ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½Ê±ï¿½È­ ]
 
     public static CursorSystem instance;
     [SerializeField]
     private RectTransform CursorCanvas;
     [SerializeField]
     private RectTransform rect;
+    private Canvas canvas;
+
     [SerializeField]
     private UnityEngine.UI.RawImage cursor;
 
@@ -19,6 +21,7 @@ public class CursorSystem : MonoBehaviour
         if (instance == null) instance = this;
         else if (instance != this) Destroy(gameObject);
 
+        canvas = CursorCanvas.GetComponent<Canvas>();
         DontDestroyOnLoad(CursorCanvas.gameObject);
     }
 
@@ -54,6 +57,7 @@ public class CursorSystem : MonoBehaviour
     private void Update()
     {
         Vector3 position = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        canvas.planeDistance = Mathf.Sign(CameraSystem.currentCamera.transform.position.z) > 0 ? 0.1f : 100f;
         cursor.rectTransform.anchoredPosition = position * CursorCanvas.sizeDelta + cursors[index].spot;
     }
 }
